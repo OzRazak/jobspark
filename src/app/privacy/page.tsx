@@ -144,7 +144,7 @@ export default function PrivacyPage() {
                 <div className="bg-slate-50 p-4 rounded-lg">
                   <p className="text-slate-700"><strong>Email:</strong> privacy@jobspark.co.za</p>
                   <p className="text-slate-700"><strong>Address:</strong> JobSpark Privacy Officer, Cape Town, South Africa</p>
-                  <p className="text-slate-700"><strong>Information Regulator:</strong> If you are not satisfied with our response, you may lodge a complaint with the Information Regulator of South Africa at <a href="https://inforegulator.org.za" className=\"text-green-600 hover:text-green-700">inforegulator.org.za</a></p>
+                  <p className="text-slate-700"><strong>Information Regulator:</strong> If you are not satisfied with our response, you may lodge a complaint with the Information Regulator of South Africa at <a href="https://inforegulator.org.za" className="text-green-600 hover:text-green-700">inforegulator.org.za</a></p>
                 </div>
               </section>
             </div>
