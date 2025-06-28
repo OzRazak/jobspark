@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Users, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Career Insights Blog - JobSpark',
@@ -371,8 +373,10 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Career Insights & Expert Advice
@@ -539,6 +543,8 @@ export default function BlogPage() {
           </p>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

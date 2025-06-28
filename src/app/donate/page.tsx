@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { Heart, Users, Laptop, Wifi, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Support Others - JobSpark',
@@ -9,8 +11,10 @@ export const metadata: Metadata = {
 export default function DonatePage() {
   return (
     <div className="min-h-screen bg-slate-50">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20">
+      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-white/20 rounded-full">
@@ -436,6 +440,8 @@ export default function DonatePage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

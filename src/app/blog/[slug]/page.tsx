@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 // This would typically come from a CMS or database
 const blogPosts = [
@@ -402,8 +404,10 @@ export default function BlogPost({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <Header />
+      
       {/* Header */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-white border-b border-slate-200 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link 
             href="/blog"
@@ -556,6 +560,8 @@ export default function BlogPost({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
