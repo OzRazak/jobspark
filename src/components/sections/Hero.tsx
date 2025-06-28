@@ -9,7 +9,9 @@ import {
   Star,
   CheckCircle,
   ExternalLink,
-  Sparkles,
+  Mic,
+  Users,
+  TrendingUp,
   Zap,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
@@ -30,7 +32,7 @@ const SpotlightButton = ({ children, href }: { children: React.ReactNode; href?:
       onMouseLeave={() => setMousePos({ x: -999, y: -999 })}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
-      className="relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-white bg-gradient-to-r from-slate-900 to-slate-800 transition-all duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-xl"
+      className="relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-white bg-gradient-to-r from-green-700 to-green-600 transition-all duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-xl"
     >
       <div
         className="absolute inset-0 opacity-0 transition-opacity duration-300"
@@ -67,7 +69,7 @@ const FlipButton = ({
       href={href}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="relative flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 font-semibold text-slate-800 bg-white/90 backdrop-blur-sm border-2 border-slate-200 hover:border-sky-300 transition-all duration-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg"
+      className="relative flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 font-semibold text-slate-800 bg-white/90 backdrop-blur-sm border-2 border-slate-200 hover:border-green-300 transition-all duration-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg"
       style={{ perspective: "500px" }}
     >
       <AnimatePresence mode="wait">
@@ -89,7 +91,7 @@ const FlipButton = ({
             animate={{ rotateY: 0, opacity: 1 }}
             exit={{ rotateY: -90, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="flex items-center gap-2 text-sky-500 text-base sm:text-lg"
+            className="flex items-center gap-2 text-green-600 text-base sm:text-lg"
           >
             <ExternalLink className="w-5 h-5" />
             <span>Learn More</span>
@@ -100,109 +102,113 @@ const FlipButton = ({
   );
 };
 
-// --- Simplified Animation Scenes ---
-const animationScenes = [
-  {
-    key: "cv",
-    icon: FileText,
-    title: "AI CV Generation",
-    subtitle: "Creating your perfect resume...",
-    content: (
-      <div className="space-y-3 w-full">
-        <motion.div 
-          className="h-3 w-full bg-gradient-to-r from-sky-200 to-sky-400 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
-        <motion.div 
-          className="h-3 w-4/5 bg-gradient-to-r from-blue-200 to-blue-400 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: "80%" }}
-          transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-        />
-        <motion.div 
-          className="h-3 w-full bg-gradient-to-r from-indigo-200 to-indigo-400 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
-        />
-        <motion.div 
-          className="h-3 w-3/4 bg-gradient-to-r from-purple-200 to-purple-400 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: "75%" }}
-          transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
-        />
+// --- South African Interview Animation ---
+const SouthAfricanInterviewVisual = () => (
+  <div className="w-full h-full p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:rounded-2xl">
+    <motion.div 
+      initial={{ scale: 0 }} 
+      animate={{ scale: 1 }} 
+      className="mb-4 p-3 sm:p-4 bg-gradient-to-r from-red-100 to-green-100 rounded-full"
+    >
+      <Mic className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
+    </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }} 
+      animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+      className="text-center space-y-3"
+    >
+      <p className="text-xs sm:text-sm font-medium text-green-700 bg-green-100 px-3 py-2 rounded-lg">
+        "Tell me about Ubuntu and how it applies to teamwork."
+      </p>
+      <div className="flex items-center justify-center space-x-2">
+        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+        <span className="text-xs text-green-600 font-medium">Listening in South African English...</span>
       </div>
-    ),
-  },
+    </motion.div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1 }}
+      className="mt-4 bg-green-50 px-3 py-2 rounded-lg"
+    >
+      <div className="flex items-center space-x-2">
+        <Star className="w-4 h-4 text-yellow-500 fill-current" />
+        <span className="text-xs sm:text-sm text-green-700 font-medium">Cultural fit: 92%</span>
+      </div>
+    </motion.div>
+  </div>
+);
+
+const UnemploymentStatsVisual = () => (
+  <div className="w-full h-full p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:rounded-2xl">
+    <motion.div 
+      initial={{ scale: 0 }} 
+      animate={{ scale: 1 }} 
+      className="mb-4 p-3 sm:p-4 bg-red-100 rounded-full"
+    >
+      <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
+    </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }} 
+      animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+      className="text-center space-y-3"
+    >
+      <div className="text-3xl font-bold text-red-600">32.9%</div>
+      <p className="text-xs sm:text-sm text-slate-600">Youth unemployment in SA</p>
+      <div className="text-2xl font-bold text-green-600">12,500+</div>
+      <p className="text-xs sm:text-sm text-slate-600">Lives changed with JobSpark</p>
+    </motion.div>
+  </div>
+);
+
+const OpenSourceVisual = () => (
+  <div className="w-full h-full p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center bg-white shadow-lg rounded-xl sm:rounded-2xl">
+    <motion.div 
+      initial={{ scale: 0 }} 
+      animate={{ scale: 1 }} 
+      className="mb-4 p-3 sm:p-4 bg-blue-100 rounded-full"
+    >
+      <Users className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
+    </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }} 
+      animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+      className="text-center space-y-3"
+    >
+      <p className="text-sm font-medium text-blue-700 bg-blue-100 px-3 py-2 rounded-lg">
+        100% Free & Open Source
+      </p>
+      <p className="text-xs text-slate-600">Built by the community, for the community</p>
+      <div className="flex items-center justify-center space-x-2">
+        <Zap className="w-4 h-4 text-orange-500" />
+        <span className="text-xs text-orange-600 font-medium">Powered by donations</span>
+      </div>
+    </motion.div>
+  </div>
+);
+
+// --- Animation Scenes ---
+const animationScenes = [
   {
     key: "interview",
     icon: MessageSquare,
     title: "AI Interview Coach",
-    subtitle: "Practicing with real-time feedback...",
-    content: (
-      <div className="space-y-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, type: "spring" }}
-          className="bg-gradient-to-r from-indigo-100 to-purple-100 p-4 rounded-lg border border-indigo-200"
-        >
-          <p className="text-sm font-medium text-indigo-700 mb-2">
-            "Tell me about a challenging project you worked on."
-          </p>
-          <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-xs text-green-600 font-medium">Listening...</span>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="bg-green-50 p-3 rounded-lg border border-green-200"
-        >
-          <div className="flex items-center space-x-2">
-            <CheckCircle className="w-4 h-4 text-green-600" />
-            <span className="text-xs text-green-700 font-medium">Great structure! Score: 85%</span>
-          </div>
-        </motion.div>
-      </div>
-    ),
+    subtitle: "Tailored for South African professionals...",
+    content: <SouthAfricanInterviewVisual />,
   },
   {
-    key: "match",
-    icon: Briefcase,
-    title: "Smart Job Matching",
-    subtitle: "Connecting you with opportunities...",
-    content: (
-      <div className="space-y-3">
-        {[1, 2, 3].map((i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.2, duration: 0.5 }}
-            className="flex items-center justify-between bg-gradient-to-r from-green-50 to-emerald-50 p-3 rounded-lg border border-green-200"
-          >
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                <Briefcase className="w-4 h-4 text-green-600" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-slate-800">Company {i}</p>
-                <p className="text-xs text-slate-600">Software Engineer</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Star className="w-4 h-4 text-yellow-400 fill-current" />
-              <span className="text-sm font-bold text-green-600">{95 - i * 3}%</span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    ),
+    key: "impact",
+    icon: TrendingUp,
+    title: "Tackling Unemployment",
+    subtitle: "Making a real difference in SA...",
+    content: <UnemploymentStatsVisual />,
+  },
+  {
+    key: "opensource",
+    icon: Users,
+    title: "Free & Open Source",
+    subtitle: "Accessible to everyone who needs it...",
+    content: <OpenSourceVisual />,
   },
 ];
 
@@ -212,7 +218,7 @@ export const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSceneIndex((prevIndex) => (prevIndex + 1) % animationScenes.length);
-    }, 4000); // Slightly faster transitions
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -225,10 +231,10 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         {/* The Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] sm:bg-[size:36px_36px] opacity-20 sm:opacity-30" />
-        {/* Simplified Aurora */}
+        {/* South African inspired colors */}
         <div className="absolute inset-0 opacity-30 sm:opacity-40">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_#bae6fd_0%,_transparent_40%)]" />
-          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#c7d2fe_0%,_transparent_45%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_#fef3c7_0%,_transparent_40%)]" />
+          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#dcfce7_0%,_transparent_45%)]" />
         </div>
       </div>
 
@@ -243,11 +249,11 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center bg-gradient-to-r from-sky-100 to-blue-100 text-sky-800 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-4 sm:mb-6 border border-sky-200 shadow-sm"
+            className="inline-flex items-center bg-gradient-to-r from-red-100 to-green-100 text-green-800 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-4 sm:mb-6 border border-green-200 shadow-sm"
           >
             <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-yellow-400 fill-current" />
-            <span className="hidden sm:inline">Voted #1 Platform for Career Growth</span>
-            <span className="sm:hidden">#1 Career Platform</span>
+            <span className="hidden sm:inline">Tackling SA's 32.9% Youth Unemployment</span>
+            <span className="sm:hidden">Fighting Youth Unemployment</span>
           </motion.div>
 
           <motion.h1 
@@ -256,9 +262,9 @@ export const Hero = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-slate-900 mb-4 sm:mb-6 leading-tight"
           >
-            Your Intelligent <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
-              Career Co-Pilot
+            <span className="text-red-600">Ignite</span> Your <br className="hidden sm:block" />
+            <span className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 bg-clip-text text-transparent">
+              Interview Success
             </span>
           </motion.h1>
 
@@ -268,8 +274,8 @@ export const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-base sm:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
           >
-            Accelerate your job search with intelligent tools for CV building,
-            interview practice, and direct connections to top employers.
+            AI-powered interview practice with a <strong>South African voice</strong>, 
+            designed to help you land your dream job. Free for those who need it most.
           </motion.p>
 
           <motion.div 
@@ -280,7 +286,7 @@ export const Hero = () => {
           >
             <SpotlightButton href="https://app.jobspark.co.za/auth">
               <span className="flex items-center">
-                Start Your Journey 
+                Start Practicing Free
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </span>
             </SpotlightButton>
@@ -296,20 +302,24 @@ export const Hero = () => {
           >
             <div className="flex items-center space-x-1">
               <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
-              <span>Free to start</span>
+              <span>100% Free</span>
             </div>
             <div className="flex items-center space-x-1">
-              <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500" />
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500" />
               <span>AI-powered</span>
             </div>
             <div className="flex items-center space-x-1">
-              <Star className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
-              <span>12,500+ users</span>
+              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
+              <span>Open Source</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="text-lg">🇿🇦</span>
+              <span>Made for SA</span>
             </div>
           </motion.div>
         </motion.div>
 
-        {/* --- Simplified Animated Viewport --- */}
+        {/* --- Animated Viewport --- */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -317,7 +327,7 @@ export const Hero = () => {
           whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto aspect-[4/3] order-1 lg:order-2"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-200 via-blue-200 to-indigo-200 rounded-2xl sm:rounded-3xl opacity-20 sm:opacity-30 blur-xl sm:blur-2xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-200 via-orange-200 to-green-200 rounded-2xl sm:rounded-3xl opacity-20 sm:opacity-30 blur-xl sm:blur-2xl"></div>
           <div className="relative w-full h-full bg-white/70 sm:bg-white/60 backdrop-blur-xl border-2 border-white/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl sm:shadow-2xl shadow-slate-400/20 flex flex-col items-center justify-center text-center">
             <AnimatePresence mode="wait">
               <motion.div
@@ -337,7 +347,7 @@ export const Hero = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <CurrentIcon className="w-6 h-6 sm:w-8 sm:h-8 text-sky-500" />
+                  <CurrentIcon className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
                 </motion.div>
                 <div className="text-center">
                   <p className="font-bold text-slate-800 text-sm sm:text-lg mb-1">
@@ -359,7 +369,7 @@ export const Hero = () => {
                 <div
                   key={index}
                   className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${
-                    index === sceneIndex ? 'bg-sky-500 w-4 sm:w-6' : 'bg-slate-300'
+                    index === sceneIndex ? 'bg-green-600 w-4 sm:w-6' : 'bg-slate-300'
                   }`}
                 />
               ))}

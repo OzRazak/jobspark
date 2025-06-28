@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -9,24 +9,51 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-4 md:col-span-1 mb-8 md:mb-0">
-            <a href="#" className="flex items-center space-x-2 mb-4">
-              <Sparkles className="w-7 h-7 text-neon-cyan drop-shadow-[0_0_5px_rgba(var(--neon-cyan-rgb),0.7)]" />
-              <span className="text-2xl font-bold text-slate-900">
-                JobSpark
-              </span>
+            <a href="#" className="flex items-center space-x-3 mb-4">
+              <Image 
+                src="/jobspark-logo.svg" 
+                alt="JobSpark Logo" 
+                width={32} 
+                height={32}
+                className="w-8 h-8"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold">
+                  <span className="text-red-600">Job</span><span className="text-green-600">Spark</span>
+                </span>
+                <span className="text-xs text-orange-500 font-medium">Ignite your interview</span>
+              </div>
             </a>
             <p className="text-slate-500 text-sm max-w-xs">
-              AI-powered career tools for the modern South African professional.
+              AI-powered career tools tackling South Africa's unemployment crisis, one interview at a time.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 col-span-4 md:col-span-3 gap-8">
             {[
               {
                 title: "Product",
-                links: ["Features", "Pricing", "Integrations"],
+                links: [
+                  { name: "Features", href: "#features" },
+                  { name: "How It Works", href: "#how-it-works" },
+                  { name: "Interview Practice", href: "https://app.jobspark.co.za" },
+                ],
               },
-              { title: "Company", links: ["About Us", "Careers", "Contact"] },
-              { title: "Legal", links: ["Privacy Policy", "Terms of Service"] },
+              { 
+                title: "Company", 
+                links: [
+                  { name: "About Us", href: "#impact" },
+                  { name: "Support Others", href: "/donate" },
+                  { name: "Contact", href: "mailto:hello@jobspark.co.za" },
+                ] 
+              },
+              { 
+                title: "Legal", 
+                links: [
+                  { name: "Privacy Policy", href: "/privacy" },
+                  { name: "Terms of Service", href: "/terms" },
+                  { name: "Open Source", href: "https://github.com/jobspark" },
+                ] 
+              },
             ].map((col) => (
               <div key={col.title}>
                 <h3 className="font-semibold text-slate-900 mb-4">
@@ -34,12 +61,14 @@ export const Footer = () => {
                 </h3>
                 <ul className="space-y-3">
                   {col.links.map((link) => (
-                    <li key={link}>
+                    <li key={link.name}>
                       <a
-                        href="#"
-                        className="text-slate-500 hover:text-neon-cyan transition-colors"
+                        href={link.href}
+                        className="text-slate-500 hover:text-green-600 transition-colors"
+                        target={link.href.startsWith('http') ? '_blank' : undefined}
+                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
-                        {link}
+                        {link.name}
                       </a>
                     </li>
                   ))}
@@ -50,7 +79,10 @@ export const Footer = () => {
         </div>
         <div className="mt-16 border-t border-slate-200 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-slate-500">
           <p>© {new Date().getFullYear()} JobSpark. All rights reserved.</p>
-          <p>Proudly built for South Africa 🇿🇦</p>
+          <p className="flex items-center space-x-1">
+            <span>Proudly built for South Africa</span>
+            <span className="text-lg">🇿🇦</span>
+          </p>
         </div>
       </div>
     </footer>

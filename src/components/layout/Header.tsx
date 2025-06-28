@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Sparkles, BarChart3, Users, Info, ArrowRight, Menu, X } from "lucide-react";
+import { BarChart3, Users, Info, ArrowRight, Menu, X } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export const Header = () => {
   const navLinks = [
     { name: "Features", href: "#features", icon: BarChart3 },
     { name: "How It Works", href: "#how-it-works", icon: Users },
-    { name: "Testimonials", href: "#testimonials", icon: Info },
+    { name: "Impact", href: "#impact", icon: Info },
   ];
 
   const handleNavClick = (
@@ -74,11 +74,20 @@ export const Header = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 sm:h-20"
       >
         {/* Left Side: Logo */}
-        <a href="/" className="flex items-center space-x-2">
-          <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-sky-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.5)]" />
-          <span className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
-            JobSpark
-          </span>
+        <a href="/" className="flex items-center space-x-3">
+          <Image 
+            src="/jobspark-logo.svg" 
+            alt="JobSpark Logo" 
+            width={40} 
+            height={40}
+            className="w-8 h-8 sm:w-10 sm:h-10"
+          />
+          <div className="flex flex-col">
+            <span className="text-xl sm:text-2xl font-bold tracking-tight">
+              <span className="text-red-600">Job</span><span className="text-green-600">Spark</span>
+            </span>
+            <span className="text-xs text-orange-500 font-medium hidden sm:block">Ignite your interview</span>
+          </div>
         </a>
 
         {/* Center: Navigation - Hidden on mobile, shown on md+ */}
@@ -95,7 +104,7 @@ export const Header = () => {
               onMouseEnter={() => setHoveredLink(link.name)}
             >
               <span className="relative z-10 flex items-center">
-                <link.icon className="w-4 h-4 mr-2 text-slate-400 group-hover:text-sky-500 transition-colors" />
+                <link.icon className="w-4 h-4 mr-2 text-slate-400 group-hover:text-green-600 transition-colors" />
                 {link.name}
               </span>
               {hoveredLink === link.name && (
@@ -140,22 +149,6 @@ export const Header = () => {
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-          
-          {/* Spinning Logo */}
-          <div className="animate-spin-slow ml-2 hidden lg:block">
-            <Image
-              src="/bolt.svg"
-              alt="Decorative Bolt"
-              width={60}
-              height={60}
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  window.open("https://bolt.new", "_blank");
-                }
-              }}
-              className="opacity-80 cursor-pointer"
-            />
-          </div>
         </div>
       </motion.div>
 
@@ -186,7 +179,7 @@ export const Header = () => {
                 </button>
               </a>
               <a href="https://app.jobspark.co.za/auth" className="block">
-                <button className="w-full bg-sky-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-sky-600 transition-colors">
+                <button className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   Get Started
                 </button>
               </a>
