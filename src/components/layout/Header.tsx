@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BarChart3, Users, Info, ArrowRight, Menu, X } from "lucide-react";
+import { BarChart3, Users, Info, ArrowRight, Menu, X, Heart, BookOpen } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
@@ -23,16 +23,20 @@ export const Header = () => {
     { name: "Features", href: "#features", icon: BarChart3 },
     { name: "How It Works", href: "#how-it-works", icon: Users },
     { name: "Impact", href: "#impact", icon: Info },
+    { name: "Blog", href: "/blog", icon: BookOpen },
+    { name: "Support Others", href: "/donate", icon: Heart },
   ];
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setMobileMenuOpen(false);
   };
@@ -90,9 +94,9 @@ export const Header = () => {
           </div>
         </a>
 
-        {/* Center: Navigation - Hidden on mobile, shown on md+ */}
+        {/* Center: Navigation - Hidden on mobile, shown on lg+ */}
         <div
-          className="hidden md:flex items-center space-x-1 bg-white/60 border border-slate-200/80 rounded-full px-2 shadow-sm"
+          className="hidden lg:flex items-center space-x-1 bg-white/60 border border-slate-200/80 rounded-full px-2 shadow-sm"
           onMouseLeave={() => setHoveredLink("")}
         >
           {navLinks.map((link) => (
@@ -100,11 +104,13 @@ export const Header = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="relative font-medium text-slate-600 hover:text-slate-900 transition-colors px-3 lg:px-4 py-2 rounded-full group text-sm lg:text-base"
+              className="relative font-medium text-slate-600 hover:text-slate-900 transition-colors px-3 py-2 rounded-full group text-sm"
               onMouseEnter={() => setHoveredLink(link.name)}
             >
               <span className="relative z-10 flex items-center">
-                <link.icon className="w-4 h-4 mr-2 text-slate-400 group-hover:text-green-600 transition-colors" />
+                <link.icon className={`w-4 h-4 mr-2 transition-colors ${
+                  link.name === "Support Others" ? "text-red-400 group-hover:text-red-600" : "text-slate-400 group-hover:text-green-600"
+                }`} />
                 {link.name}
               </span>
               {hoveredLink === link.name && (
@@ -145,7 +151,7 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
+            className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -158,7 +164,7 @@ export const Header = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60"
+          className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60"
         >
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
@@ -168,7 +174,9 @@ export const Header = () => {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="flex items-center space-x-3 px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
               >
-                <link.icon className="w-5 h-5 text-slate-400" />
+                <link.icon className={`w-5 h-5 ${
+                  link.name === "Support Others" ? "text-red-400" : "text-slate-400"
+                }`} />
                 <span className="font-medium">{link.name}</span>
               </a>
             ))}
