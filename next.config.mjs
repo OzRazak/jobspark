@@ -1,7 +1,16 @@
 const nextConfig = {
-  // Use Terser for minification instead
+  // Disable SWC and use Babel instead for WebContainer compatibility
+  swcMinify: false,
   experimental: {
     forceSwcTransforms: false,
+    esmExternals: false,
+  },
+  // Disable webpack cache to avoid issues
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.cache = false;
+    }
+    return config;
   },
 
   images: {
