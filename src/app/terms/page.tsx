@@ -160,7 +160,7 @@ export default function TermsPage() {
               <div className="bg-slate-50 p-4 rounded-lg">
                 <p className="text-slate-700"><strong>Email:</strong> legal@jobspark.co.za</p>
                 <p className="text-slate-700"><strong>Address:</strong> JobSpark Legal Department, Cape Town, South Africa</p>
-                <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className="text-green-600 hover:text-green-700">jobspark.co.za</a></p>
+                <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className=\"text-green-600 hover:text-green-700">jobspark.co.za</a></p>
               </div>
             </section>
           </div>
