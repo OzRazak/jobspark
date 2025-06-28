@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Zap, ArrowRight, CheckCircle } from "lucide-react";
 import React from "react";
-import Link from "next/link";
 
 // --- Enhanced "Shine" Button ---
 const ShineButton = ({ children, href }: { children: React.ReactNode; href?: string }) => {
@@ -31,7 +30,11 @@ const ShineButton = ({ children, href }: { children: React.ReactNode; href?: str
         </motion.button>
     );
 
-    return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
+    return href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {ButtonContent}
+      </a>
+    ) : ButtonContent;
 };
 
 export const CTA = () => {
@@ -89,7 +92,7 @@ export const CTA = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                <ShineButton href="/auth">
+                <ShineButton href="https://app.jobspark.co.za/auth">
                   <span className="flex items-center">
                     Get Started for Free 
                     <Zap className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />

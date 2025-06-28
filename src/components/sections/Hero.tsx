@@ -13,7 +13,6 @@ import {
   Zap,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 
 // --- Custom Spotlight Button (Enhanced) ---
 const SpotlightButton = ({ children, href }: { children: React.ReactNode; href?: string }) => {
@@ -46,7 +45,11 @@ const SpotlightButton = ({ children, href }: { children: React.ReactNode; href?:
     </motion.button>
   );
 
-  return href ? <Link href={href}>{ButtonContent}</Link> : ButtonContent;
+  return href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {ButtonContent}
+    </a>
+  ) : ButtonContent;
 };
 
 // --- Enhanced "Flip" Button Component ---
@@ -275,7 +278,7 @@ export const Hero = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
           >
-            <SpotlightButton href="/auth">
+            <SpotlightButton href="https://app.jobspark.co.za/auth">
               <span className="flex items-center">
                 Start Your Journey 
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
