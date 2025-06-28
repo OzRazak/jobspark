@@ -1,16 +1,14 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable SWC and use Babel instead for WebContainer compatibility
+  // Disable SWC completely for WebContainer compatibility
   swcMinify: false,
   experimental: {
     forceSwcTransforms: false,
-    esmExternals: false,
   },
-  // Disable webpack cache to avoid issues
-  webpack: (config, { dev }) => {
-    if (dev) {
-      config.cache = false;
-    }
-    return config;
+  
+  // Use legacy build mode
+  compiler: {
+    removeConsole: false,
   },
 
   images: {
