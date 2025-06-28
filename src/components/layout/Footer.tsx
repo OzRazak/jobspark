@@ -27,6 +27,9 @@ export const Footer = () => {
             <p className="text-slate-500 text-sm max-w-xs">
               AI-powered career tools tackling South Africa's unemployment crisis, one interview at a time.
             </p>
+            <p className="text-slate-400 text-xs mt-4">
+              Built with ❤️ by <a href="https://auxo.digital/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">Auxo Digital</a>
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 col-span-4 md:col-span-3 gap-8">
             {[
@@ -41,9 +44,10 @@ export const Footer = () => {
               { 
                 title: "Company", 
                 links: [
-                  { name: "About Us", href: "#impact" },
+                  { name: "About Auxo Digital", href: "/about" },
+                  { name: "Blog", href: "/blog" },
                   { name: "Support Others", href: "/donate" },
-                  { name: "Contact", href: "mailto:hello@jobspark.co.za" },
+                  { name: "Contact", href: "mailto:info@auxo.digital" },
                 ] 
               },
               { 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BarChart3, Users, Info, ArrowRight, Menu, X, Heart, BookOpen } from "lucide-react";
+import { BarChart3, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
@@ -24,6 +24,7 @@ export const Header = () => {
     { name: "How It Works", href: "#how-it-works", icon: Users },
     { name: "Impact", href: "#impact", icon: Info },
     { name: "Blog", href: "/blog", icon: BookOpen },
+    { name: "About", href: "/about", icon: Building },
     { name: "Support Others", href: "/donate", icon: Heart },
   ];
 

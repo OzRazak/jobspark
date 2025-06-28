@@ -152,6 +152,12 @@ export const Stats = () => {
               >
                 Support Others
               </a>
+              <a 
+                href="/about"
+                className="px-6 py-3 border border-blue-500 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                Meet the Team
+              </a>
             </div>
           </div>
         </motion.div>
