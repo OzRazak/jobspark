@@ -1,4 +1,12 @@
 const nextConfig = {
+  // Disable SWC minifier to avoid binary loading issues
+  swcMinify: false,
+  
+  // Use Terser for minification instead
+  experimental: {
+    forceSwcTransforms: false,
+  },
+  
   images: {
     remotePatterns: [
       {
@@ -36,6 +44,12 @@ const nextConfig = {
         hostname: 'www.netlify.com',
         port: '',
         pathname: '/v3/img/components/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        port: '',
+        pathname: '/**',
       },
     ],
   },
