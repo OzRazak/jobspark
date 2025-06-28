@@ -16,7 +16,7 @@ export default function AboutPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
+      <section className="bg-gradient-to-br from-green-600 to-sa-gold-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-white/20 rounded-full">
@@ -80,8 +80,8 @@ export default function AboutPage() {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-blue-100 rounded-lg">
-                    <Lightbulb className="w-6 h-6 text-blue-600" />
+                  <div className="p-2 bg-sa-gold-100 rounded-lg">
+                    <Lightbulb className="w-6 h-6 text-sa-gold-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-2">The JobSpark Inspiration</h3>
@@ -149,7 +149,7 @@ export default function AboutPage() {
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-              <div className="w-32 h-32 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center">
+              <div className="w-32 h-32 bg-gradient-to-br from-green-100 to-sa-gold-100 rounded-full flex items-center justify-center">
                 <Users className="w-16 h-16 text-green-600" />
               </div>
               <div className="flex-1 text-center md:text-left">
@@ -214,8 +214,8 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="p-4 bg-blue-100 rounded-full w-fit mx-auto mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
+              <div className="p-4 bg-sa-gold-100 rounded-full w-fit mx-auto mb-4">
+                <Zap className="w-8 h-8 text-sa-gold-600" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Rapid Impact</h3>
               <p className="text-slate-600">
@@ -268,8 +268,8 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="p-3 bg-blue-100 rounded-lg w-fit mx-auto mb-4">
-                <Code className="w-6 h-6 text-blue-600" />
+              <div className="p-3 bg-sa-gold-100 rounded-lg w-fit mx-auto mb-4">
+                <Code className="w-6 h-6 text-sa-gold-600" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Enterprise Solutions</h3>
               <p className="text-slate-600 text-sm mb-4">
@@ -279,7 +279,7 @@ export default function AboutPage() {
                 href="https://auxo.digital/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                className="text-sa-gold-600 hover:text-sa-gold-700 font-medium text-sm"
               >
                 Visit Auxo Digital →
               </a>
@@ -302,7 +302,7 @@ export default function AboutPage() {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl">
+          <div className="bg-gradient-to-r from-green-600 to-sa-gold-600 text-white p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-2">Ready to Make an Impact?</h3>
             <p className="mb-4">
               Reach out to us at <strong>info@auxo.digital</strong> to help us positively impact more people and businesses.

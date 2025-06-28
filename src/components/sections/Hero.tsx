@@ -166,16 +166,16 @@ const OpenSourceVisual = () => (
     <motion.div 
       initial={{ scale: 0 }} 
       animate={{ scale: 1 }} 
-      className="mb-4 p-3 sm:p-4 bg-blue-100 rounded-full"
+      className="mb-4 p-3 sm:p-4 bg-sa-gold-100 rounded-full"
     >
-      <Users className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
+      <Users className="w-6 h-6 sm:w-8 sm:h-8 text-sa-gold-600" />
     </motion.div>
     <motion.div
       initial={{ opacity: 0, y: 10 }} 
       animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
       className="text-center space-y-3"
     >
-      <p className="text-sm font-medium text-blue-700 bg-blue-100 px-3 py-2 rounded-lg">
+      <p className="text-sm font-medium text-sa-gold-700 bg-sa-gold-100 px-3 py-2 rounded-lg">
         100% Free & Open Source
       </p>
       <p className="text-xs text-slate-600">Built by the community, for the community</p>
@@ -309,7 +309,7 @@ export const Hero = () => {
               <span>AI-powered</span>
             </div>
             <div className="flex items-center space-x-1">
-              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
+              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-sa-gold-500" />
               <span>Open Source</span>
             </div>
             <div className="flex items-center space-x-1">
