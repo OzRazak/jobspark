@@ -1,8 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
   title: "JobSpark - Your AI Career Co-Pilot",
   description: "Accelerate your job search with AI-powered tools.",
@@ -15,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
