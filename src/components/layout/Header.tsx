@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { BarChart3, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Home, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [hoveredLink, setHoveredLink] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,27 +19,64 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Features", href: "#features", icon: BarChart3 },
-    { name: "How It Works", href: "#how-it-works", icon: Users },
-    { name: "Impact", href: "#impact", icon: Info },
-    { name: "Blog", href: "/blog", icon: BookOpen },
-    { name: "About", href: "/about", icon: Building },
-    { name: "Support Others", href: "/donate", icon: Heart },
+  const navItems = [
+    { 
+      name: "Home", 
+      href: "/", 
+      icon: Home 
+    },
+    {
+      name: "Product",
+      icon: Info,
+      subItems: [
+        { name: "Features", href: "/#features" },
+        { name: "How It Works", href: "/#how-it-works" },
+        { name: "Impact", href: "/#impact" },
+      ]
+    },
+    {
+      name: "Resources",
+      icon: BookOpen,
+      subItems: [
+        { name: "Blog", href: "/blog" },
+        { name: "Career Insights", href: "/blog" },
+        { name: "Interview Tips", href: "/blog" },
+      ]
+    },
+    {
+      name: "Company",
+      icon: Building,
+      subItems: [
+        { name: "About Auxo Digital", href: "/about" },
+        { name: "Our Mission", href: "/about#mission" },
+        { name: "Meet the Team", href: "/about#team" },
+      ]
+    },
+    { 
+      name: "Support Others", 
+      href: "/donate", 
+      icon: Heart,
+      highlight: true
+    },
   ];
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    if (href.startsWith('#')) {
+    if (href.startsWith('/#')) {
       e.preventDefault();
-      const element = document.querySelector(href);
+      const element = document.querySelector(href.substring(1));
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
     setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  const handleDropdownToggle = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 
   const headerVariants = {
@@ -96,37 +133,59 @@ export const Header = () => {
         </a>
 
         {/* Center: Navigation - Hidden on mobile, shown on lg+ */}
-        <div
-          className="hidden lg:flex items-center space-x-1 bg-white/60 border border-slate-200/80 rounded-full px-2 shadow-sm"
-          onMouseLeave={() => setHoveredLink("")}
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="relative font-medium text-slate-600 hover:text-slate-900 transition-colors px-3 py-2 rounded-full group text-sm"
-              onMouseEnter={() => setHoveredLink(link.name)}
-            >
-              <span className="relative z-10 flex items-center">
-                <link.icon className={`w-4 h-4 mr-2 transition-colors ${
-                  link.name === "Support Others" ? "text-red-400 group-hover:text-red-600" : "text-slate-400 group-hover:text-green-600"
-                }`} />
-                {link.name}
-              </span>
-              {hoveredLink === link.name && (
-                <motion.div
-                  className="absolute inset-0 bg-slate-100 rounded-full"
-                  layoutId="hover-bg"
-                  transition={{
-                    duration: 0.25,
-                    type: "spring",
-                    stiffness: 120,
-                    damping: 14,
-                  }}
-                />
+        <div className="hidden lg:flex items-center space-x-1">
+          {navItems.map((item) => (
+            <div key={item.name} className="relative">
+              {item.subItems ? (
+                <div
+                  className="relative"
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <button className="flex items-center space-x-1 font-medium text-slate-600 hover:text-slate-900 transition-colors px-3 py-2 rounded-lg text-sm">
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    <ChevronDown className="w-3 h-3" />
+                  </button>
+                  
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-1 w-48 bg-white border border-slate-200 rounded-lg shadow-lg py-2"
+                      >
+                        {item.subItems.map((subItem) => (
+                          <a
+                            key={subItem.name}
+                            href={subItem.href}
+                            onClick={(e) => handleNavClick(e, subItem.href)}
+                            className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+                          >
+                            {subItem.name}
+                          </a>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <a
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href!)}
+                  className={`flex items-center space-x-2 font-medium transition-colors px-3 py-2 rounded-lg text-sm ${
+                    item.highlight 
+                      ? "text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100" 
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                </a>
               )}
-            </a>
+            </div>
           ))}
         </div>
 
@@ -160,42 +219,87 @@ export const Header = () => {
       </motion.div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60"
-        >
-          <div className="px-4 py-6 space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="flex items-center space-x-3 px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
-              >
-                <link.icon className={`w-5 h-5 ${
-                  link.name === "Support Others" ? "text-red-400" : "text-slate-400"
-                }`} />
-                <span className="font-medium">{link.name}</span>
-              </a>
-            ))}
-            <div className="pt-4 border-t border-slate-200 space-y-3">
-              <a href="https://app.jobspark.co.za/auth" className="block">
-                <button className="w-full text-left px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors font-medium">
-                  Login
-                </button>
-              </a>
-              <a href="https://app.jobspark.co.za/auth" className="block">
-                <button className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                  Get Started
-                </button>
-              </a>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60 overflow-hidden"
+          >
+            <div className="px-4 py-6 space-y-4 max-h-96 overflow-y-auto">
+              {navItems.map((item) => (
+                <div key={item.name}>
+                  {item.subItems ? (
+                    <div>
+                      <button
+                        onClick={() => handleDropdownToggle(item.name)}
+                        className="flex items-center justify-between w-full px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5" />
+                          <span className="font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="ml-8 mt-2 space-y-2 overflow-hidden"
+                          >
+                            {item.subItems.map((subItem) => (
+                              <a
+                                key={subItem.name}
+                                href={subItem.href}
+                                onClick={(e) => handleNavClick(e, subItem.href)}
+                                className="block px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors text-sm"
+                              >
+                                {subItem.name}
+                              </a>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      onClick={(e) => handleNavClick(e, item.href!)}
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                        item.highlight 
+                          ? "text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100" 
+                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                      }`}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-medium">{item.name}</span>
+                    </a>
+                  )}
+                </div>
+              ))}
+              
+              <div className="pt-4 border-t border-slate-200 space-y-3">
+                <a href="https://app.jobspark.co.za/auth" className="block">
+                  <button className="w-full text-left px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors font-medium">
+                    Login
+                  </button>
+                </a>
+                <a href="https://app.jobspark.co.za/auth" className="block">
+                  <button className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                    Get Started
+                  </button>
+                </a>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
