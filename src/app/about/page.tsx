@@ -156,7 +156,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-center text-center">
                 <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-green-200">
                   <Image
-                    src="/oz-image.jpeg"
+                    src="/oz-image-new.jpeg"
                     alt="Oz Razak"
                     width={128}
                     height={128}
