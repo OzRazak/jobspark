@@ -154,8 +154,14 @@ export default function AboutPage() {
             {/* Oz Razak - Founder */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex flex-col items-center text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-green-100 to-sa-gold-100 rounded-full flex items-center justify-center mb-6">
-                  <Users className="w-16 h-16 text-green-600" />
+                <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-green-200">
+                  <Image
+                    src="/oz-image.jpeg"
+                    alt="Oz Razak"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Oz Razak</h3>
                 <p className="text-lg text-green-600 font-semibold mb-4">Founder of Auxo Digital</p>
