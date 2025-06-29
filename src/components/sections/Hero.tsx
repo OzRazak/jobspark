@@ -262,7 +262,7 @@ export const Hero = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-slate-900 mb-4 sm:mb-6 leading-tight"
           >
-            <span className="text-sa-gold-600">Ignite</span> Your <br className="hidden sm:block" />
+            <span className="text-blue-600">Ignite</span> Your <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 bg-clip-text text-transparent">
               Interview Success
             </span>

@@ -19,7 +19,7 @@ export const Footer = () => {
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold">
-                  <span className="text-red-600">Job</span><span className="text-green-600">Spark</span>
+                  <span className="text-blue-600">Job</span><span className="text-green-600">Spark</span>
                 </span>
                 <span className="text-xs text-orange-500 font-medium">Ignite your interview</span>
               </div>

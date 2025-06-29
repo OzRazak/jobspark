@@ -126,7 +126,7 @@ export const Header = () => {
           />
           <div className="flex flex-col">
             <span className="text-xl sm:text-2xl font-bold tracking-tight">
-              <span className="text-sa-gold-600">Job</span><span className="text-green-600">Spark</span>
+              <span className="text-blue-600">Job</span><span className="text-green-600">Spark</span>
             </span>
             <span className="text-xs text-orange-500 font-medium hidden sm:block">Ignite your interview</span>
           </div>
