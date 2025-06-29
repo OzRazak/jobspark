@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Heart, Users, Zap, Target, Mail, ExternalLink, Lightbulb, Globe, Code, Rocket } from 'lucide-react';
+import { Heart, Users, Zap, Target, Mail, ExternalLink, Lightbulb, Globe, Code, Rocket, Brain, Wrench } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'About Auxo Digital - JobSpark',
   description: 'Meet the team behind JobSpark. Learn about Auxo Digital\'s mission to help people feel more like themselves through innovative digital solutions.',
-  keywords: 'Auxo Digital, Oz Razak, JobSpark team, digital solutions, AI development, South Africa',
+  keywords: 'Auxo Digital, Oz Razak, Theodore Egling, JobSpark team, digital solutions, AI development, South Africa',
 };
 
 export default function AboutPage() {
@@ -138,21 +138,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Team Section */}
+      <section id="team" className="py-16 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Meet Our Founder
+              Meet Our Team
             </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              The passionate individuals driving innovation and positive impact through technology.
+            </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-              <div className="w-32 h-32 bg-gradient-to-br from-green-100 to-sa-gold-100 rounded-full flex items-center justify-center">
-                <Users className="w-16 h-16 text-green-600" />
-              </div>
-              <div className="flex-1 text-center md:text-left">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Oz Razak - Founder */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-green-100 to-sa-gold-100 rounded-full flex items-center justify-center mb-6">
+                  <Users className="w-16 h-16 text-green-600" />
+                </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Oz Razak</h3>
                 <p className="text-lg text-green-600 font-semibold mb-4">Founder of Auxo Digital</p>
                 <p className="text-slate-700 leading-relaxed mb-6">
@@ -160,27 +164,84 @@ export default function AboutPage() {
                   With years of experience in digital transformation and a deep understanding of the challenges faced by 
                   both individuals and enterprises, Oz leads our mission to create solutions that truly matter.
                 </p>
-                <p className="text-slate-700 leading-relaxed mb-6">
+                <p className="text-slate-700 leading-relaxed mb-6 italic">
                   "We've seen too many talented individuals struggle not because they lack ability, but because they 
                   lack the confidence and tools to showcase their true potential. JobSpark is our way of leveling 
                   the playing field and giving everyone the chance to shine."
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a 
                     href="https://auxo.digital/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm"
                   >
-                    Learn More About Auxo
-                    <ExternalLink className="ml-2 w-4 h-4" />
+                    <ExternalLink className="mr-2 w-4 h-4" />
+                    Auxo Digital
                   </a>
                   <a 
                     href="mailto:info@auxo.digital" 
-                    className="inline-flex items-center px-6 py-3 border border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors text-sm"
                   >
-                    Connect with Oz
-                    <Mail className="ml-2 w-4 h-4" />
+                    <Mail className="mr-2 w-4 h-4" />
+                    Connect
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Theodore Egling - Technical Director */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-sa-gold-200">
+                  <Image
+                    src="/Theo Image.jpeg"
+                    alt="Theodore Egling"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Theodore Egling</h3>
+                <p className="text-lg text-sa-gold-600 font-semibold mb-4">Co-Founder & Technical Director</p>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Theodore is the co-founder and Technical Director at Auxo Digital. As a digital creator and 
+                  inventor, Theodore excels in designing solutions to tackle business challenges.
+                </p>
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  He holds an MEng in Artificial Intelligence and a BSc in Mechanical Engineering. He has led the 
+                  successful implementation of standout projects across multidisciplinary software development.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-center space-x-2">
+                    <Brain className="w-5 h-5 text-sa-gold-600" />
+                    <span className="text-slate-700 text-sm">MEng Artificial Intelligence</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Wrench className="w-5 h-5 text-sa-gold-600" />
+                    <span className="text-slate-700 text-sm">BSc Mechanical Engineering</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <Code className="w-5 h-5 text-sa-gold-600" />
+                    <span className="text-slate-700 text-sm">Multidisciplinary Software Development</span>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3 w-full">
+                  <a 
+                    href="https://auxo.digital/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-sa-gold-600 text-white rounded-lg font-semibold hover:bg-sa-gold-700 transition-colors text-sm"
+                  >
+                    <ExternalLink className="mr-2 w-4 h-4" />
+                    Auxo Digital
+                  </a>
+                  <a 
+                    href="mailto:info@auxo.digital" 
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-sa-gold-600 text-sa-gold-600 rounded-lg font-semibold hover:bg-sa-gold-50 transition-colors text-sm"
+                  >
+                    <Mail className="mr-2 w-4 h-4" />
+                    Connect
                   </a>
                 </div>
               </div>
