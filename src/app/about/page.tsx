@@ -16,7 +16,7 @@ export default function AboutPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-sa-gold-600 text-white py-20 mt-16">
+      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-white/20 rounded-full">
@@ -80,8 +80,8 @@ export default function AboutPage() {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-sa-gold-100 rounded-lg">
-                    <Lightbulb className="w-6 h-6 text-sa-gold-600" />
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <Lightbulb className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-2">The JobSpark Inspiration</h3>
@@ -199,7 +199,7 @@ export default function AboutPage() {
             {/* Theodore Egling - Technical Director */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex flex-col items-center text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-sa-gold-200">
+                <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-blue-200">
                   <Image
                     src="/Theo Image.jpeg"
                     alt="Theodore Egling"
@@ -209,7 +209,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Theodore Egling</h3>
-                <p className="text-lg text-sa-gold-600 font-semibold mb-4">Co-Founder & Technical Director</p>
+                <p className="text-lg text-blue-600 font-semibold mb-4">Co-Founder & Technical Director</p>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   Theodore is the co-founder and Technical Director at Auxo Digital. As a digital creator and 
                   inventor, Theodore excels in designing solutions to tackle business challenges.
@@ -220,15 +220,15 @@ export default function AboutPage() {
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-center space-x-2">
-                    <Brain className="w-5 h-5 text-sa-gold-600" />
+                    <Brain className="w-5 h-5 text-blue-600" />
                     <span className="text-slate-700 text-sm">MEng Artificial Intelligence</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
-                    <Wrench className="w-5 h-5 text-sa-gold-600" />
+                    <Wrench className="w-5 h-5 text-blue-600" />
                     <span className="text-slate-700 text-sm">BSc Mechanical Engineering</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
-                    <Code className="w-5 h-5 text-sa-gold-600" />
+                    <Code className="w-5 h-5 text-blue-600" />
                     <span className="text-slate-700 text-sm">Multidisciplinary Software Development</span>
                   </div>
                 </div>
@@ -237,14 +237,14 @@ export default function AboutPage() {
                     href="https://auxo.digital/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-sa-gold-600 text-white rounded-lg font-semibold hover:bg-sa-gold-700 transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
                   >
                     <ExternalLink className="mr-2 w-4 h-4" />
                     Auxo Digital
                   </a>
                   <a 
                     href="mailto:info@auxo.digital" 
-                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-sa-gold-600 text-sa-gold-600 rounded-lg font-semibold hover:bg-sa-gold-50 transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm"
                   >
                     <Mail className="mr-2 w-4 h-4" />
                     Connect
@@ -281,8 +281,8 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="p-4 bg-sa-gold-100 rounded-full w-fit mx-auto mb-4">
-                <Zap className="w-8 h-8 text-sa-gold-600" />
+              <div className="p-4 bg-blue-100 rounded-full w-fit mx-auto mb-4">
+                <Zap className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Rapid Impact</h3>
               <p className="text-slate-600">
@@ -335,8 +335,8 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="p-3 bg-sa-gold-100 rounded-lg w-fit mx-auto mb-4">
-                <Code className="w-6 h-6 text-sa-gold-600" />
+              <div className="p-3 bg-blue-100 rounded-lg w-fit mx-auto mb-4">
+                <Code className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Enterprise Solutions</h3>
               <p className="text-slate-600 text-sm mb-4">
@@ -346,7 +346,7 @@ export default function AboutPage() {
                 href="https://auxo.digital/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sa-gold-600 hover:text-sa-gold-700 font-medium text-sm"
+                className="text-blue-600 hover:text-blue-700 font-medium text-sm"
               >
                 Visit Auxo Digital →
               </a>
@@ -369,7 +369,7 @@ export default function AboutPage() {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-green-600 to-sa-gold-600 text-white p-6 rounded-xl">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-2">Ready to Make an Impact?</h3>
             <p className="mb-4">
               Reach out to us at <strong>info@auxo.digital</strong> to help us positively impact more people and businesses.

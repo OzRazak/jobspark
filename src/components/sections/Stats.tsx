@@ -29,7 +29,7 @@ export const Stats = () => {
       suffix: "%", 
       label: "Youth Unemployment in SA", 
       icon: TrendingDown, 
-      color: "from-red-400 to-red-600",
+      color: "from-sa-gold-400 to-sa-gold-600",
       description: "The crisis we're fighting"
     },
     { 
@@ -44,7 +44,7 @@ export const Stats = () => {
       suffix: "%", 
       label: "Interview Success Rate", 
       icon: TrendingUp, 
-      color: "from-sa-gold-400 to-sa-gold-600",
+      color: "from-blue-400 to-blue-600",
       description: "After using JobSpark"
     },
     { 
@@ -154,7 +154,7 @@ export const Stats = () => {
               </a>
               <a 
                 href="/about"
-                className="px-6 py-3 border border-sa-gold-500 text-sa-gold-600 rounded-lg font-semibold hover:bg-sa-gold-50 transition-colors"
+                className="px-6 py-3 border border-blue-500 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Meet the Team
               </a>

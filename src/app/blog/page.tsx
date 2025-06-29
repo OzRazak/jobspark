@@ -376,7 +376,7 @@ export default function BlogPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-sa-gold-600 text-white py-20 mt-16">
+      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Career Insights & Expert Advice
@@ -498,8 +498,8 @@ export default function BlogPage() {
               <div className="text-slate-600">Success rate improvement after reading our guides</div>
             </div>
             <div className="space-y-2">
-              <div className="p-4 bg-sa-gold-100 rounded-full w-fit mx-auto">
-                <Users className="w-8 h-8 text-sa-gold-600" />
+              <div className="p-4 bg-blue-100 rounded-full w-fit mx-auto">
+                <Users className="w-8 h-8 text-blue-600" />
               </div>
               <div className="text-3xl font-bold text-slate-900">25,000+</div>
               <div className="text-slate-600">South Africans helped with career advice</div>

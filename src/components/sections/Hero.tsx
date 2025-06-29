@@ -108,7 +108,7 @@ const SouthAfricanInterviewVisual = () => (
     <motion.div 
       initial={{ scale: 0 }} 
       animate={{ scale: 1 }} 
-      className="mb-4 p-3 sm:p-4 bg-gradient-to-r from-red-100 to-green-100 rounded-full"
+      className="mb-4 p-3 sm:p-4 bg-gradient-to-r from-sa-gold-100 to-green-100 rounded-full"
     >
       <Mic className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
     </motion.div>
@@ -144,16 +144,16 @@ const UnemploymentStatsVisual = () => (
     <motion.div 
       initial={{ scale: 0 }} 
       animate={{ scale: 1 }} 
-      className="mb-4 p-3 sm:p-4 bg-red-100 rounded-full"
+      className="mb-4 p-3 sm:p-4 bg-sa-gold-100 rounded-full"
     >
-      <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
+      <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-sa-gold-600" />
     </motion.div>
     <motion.div
       initial={{ opacity: 0, y: 10 }} 
       animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
       className="text-center space-y-3"
     >
-      <div className="text-3xl font-bold text-red-600">32.9%</div>
+      <div className="text-3xl font-bold text-sa-gold-600">32.9%</div>
       <p className="text-xs sm:text-sm text-slate-600">Youth unemployment in SA</p>
       <div className="text-2xl font-bold text-green-600">12,500+</div>
       <p className="text-xs sm:text-sm text-slate-600">Lives changed with JobSpark</p>
@@ -166,16 +166,16 @@ const OpenSourceVisual = () => (
     <motion.div 
       initial={{ scale: 0 }} 
       animate={{ scale: 1 }} 
-      className="mb-4 p-3 sm:p-4 bg-sa-gold-100 rounded-full"
+      className="mb-4 p-3 sm:p-4 bg-blue-100 rounded-full"
     >
-      <Users className="w-6 h-6 sm:w-8 sm:h-8 text-sa-gold-600" />
+      <Users className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
     </motion.div>
     <motion.div
       initial={{ opacity: 0, y: 10 }} 
       animate={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
       className="text-center space-y-3"
     >
-      <p className="text-sm font-medium text-sa-gold-700 bg-sa-gold-100 px-3 py-2 rounded-lg">
+      <p className="text-sm font-medium text-blue-700 bg-blue-100 px-3 py-2 rounded-lg">
         100% Free & Open Source
       </p>
       <p className="text-xs text-slate-600">Built by the community, for the community</p>
@@ -249,7 +249,7 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center bg-gradient-to-r from-red-100 to-green-100 text-green-800 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-4 sm:mb-6 border border-green-200 shadow-sm"
+            className="inline-flex items-center bg-gradient-to-r from-sa-gold-100 to-green-100 text-green-800 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-4 sm:mb-6 border border-green-200 shadow-sm"
           >
             <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-yellow-400 fill-current" />
             <span className="hidden sm:inline">Tackling SA's 32.9% Youth Unemployment</span>
@@ -262,7 +262,7 @@ export const Hero = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-slate-900 mb-4 sm:mb-6 leading-tight"
           >
-            <span className="text-red-600">Ignite</span> Your <br className="hidden sm:block" />
+            <span className="text-sa-gold-600">Ignite</span> Your <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 bg-clip-text text-transparent">
               Interview Success
             </span>
@@ -309,7 +309,7 @@ export const Hero = () => {
               <span>AI-powered</span>
             </div>
             <div className="flex items-center space-x-1">
-              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-sa-gold-500" />
+              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
               <span>Open Source</span>
             </div>
             <div className="flex items-center space-x-1">
@@ -327,7 +327,7 @@ export const Hero = () => {
           whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto aspect-[4/3] order-1 lg:order-2"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-red-200 via-orange-200 to-green-200 rounded-2xl sm:rounded-3xl opacity-20 sm:opacity-30 blur-xl sm:blur-2xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-sa-gold-200 via-orange-200 to-green-200 rounded-2xl sm:rounded-3xl opacity-20 sm:opacity-30 blur-xl sm:blur-2xl"></div>
           <div className="relative w-full h-full bg-white/70 sm:bg-white/60 backdrop-blur-xl border-2 border-white/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl sm:shadow-2xl shadow-slate-400/20 flex flex-col items-center justify-center text-center">
             <AnimatePresence mode="wait">
               <motion.div

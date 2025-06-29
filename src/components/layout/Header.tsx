@@ -126,7 +126,7 @@ export const Header = () => {
           />
           <div className="flex flex-col">
             <span className="text-xl sm:text-2xl font-bold tracking-tight">
-              <span className="text-red-600">Job</span><span className="text-green-600">Spark</span>
+              <span className="text-sa-gold-600">Job</span><span className="text-green-600">Spark</span>
             </span>
             <span className="text-xs text-orange-500 font-medium hidden sm:block">Ignite your interview</span>
           </div>
@@ -177,7 +177,7 @@ export const Header = () => {
                   onClick={(e) => handleNavClick(e, item.href!)}
                   className={`flex items-center space-x-2 font-medium transition-colors px-3 py-2 rounded-lg text-sm ${
                     item.highlight 
-                      ? "text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100" 
+                      ? "text-sa-gold-600 hover:text-sa-gold-700 bg-sa-gold-50 hover:bg-sa-gold-100" 
                       : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
@@ -273,7 +273,7 @@ export const Header = () => {
                       onClick={(e) => handleNavClick(e, item.href!)}
                       className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                         item.highlight 
-                          ? "text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100" 
+                          ? "text-sa-gold-600 hover:text-sa-gold-700 bg-sa-gold-50 hover:bg-sa-gold-100" 
                           : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                       }`}
                     >

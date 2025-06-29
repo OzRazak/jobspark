@@ -14,7 +14,7 @@ export default function DonatePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-sa-gold-600 text-white py-20 mt-16">
+      <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-white/20 rounded-full">
@@ -62,8 +62,8 @@ export default function DonatePage() {
             <div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-red-100 rounded-lg">
-                    <Users className="w-6 h-6 text-red-600" />
+                  <div className="p-2 bg-sa-gold-100 rounded-lg">
+                    <Users className="w-6 h-6 text-sa-gold-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-2">32.9% Youth Unemployment</h3>
@@ -86,8 +86,8 @@ export default function DonatePage() {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-sa-gold-100 rounded-lg">
-                    <Wifi className="w-6 h-6 text-sa-gold-600" />
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <Wifi className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-2">Internet Connectivity Barriers</h3>
@@ -154,8 +154,8 @@ export default function DonatePage() {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="p-3 bg-sa-gold-100 rounded-lg w-fit mb-4">
-                <Wifi className="w-8 h-8 text-sa-gold-600" />
+              <div className="p-3 bg-blue-100 rounded-lg w-fit mb-4">
+                <Wifi className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Connectivity Solutions</h3>
               <p className="text-slate-600 mb-4">
@@ -283,10 +283,10 @@ export default function DonatePage() {
             </div>
 
             {/* Application Form */}
-            <div id="apply-form" className="bg-sa-gold-50 rounded-2xl p-8">
+            <div id="apply-form" className="bg-blue-50 rounded-2xl p-8">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="p-2 bg-sa-gold-100 rounded-lg">
-                  <Users className="w-6 h-6 text-sa-gold-600" />
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Users className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">Apply for Support</h3>
               </div>
@@ -304,7 +304,7 @@ export default function DonatePage() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
@@ -316,7 +316,7 @@ export default function DonatePage() {
                   <input
                     type="email"
                     required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -328,7 +328,7 @@ export default function DonatePage() {
                   <input
                     type="tel"
                     required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+27 XX XXX XXXX"
                   />
                 </div>
@@ -339,7 +339,7 @@ export default function DonatePage() {
                   </label>
                   <select 
                     required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select your age range</option>
                     <option value="18-21">18-21 years</option>
@@ -356,7 +356,7 @@ export default function DonatePage() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="e.g., Cape Town, Western Cape"
                   />
                 </div>
@@ -365,7 +365,7 @@ export default function DonatePage() {
                   <label className="block text-sm font-medium text-slate-700 mb-2">
                     What support do you need most?
                   </label>
-                  <select className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent">
+                  <select className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                     <option value="">Select primary need</option>
                     <option value="laptop">Laptop/Computer access</option>
                     <option value="internet">Internet connectivity</option>
@@ -382,14 +382,14 @@ export default function DonatePage() {
                   <textarea
                     rows={4}
                     required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sa-gold-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     placeholder="Describe your current situation, career goals, and how this support would help you..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-sa-gold-600 text-white py-3 rounded-lg font-semibold hover:bg-sa-gold-700 transition-colors"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Submit Application
                 </button>
@@ -421,11 +421,11 @@ export default function DonatePage() {
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="p-3 bg-sa-gold-100 rounded-lg mb-4">
-                <Phone className="w-6 h-6 text-sa-gold-600" />
+              <div className="p-3 bg-blue-100 rounded-lg mb-4">
+                <Phone className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Call Us</h3>
-              <a href="tel:+27123456789" className="text-sa-gold-600 hover:text-sa-gold-700">
+              <a href="tel:+27123456789" className="text-blue-600 hover:text-blue-700">
                 +27 12 345 6789
               </a>
             </div>
