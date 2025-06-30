@@ -1,3 +1,5 @@
+'use client';
+
 import { Metadata } from 'next';
 import { MessageSquare, FileText, Users, Mic, CheckCircle, Star, TrendingUp, Heart, Zap, Target, Brain, Smartphone, Globe, Award, ChevronDown, ChevronUp } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
