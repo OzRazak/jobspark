@@ -102,10 +102,10 @@ export default function OpenSourceSoftwarePost() {
               title={post.title}
               description={post.excerpt}
             />
-            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colours">
-              <Bookmark className="w-4 h-4" />
+            <span className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colours">
+              <Tag className="w-4 h-4" />
               <span>Save</span>
-            </button>
+            </span>
           </div>
         </div>
       </div>

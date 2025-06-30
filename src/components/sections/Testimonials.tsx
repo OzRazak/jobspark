@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Quote, ArrowLeft, ArrowRight, Star } from "lucide-react";
+import { Quote, ArrowLeft, ArrowRight, Star, Info } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -140,7 +140,7 @@ export const Testimonials = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto"
           >
-            Real stories from people who've transformed their careers with JobSpark.
+            Illustrative of the testimonials we would love to receive. These are not necessarily real yet - if you see benefit in the platform, please share your experience to help spread the word!
           </motion.p>
         </motion.div>
         
@@ -269,6 +269,20 @@ export const Testimonials = () => {
             />
           ))}
         </div>
+        
+        {/* Disclaimer notice */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-8 flex justify-center"
+        >
+          <div className="flex items-start space-x-2 text-sm text-slate-500 max-w-md text-center">
+            <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
+            <p>These testimonials are illustrative examples of the feedback we hope to receive. If you find JobSpark helpful, please share your experience to help others discover our platform.</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

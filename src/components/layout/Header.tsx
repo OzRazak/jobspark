@@ -40,7 +40,6 @@ export const Header = () => {
       icon: BookOpen,
       subItems: [
         { name: "Blog", href: "/blog" },
-        { name: "Career Insights", href: "/blog" },
         { name: "Interview Tips", href: "/interview-tips" },
       ]
     },
@@ -70,7 +69,7 @@ export const Header = () => {
       
       // If we're not on the home page, navigate there first
       if (window.location.pathname !== '/') {
-        window.location.href = '/' + href;
+        window.location.href = href;
         return;
       }
       
