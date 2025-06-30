@@ -259,8 +259,8 @@ export default function PrivacyPage() {
                   <p className="text-slate-700"><strong>Email:</strong> info@auxo.digital</p>
                   <p className="text-slate-700"><strong>Phone:</strong> +27 21 8480 9</p>
                   <p className="text-slate-700"><strong>Address:</strong> 6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
-                  <p className="text-slate-700 mt-4"><strong>Information Regulator:</strong> If you are not satisfied with our response, you may lodge a complaint with the Information Regulator of South Africa at <a href="https://inforegulator.org.za" className="text-green-600 hover:text-green-700">inforegulator.org.za</a></p>
-                  <p className="text-slate-700 mt-4"><strong>Early Access Information:</strong> <a href="/features/early-access" className="text-orange-600 hover:text-orange-700">View Early Access Details</a></p>
+                  <p className="text-slate-700 mt-4"><strong>Information Regulator:</strong> If you are not satisfied with our response, you may lodge a complaint with the Information Regulator of South Africa at <a href="https://inforegulator.org.za" className=\"text-green-600 hover:text-green-700">inforegulator.org.za</a></p>
+                  <p className="text-slate-700 mt-4"><strong>Early Access Information:</strong> <a href="/features/early-access" className=\"text-orange-600 hover:text-orange-700">View Early Access Details</a></p>
                 </div>
               </section>
             </div>
