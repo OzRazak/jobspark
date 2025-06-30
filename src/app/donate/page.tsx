@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Heart, Users, Laptop, Wifi, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Heart, Users, Laptop, Wifi, CheckCircle, Mail, Coffee, MapPin } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
@@ -31,13 +31,13 @@ export default function DonatePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#donate-form" 
-              className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours"
             >
               Make a Contribution
             </a>
             <a 
               href="#apply-form" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colours"
             >
               Apply for Support
             </a>
@@ -275,7 +275,7 @@ export default function DonatePage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colours"
                 >
                   Submit Contribution Inquiry
                 </button>
@@ -389,7 +389,7 @@ export default function DonatePage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colours"
                 >
                   Submit Application
                 </button>
@@ -409,33 +409,23 @@ export default function DonatePage() {
             We're here to help and answer any questions you might have about our program.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col items-center">
               <div className="p-3 bg-green-100 rounded-lg mb-4">
                 <Mail className="w-6 h-6 text-green-600" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Email Us</h3>
-              <a href="mailto:support@jobspark.co.za" className="text-green-600 hover:text-green-700">
-                support@jobspark.co.za
-              </a>
-            </div>
-            
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-blue-100 rounded-lg mb-4">
-                <Phone className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="font-semibold text-slate-900 mb-2">Call Us</h3>
-              <a href="tel:+27123456789" className="text-blue-600 hover:text-blue-700">
-                +27 12 345 6789
+              <a href="mailto:info@auxo.digital" className="text-green-600 hover:text-green-700">
+                info@auxo.digital
               </a>
             </div>
             
             <div className="flex flex-col items-center">
               <div className="p-3 bg-orange-100 rounded-lg mb-4">
-                <MapPin className="w-6 h-6 text-orange-600" />
+                <Coffee className="w-6 h-6 text-orange-600" />
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2">Visit Us</h3>
-              <span className="text-slate-600">Cape Town, South Africa</span>
+              <h3 className="font-semibold text-slate-900 mb-2">Let's Grab a Coffee</h3>
+              <span className="text-slate-600">Johannesburg, South Africa</span>
             </div>
           </div>
         </div>

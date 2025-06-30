@@ -78,7 +78,21 @@ export const Header = () => {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else if (href === "/features#faq") {
+      e.preventDefault();
+      
+      // Navigate to features page and then scroll to FAQ section
+      if (window.location.pathname !== '/features') {
+        window.location.href = href;
+      } else {
+        // If already on features page, just scroll to FAQ
+        const faqElement = document.getElementById("faq");
+        if (faqElement) {
+          faqElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     }
+    
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   };
@@ -266,7 +280,7 @@ export const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60 overflow-hidden"
           >
-            <div className="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="px-4 py-6 space-y-4 max-h-96 overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.subItems ? (

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Heart, Users, Zap, Target, Mail, ExternalLink, Lightbulb, Globe, Code, Rocket, Brain, Wrench } from 'lucide-react';
+import { Heart, Users, Zap, Target, Mail, ExternalLink, Lightbulb, Globe, Code, Rocket, Brain, Wrench, Coffee } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import Image from 'next/image';
@@ -191,6 +191,15 @@ export default function AboutPage() {
                   >
                     <Mail className="mr-2 w-4 h-4" />
                     Connect
+                  </a>
+                  <a 
+                    href="https://buymeacoffee.com/ozrazak" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-orange-500 text-orange-600 rounded-lg font-semibold hover:bg-orange-50 transition-colours text-sm"
+                  >
+                    <Coffee className="mr-2 w-4 h-4" />
+                    Buy Me a Coffee
                   </a>
                 </div>
               </div>
