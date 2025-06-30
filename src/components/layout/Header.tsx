@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown } from "lucide-react";
+import { Home, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown, Zap } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
@@ -26,12 +26,13 @@ export const Header = () => {
       icon: Home 
     },
     {
-      name: "Product",
-      icon: Info,
+      name: "Features",
+      icon: Zap,
       subItems: [
-        { name: "Features", href: "/#features" },
+        { name: "Platform Features", href: "/features" },
         { name: "How It Works", href: "/#how-it-works" },
         { name: "Impact", href: "/#impact" },
+        { name: "FAQ", href: "/features#faq" },
       ]
     },
     {
@@ -40,7 +41,7 @@ export const Header = () => {
       subItems: [
         { name: "Blog", href: "/blog" },
         { name: "Career Insights", href: "/blog" },
-        { name: "Interview Tips", href: "/blog" },
+        { name: "Interview Tips", href: "/interview-tips" },
       ]
     },
     {
@@ -48,7 +49,6 @@ export const Header = () => {
       icon: Building,
       subItems: [
         { name: "About Auxo Digital", href: "/about" },
-        { name: "Our Mission", href: "/about#mission" },
         { name: "Meet the Team", href: "/about#team" },
         { name: "Building with Bolt & Auxo", href: "/building-with-bolt" },
       ]
