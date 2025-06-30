@@ -1,14 +1,12 @@
+"use client";
+
 import React, { useState } from 'react';
-import { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FileText, AlertTriangle, Clock, Shield, ChevronDown, ChevronUp, CheckCircle, ExternalLink, Info, User, Lock, Database, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export const metadata: Metadata = {
-  title: 'Terms of Service - JobSpark',
-  description: 'Terms of Service for JobSpark - Your AI Career Co-Pilot',
-};
+// Metadata is handled in layout.tsx for client components
 
 export default function TermsPage() {
   return (
@@ -450,8 +448,8 @@ export default function TermsPage() {
                           <p className="text-slate-700"><strong>Address:</strong> 6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
                         </div>
                         <div>
-                          <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className=\"text-green-600 hover:text-green-700">jobspark.co.za</a></p>
-                          <p className="text-slate-700 mt-4"><strong>Early Access Information:</strong> <a href="/features/early-access" className=\"text-orange-600 hover:text-orange-700">View Early Access Details</a></p>
+                          <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className="text-green-600 hover:text-green-700">jobspark.co.za</a></p>
+                          <p className="text-slate-700 mt-4"><strong>Early Access Information:</strong> <a href="/features/early-access" className="text-orange-600 hover:text-orange-700">View Early Access Details</a></p>
                         </div>
                       </div>
                     </div>
