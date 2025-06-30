@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "JobSpark",
+  "alternateName": "JobSpark - Your AI Career Co-Pilot",
+  "url": "https://jobspark.co.za",
+  "description": "JobSpark helps you find your dream job with AI-powered tools and personalized career guidance.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://jobspark.co.za/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Auxo Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jobspark.co.za/icon-512x512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "sameAs": [
+    "https://twitter.com/jobsparkza",
+    "https://www.facebook.com/jobsparkza",
+    "https://www.linkedin.com/company/jobsparkza",
+    "https://www.instagram.com/jobsparkza"
+  ]
+} 

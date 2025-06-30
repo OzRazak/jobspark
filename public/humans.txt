@@ -1,0 +1,12 @@
+/* TEAM */
+	Creator: Auxo Digital
+	Contact: hello@auxodigital.com
+	Twitter: @auxodigital
+	From: Cape Town, South Africa
+
+/* SITE */
+	Last update: 2023-10-01
+	Language: English
+	Doctype: HTML5
+	IDE: VS Code, Figma
+	Stack: Next.js, React, TailwindCSS 

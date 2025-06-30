@@ -1,0 +1,39 @@
+{
+  "name": "JobSpark - Your AI Career Co-Pilot",
+  "short_name": "JobSpark",
+  "description": "JobSpark helps you find your dream job with AI-powered tools and personalized career guidance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "lang": "en-ZA",
+  "categories": ["career", "jobs", "productivity", "tools"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Features",
+      "url": "/features",
+      "description": "Explore JobSpark features"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog",
+      "description": "Read our latest articles"
+    }
+  ]
+} 

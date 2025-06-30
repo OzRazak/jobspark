@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JobSpark",
+  "url": "https://jobspark.co.za",
+  "logo": "https://jobspark.co.za/icon-512x512.png",
+  "description": "JobSpark helps you find your dream job with AI-powered tools and personalized career guidance.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cape Town",
+    "addressRegion": "Western Cape",
+    "addressCountry": "South Africa"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@jobspark.co.za"
+  },
+  "sameAs": [
+    "https://twitter.com/jobsparkza",
+    "https://www.facebook.com/jobsparkza",
+    "https://www.linkedin.com/company/jobsparkza",
+    "https://www.instagram.com/jobsparkza"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Auxo Digital"
+  },
+  "foundingDate": "2023",
+  "numberOfEmployees": "5-10",
+  "slogan": "Your AI Career Co-Pilot"
+} 

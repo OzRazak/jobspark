@@ -1,0 +1,5 @@
+Contact: mailto:security@jobspark.co.za
+Expires: 2025-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://jobspark.co.za/.well-known/security.txt
+Policy: https://jobspark.co.za/security-policy 
