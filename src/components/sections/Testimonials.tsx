@@ -8,7 +8,7 @@ import Image from "next/image";
 const testimonials = [
     { 
       name: "Thabo Mthembu", 
-      role: "Software Engineer, Vodacom", 
+      role: "Software Engineer", 
       content: "JobSpark's AI CV builder is a game-changer. It helped me highlight my skills in a way I never could have on my own. I landed my dream job in just three weeks.", 
       avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5,
@@ -16,43 +16,59 @@ const testimonials = [
     },
     { 
       name: "Nomsa Dlamini", 
-      role: "Marketing Manager, Takealot", 
+      role: "Marketing Manager", 
       content: "The interview prep tool was incredible. I went into my interviews feeling so much more confident and prepared. It made all the difference.", 
       avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5,
       location: "Cape Town"
     },
     { 
-      name: "Michael Botha", 
-      role: "Data Analyst, Standard Bank", 
+      name: "Sipho Ndaba", 
+      role: "Data Analyst", 
       content: "A fantastic platform for the South African market. The direct connections to employers are invaluable. I received three offers!", 
-      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150",
+      avatar: "https://images.pexels.com/photos/2182973/pexels-photo-2182973.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5,
       location: "Durban"
     },
     { 
       name: "Lerato Mokwena", 
-      role: "HR Specialist, Discovery", 
+      role: "HR Specialist", 
       content: "As someone who reviews CVs daily, I can say JobSpark creates truly professional documents. The Ubuntu integration in interview prep is brilliant.", 
       avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5,
       location: "Johannesburg"
     },
     { 
-      name: "Sipho Ndaba", 
-      role: "Junior Developer, Naspers", 
+      name: "Mandla Khumalo", 
+      role: "Junior Developer", 
       content: "Coming from a disadvantaged background, JobSpark gave me the confidence I needed. The voice coach understood my accent perfectly.", 
-      avatar: "https://images.pexels.com/photos/2182973/pexels-photo-2182973.jpeg?auto=compress&cs=tinysrgb&w=150",
+      avatar: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5,
       location: "Cape Town"
     },
     { 
       name: "Zanele Khumalo", 
-      role: "Financial Analyst, FNB", 
+      role: "Financial Analyst", 
       content: "The gamification kept me motivated throughout my job search. Earning badges for practice sessions made the whole process enjoyable.", 
       avatar: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5,
       location: "Pretoria"
+    },
+    { 
+      name: "Bongani Mthethwa", 
+      role: "Project Manager", 
+      content: "The cultural awareness of the AI coach is impressive. It helped me prepare for questions about Ubuntu and teamwork in a way that felt authentic.", 
+      avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150",
+      rating: 5,
+      location: "Durban"
+    },
+    { 
+      name: "Naledi Motsepe", 
+      role: "Business Analyst", 
+      content: "JobSpark helped me transition from retail to corporate. The interview practice gave me the confidence to aim higher and succeed.", 
+      avatar: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=150",
+      rating: 5,
+      location: "Johannesburg"
     }
 ];
 
