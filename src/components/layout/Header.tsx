@@ -32,7 +32,7 @@ export const Header = () => {
     },
     {
       name: "Resources",
-      icon: BookBook,
+      icon: BookOpen,
       subItems: [
         { name: "Blog", href: "/blog" },
         { name: "Interview Tips", href: "/interview-tips" },
