@@ -11,8 +11,8 @@ export const AuxoDigitalSection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
-  const founderMessage1 = ""When we first thought of JobSpark, two issues for us came to mind. One was helping more people find purpose through meaningful work and in that helping in a very small way with the job crisis issue we have in South Africa."";
-  const founderMessage2 = ""Secondly, we are a startup that often has to go through thousands of CVs and hundreds of interviews in a year. We come across good, skilled people, that often due to nervousness, perhaps lack of practice, do not put their best foot forward in an interview, which is usually the make or break as to whether we progress to a case study or even hiring."";
+  const founderMessage1 = "\"When we first thought of JobSpark, two issues for us came to mind. One was helping more people find purpose through meaningful work and in that helping in a very small way with the job crisis issue we have in South Africa."";
+  const founderMessage2 = "\"Secondly, we are a startup that often has to go through thousands of CVs and hundreds of interviews in a year. We come across good, skilled people, that often due to nervousness, perhaps lack of practice, do not put their best foot forward in an interview, which is usually the make or break as to whether we progress to a case study or even hiring."";
 
   return (
     <section ref={sectionRef} className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
