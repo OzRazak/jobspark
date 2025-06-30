@@ -1,14 +1,13 @@
+'use client';
+
 import { Metadata } from 'next';
 import { Check, AlertTriangle, Heart, Zap, Shield, CreditCard, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
 
-export const metadata: Metadata = {
-  title: 'Pricing - JobSpark',
-  description: 'Affordable plans to help you accelerate your career with JobSpark\'s AI-powered tools.',
-  keywords: 'JobSpark pricing, career tools pricing, interview practice, CV builder, South Africa',
-};
+// Note: Metadata export is removed since this is now a client component
+// SEO will be handled by the layout or through other means
 
 export default function PricingPage() {
   const plans = [
