@@ -231,7 +231,7 @@ export default function TermsPage() {
                   <p className="text-slate-700"><strong>Email:</strong> info@auxo.digital</p>
                   <p className="text-slate-700"><strong>Phone:</strong> +27 21 8480 9</p>
                   <p className="text-slate-700"><strong>Address:</strong> 6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
-                  <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className="text-green-600 hover:text-green-700">jobspark.co.za</a></p>
+                  <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className=\"text-green-600 hover:text-green-700">jobspark.co.za</a></p>
                 </div>
               </section>
             </div>
