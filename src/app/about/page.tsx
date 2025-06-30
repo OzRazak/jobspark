@@ -35,14 +35,14 @@ export default function AboutPage() {
               href="https://auxo.digital/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours"
             >
               Visit Auxo Digital
               <ExternalLink className="ml-2 w-5 h-5" />
             </a>
             <a 
               href="mailto:info@auxo.digital" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colours"
             >
               Get in Touch
             </a>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                     <h3 className="font-semibold text-slate-900 mb-2">Our Core Mission</h3>
                     <p className="text-slate-600">
                       At Auxo Digital, our mission is to help people feel more like themselves and have more time 
-                      focusing on what's important as humans. We believe technology should enhance human potential, 
+                      focussing on what's important as humans. We believe technology should enhance human potential, 
                       not replace it.
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Heart className="w-5 h-5 text-green-600" />
-                  <span className="text-slate-700">Human-centered design approach</span>
+                  <span className="text-slate-700">Human-centred design approach</span>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-center text-center">
                 <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-green-200">
                   <Image
-                    src="/oz-image-new.jpeg"
+                    src="/OZ10 Large Medium copy copy.jpeg"
                     alt="Oz Razak"
                     width={128}
                     height={128}
@@ -172,7 +172,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-slate-700 leading-relaxed mb-6 italic">
                   "We've seen too many talented individuals struggle not because they lack ability, but because they 
-                  lack the confidence and tools to showcase their true potential. JobSpark is our way of leveling 
+                  lack the confidence and tools to showcase their true potential. JobSpark is our way of levelling 
                   the playing field and giving everyone the chance to shine."
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
@@ -180,14 +180,14 @@ export default function AboutPage() {
                     href="https://auxo.digital/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colours text-sm"
                   >
                     <ExternalLink className="mr-2 w-4 h-4" />
                     Auxo Digital
                   </a>
                   <a 
                     href="mailto:info@auxo.digital" 
-                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours text-sm"
                   >
                     <Mail className="mr-2 w-4 h-4" />
                     Connect
@@ -237,14 +237,14 @@ export default function AboutPage() {
                     href="https://auxo.digital/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colours text-sm"
                   >
                     <ExternalLink className="mr-2 w-4 h-4" />
                     Auxo Digital
                   </a>
                   <a 
                     href="mailto:info@auxo.digital" 
-                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colours text-sm"
                   >
                     <Mail className="mr-2 w-4 h-4" />
                     Connect
@@ -273,7 +273,7 @@ export default function AboutPage() {
               <div className="p-4 bg-green-100 rounded-full w-fit mx-auto mb-4">
                 <Heart className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Human-Centered</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Human-Centred</h3>
               <p className="text-slate-600">
                 Technology should enhance human potential, not replace it. We build solutions that help people 
                 feel more like themselves and focus on what truly matters.
@@ -376,7 +376,7 @@ export default function AboutPage() {
             </p>
             <a 
               href="mailto:info@auxo.digital" 
-              className="inline-flex items-center px-6 py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours"
             >
               Start the Conversation
               <Mail className="ml-2 w-4 h-4" />

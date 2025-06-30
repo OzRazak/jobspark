@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
-import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Code, Globe, Zap, TrendingUp, Users, Heart, ExternalLink, Building, Lightbulb, Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Tag, Code, Globe, Zap, TrendingUp, Users, Heart, ExternalLink, Building, Lightbulb, Target, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { ShareButton } from '@/components/ui/ShareButton';
 
 export const metadata: Metadata = {
   title: 'Why South Africa Desperately Needs More Free, Open Source Software Solutions - JobSpark Blog',
@@ -36,14 +37,14 @@ export default function OpenSourceSoftwarePost() {
     {
       id: 'future-platform-expansion',
       title: 'Our Future Ideas for Expanding the Platform',
-      excerpt: 'Introducing TalentSpark Portal - our vision for revolutionizing B2B hiring.',
+      excerpt: 'Introducing TalentSpark Portal - our vision for revolutionising B2B hiring.',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400',
       category: 'Platform Development',
       readTime: '15 min read'
     },
     {
       id: 'ai-revolution-south-african-job-market',
-      title: 'How AI is Revolutionizing the South African Job Market in 2025',
+      title: 'How AI is Revolutionising the South African Job Market in 2025',
       excerpt: 'Discover how artificial intelligence is transforming recruitment and creating new opportunities.',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400',
       category: 'AI & Technology',
@@ -96,11 +97,12 @@ export default function OpenSourceSoftwarePost() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-              <Share2 className="w-4 h-4" />
-              <span>Share</span>
-            </button>
-            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
+            <ShareButton 
+              url={typeof window !== 'undefined' ? window.location.href : ''}
+              title={post.title}
+              description={post.excerpt}
+            />
+            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colours">
               <Bookmark className="w-4 h-4" />
               <span>Save</span>
             </button>
@@ -124,7 +126,7 @@ export default function OpenSourceSoftwarePost() {
         <div className="prose prose-lg prose-slate max-w-none">
           
           <p className="text-xl text-slate-700 leading-relaxed mb-8">
-            South Africa stands at a critical juncture. With a 32.9% youth unemployment rate, massive inequality, and infrastructure challenges that would take decades to solve through traditional means, we need solutions that can leapfrog conventional development paths. The answer lies not in expensive proprietary software or foreign aid, but in the democratizing power of free, open source software that can be adapted, improved, and scaled by our own communities.
+            South Africa stands at a critical juncture. With a 32.9% youth unemployment rate, massive inequality, and infrastructure challenges that would take decades to solve through traditional means, we need solutions that can leapfrog conventional development paths. The answer lies not in expensive proprietary software or foreign aid, but in the democratising power of free, open source software that can be adapted, improved, and scaled by our own communities.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Scale of South Africa's Digital Divide</h2>
@@ -165,7 +167,7 @@ export default function OpenSourceSoftwarePost() {
 
           <h3 className="text-xl font-semibold text-slate-800 mb-4">India's Digital Revolution</h3>
           <p className="text-slate-700 leading-relaxed mb-6">
-            India's <a href="https://www.indiastack.org/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">India Stack</a> initiative, built on open source principles, has revolutionized digital payments and identity verification. The Unified Payments Interface (UPI), launched in 2016, now processes over <a href="https://www.npci.org.in/what-we-do/upi/product-statistics" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">8 billion transactions monthly</a>, bringing millions into the formal economy.
+            India's <a href="https://www.indiastack.org/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">India Stack</a> initiative, built on open source principles, has revolutionised digital payments and identity verification. The Unified Payments Interface (UPI), launched in 2016, now processes over <a href="https://www.npci.org.in/what-we-do/upi/product-statistics" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">8 billion transactions monthly</a>, bringing millions into the formal economy.
           </p>
 
           <div className="bg-blue-50 p-6 rounded-xl my-8">
@@ -211,7 +213,7 @@ export default function OpenSourceSoftwarePost() {
                 <h3 className="text-lg font-semibold text-slate-900">Cost Accessibility</h3>
               </div>
               <p className="text-slate-600 mb-4">
-                With 55.5% of South Africans living below the poverty line according to <a href="https://www.statssa.gov.za/publications/P03101/P031012022.pdf" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">Stats SA</a>, expensive proprietary software licenses are simply not viable for most individuals and organizations.
+                With 55.5% of South Africans living below the poverty line according to <a href="https://www.statssa.gov.za/publications/P03101/P031012022.pdf" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">Stats SA</a>, expensive proprietary software licences are simply not viable for most individuals and organisations.
               </p>
               <ul className="text-slate-600 text-sm space-y-1">
                 <li>• No licensing fees or subscription costs</li>
@@ -276,7 +278,7 @@ export default function OpenSourceSoftwarePost() {
 
           <h3 className="text-xl font-semibold text-slate-800 mb-4">1. Education Technology</h3>
           <p className="text-slate-700 leading-relaxed mb-6">
-            The <a href="https://www.education.gov.za/Portals/0/Documents/Reports/NEEDU%20NATIONAL%20REPORT%202012.pdf" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">National Education Evaluation and Development Unit</a> reports that only 58% of Grade 4 learners can read for meaning. Open source educational platforms could provide personalized learning experiences at scale.
+            The <a href="https://www.education.gov.za/Portals/0/Documents/Reports/NEEDU%20NATIONAL%20REPORT%202012.pdf" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">National Education Evaluation and Development Unit</a> reports that only 58% of Grade 4 learners can read for meaning. Open source educational platforms could provide personalised learning experiences at scale.
           </p>
 
           <div className="bg-slate-50 p-6 rounded-xl my-6">
@@ -300,7 +302,7 @@ export default function OpenSourceSoftwarePost() {
 
           <h3 className="text-xl font-semibold text-slate-800 mb-4">4. Government Services</h3>
           <p className="text-slate-700 leading-relaxed mb-6">
-            Digital government services could save billions in administrative costs while improving service delivery. The <a href="https://www.gov.za/about-government/government-programmes/digital-government" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">South African Digital Government Strategy</a> recognizes this potential but implementation has been slow.
+            Digital government services could save billions in administrative costs while improving service delivery. The <a href="https://www.gov.za/about-government/government-programmes/digital-government" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">South African Digital Government Strategy</a> recognises this potential but implementation has been slow.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Auxo Digital: Leading the Charge with Custom AI Platforms</h2>
@@ -326,9 +328,9 @@ export default function OpenSourceSoftwarePost() {
               </div>
               
               <div>
-                <h4 className="font-semibold text-slate-900 mb-3">AI Specialization</h4>
+                <h4 className="font-semibold text-slate-900 mb-3">AI Specialisation</h4>
                 <p className="text-slate-700 mb-4">
-                  Our team specializes in integrating cutting-edge AI capabilities into practical business solutions, making advanced technology accessible to South African organizations.
+                  Our team specialises in integrating cutting-edge AI capabilities into practical business solutions, making advanced technology accessible to South African organisations.
                 </p>
                 <ul className="text-slate-600 text-sm space-y-1">
                   <li>• Natural language processing</li>
@@ -404,7 +406,7 @@ export default function OpenSourceSoftwarePost() {
               <div>
                 <h4 className="font-semibold text-slate-900 mb-2">Distributed Energy Management</h4>
                 <p className="text-slate-700">
-                  Smart grid software could optimize renewable energy distribution, reducing dependence on centralized power generation and improving energy access in remote areas.
+                  Smart grid software could optimise renewable energy distribution, reducing dependence on centralised power generation and improving energy access in remote areas.
                 </p>
               </div>
             </div>
@@ -423,7 +425,7 @@ export default function OpenSourceSoftwarePost() {
                 <li>• Open source procurement policies</li>
                 <li>• Tax incentives for open source development</li>
                 <li>• Public sector open source mandates</li>
-                <li>• Digital skills training programs</li>
+                <li>• Digital skills training programmes</li>
                 <li>• Open data initiatives</li>
               </ul>
             </div>
@@ -433,7 +435,7 @@ export default function OpenSourceSoftwarePost() {
               <ul className="text-slate-600 space-y-2">
                 <li>• Corporate open source contributions</li>
                 <li>• Funding for community projects</li>
-                <li>• Mentorship programs</li>
+                <li>• Mentorship programmes</li>
                 <li>• Internship opportunities</li>
                 <li>• Open source adoption strategies</li>
               </ul>
@@ -443,7 +445,7 @@ export default function OpenSourceSoftwarePost() {
               <h3 className="text-lg font-semibold text-slate-900 mb-4">Educational Integration</h3>
               <ul className="text-slate-600 space-y-2">
                 <li>• Open source curriculum development</li>
-                <li>• Student contribution programs</li>
+                <li>• Student contribution programmes</li>
                 <li>• Research partnerships</li>
                 <li>• Hackathons and coding competitions</li>
                 <li>• Industry-academia collaboration</li>
@@ -495,7 +497,7 @@ export default function OpenSourceSoftwarePost() {
           <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-xl my-12">
             <h3 className="text-2xl font-bold mb-4">Partner with Auxo Digital</h3>
             <p className="text-green-100 mb-6">
-              We're actively seeking partnerships with forward-thinking organizations that want to be part of South Africa's digital transformation. Whether you're a business looking for custom AI solutions, a government department seeking to improve service delivery, or an NGO wanting to maximize your impact, we can help you build the tools you need.
+              We're actively seeking partnerships with forward-thinking organisations that want to be part of South Africa's digital transformation. Whether you're a business looking for custom AI solutions, a government department seeking to improve service delivery, or an NGO wanting to maximise your impact, we can help you build the tools you need.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -509,12 +511,12 @@ export default function OpenSourceSoftwarePost() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-2">For Organizations</h4>
+                <h4 className="font-semibold text-white mb-2">For Organisations</h4>
                 <ul className="text-green-100 text-sm space-y-1">
                   <li>• Social impact platform development</li>
                   <li>• Community engagement tools</li>
                   <li>• Data analytics and insights</li>
-                  <li>• Capacity building programs</li>
+                  <li>• Capacity building programmes</li>
                 </ul>
               </div>
             </div>
@@ -522,7 +524,7 @@ export default function OpenSourceSoftwarePost() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="mailto:info@auxo.digital" 
-                className="px-6 py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center"
+                className="px-6 py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours text-center"
               >
                 Start a Conversation
               </a>
@@ -530,7 +532,7 @@ export default function OpenSourceSoftwarePost() {
                 href="https://auxo.digital/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-center"
+                className="px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colours text-center"
               >
                 Learn More About Auxo
               </a>
@@ -609,14 +611,14 @@ export default function OpenSourceSoftwarePost() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="mailto:info@auxo.digital" 
-                className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colours"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>
               <a 
                 href="https://app.jobspark.co.za/auth" 
-                className="px-6 py-3 border border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+                className="px-6 py-3 border border-green-600 text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours"
               >
                 Try JobSpark Free
               </a>
@@ -653,7 +655,7 @@ export default function OpenSourceSoftwarePost() {
             {post.tags.map((tag) => (
               <span 
                 key={tag}
-                className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full hover:bg-slate-200 transition-colors"
+                className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full hover:bg-slate-200 transition-colours"
               >
                 {tag}
               </span>
@@ -681,7 +683,7 @@ export default function OpenSourceSoftwarePost() {
                   <h3 className="text-lg font-semibold text-slate-900 mb-3">
                     <Link 
                       href={`/blog/${relatedPost.id}`}
-                      className="hover:text-green-600 transition-colors"
+                      className="hover:text-green-600 transition-colours"
                     >
                       {relatedPost.title}
                     </Link>

@@ -31,7 +31,6 @@ export const Header = () => {
       subItems: [
         { name: "Platform Features", href: "/features" },
         { name: "How It Works", href: "/#how-it-works" },
-        { name: "Impact", href: "/#impact" },
         { name: "FAQ", href: "/features#faq" },
       ]
     },
@@ -205,7 +204,7 @@ export const Header = () => {
               className="w-8 h-8 lg:w-10 lg:h-10"
             >
               <Image
-                src="/bolt-logo-circle.svg"
+                src="/black_circle_360x360.png"
                 alt="Powered by Bolt.new"
                 width={40}
                 height={40}

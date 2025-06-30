@@ -1,16 +1,17 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Tag, Bookmark } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { ShareButton } from '@/components/ui/ShareButton';
 
 // This would typically come from a CMS or database
 const blogPosts = [
   {
     id: 'ai-revolution-south-african-job-market',
-    title: 'How AI is Revolutionizing the South African Job Market in 2025',
+    title: 'How AI is Revolutionising the South African Job Market in 2025',
     excerpt: 'Discover how artificial intelligence is transforming recruitment, creating new opportunities, and what job seekers need to know to stay competitive in the evolving landscape.',
     content: `
       <p>The South African job market is experiencing a seismic shift as artificial intelligence (AI) transforms how companies recruit, evaluate, and hire talent. With youth unemployment at a staggering 32.9% according to <a href="https://www.statssa.gov.za" target="_blank" rel="noopener noreferrer">Statistics South Africa</a>, understanding these changes isn't just beneficial—it's essential for career survival.</p>
@@ -21,7 +22,7 @@ const blogPosts = [
       <h3>Key AI Technologies Reshaping Recruitment:</h3>
       <ul>
         <li><strong>Applicant Tracking Systems (ATS):</strong> 78% of large South African companies now use ATS with AI capabilities</li>
-        <li><strong>Video Interview Analysis:</strong> AI analyzes facial expressions, speech patterns, and word choice</li>
+        <li><strong>Video Interview Analysis:</strong> AI analyses facial expressions, speech patterns, and word choice</li>
         <li><strong>Predictive Analytics:</strong> Algorithms predict job performance based on historical data</li>
         <li><strong>Chatbot Screening:</strong> Initial candidate interactions handled by AI assistants</li>
       </ul>
@@ -31,8 +32,8 @@ const blogPosts = [
 
       <h3>How to Leverage AI in Your Job Search:</h3>
       <ol>
-        <li><strong>Optimize Your CV for ATS:</strong> Use relevant keywords from job descriptions</li>
-        <li><strong>Practice with AI Interview Tools:</strong> Platforms like JobSpark help you prepare for AI-analyzed interviews</li>
+        <li><strong>Optimise Your CV for ATS:</strong> Use relevant keywords from job descriptions</li>
+        <li><strong>Practice with AI Interview Tools:</strong> Platforms like JobSpark help you prepare for AI-analysed interviews</li>
         <li><strong>Develop AI-Complementary Skills:</strong> Focus on creativity, emotional intelligence, and complex problem-solving</li>
         <li><strong>Stay Updated:</strong> Follow AI trends in your industry</li>
       </ol>
@@ -65,8 +66,8 @@ const blogPosts = [
 
       <p>Remember, every challenge presents an opportunity. With 32.9% youth unemployment, those who master AI-enhanced job searching will stand out from the crowd and significantly improve their chances of landing their dream job.</p>
     `,
-    author: 'Dr. Sarah Mthembu',
-    authorBio: 'AI Researcher and Career Development Expert',
+    author: 'Theodore Egling',
+    authorBio: 'Co-Founder & Technical Director at Auxo Digital',
     date: '2025-01-15',
     readTime: '8 min read',
     category: 'AI & Technology',
@@ -82,12 +83,12 @@ const blogPosts = [
       <p>In the South African job market, understanding and articulating the Ubuntu philosophy can set you apart from other candidates. Ubuntu—"I am because we are"—isn't just a cultural concept; it's a powerful framework that resonates deeply with South African employers and reflects the collaborative spirit essential in modern workplaces.</p>
 
       <h2>What is Ubuntu in the Professional Context?</h2>
-      <p>Ubuntu, derived from the Nguni phrase "umuntu ngumuntu ngabantu," emphasizes interconnectedness, empathy, and collective responsibility. In professional settings, this translates to teamwork, inclusive leadership, and community-focused problem-solving.</p>
+      <p>Ubuntu, derived from the Nguni phrase "umuntu ngumuntu ngabantu," emphasises interconnectedness, empathy, and collective responsibility. In professional settings, this translates to teamwork, inclusive leadership, and community-focused problem-solving.</p>
 
       <p>According to research by the <a href="https://www.uct.ac.za" target="_blank" rel="noopener noreferrer">University of Cape Town's Graduate School of Business</a>, 89% of South African executives consider Ubuntu principles essential for effective leadership.</p>
 
       <h2>Why Ubuntu Matters to South African Employers</h2>
-      <p>South African companies, from <a href="https://www.sasol.com" target="_blank" rel="noopener noreferrer">Sasol</a> to <a href="https://www.shoprite.co.za" target="_blank" rel="noopener noreferrer">Shoprite</a>, increasingly value candidates who can navigate diverse teams and build inclusive workplace cultures. The <a href="https://www.beecommission.co.za" target="_blank" rel="noopener noreferrer">B-BBEE Commission</a> emphasizes that transformation isn't just about numbers—it's about creating genuinely inclusive environments.</p>
+      <p>South African companies, from <a href="https://www.sasol.com" target="_blank" rel="noopener noreferrer">Sasol</a> to <a href="https://www.shoprite.co.za" target="_blank" rel="noopener noreferrer">Shoprite</a>, increasingly value candidates who can navigate diverse teams and build inclusive workplace cultures. The <a href="https://www.beecommission.co.za" target="_blank" rel="noopener noreferrer">B-BBEE Commission</a> emphasises that transformation isn't just about numbers—it's about creating genuinely inclusive environments.</p>
 
       <h3>Key Ubuntu Principles Employers Value:</h3>
       <ul>
@@ -99,7 +100,7 @@ const blogPosts = [
       </ul>
 
       <h2>How to Demonstrate Ubuntu in Interview Responses</h2>
-      <p>When answering behavioral interview questions, frame your experiences using Ubuntu principles. Here's how to structure your responses:</p>
+      <p>When answering behavioural interview questions, frame your experiences using Ubuntu principles. Here's how to structure your responses:</p>
 
       <h3>The UBUNTU Framework for Interview Responses:</h3>
       <ul>
@@ -116,7 +117,7 @@ const blogPosts = [
       <h3>Question: "Tell me about a time you led a difficult project."</h3>
       <p><strong>Ubuntu-Inspired Response Structure:</strong></p>
       <blockquote>
-        "I believe in the principle that 'I am because we are,' so when I was tasked with leading our quarterly sales project, I started by understanding each team member's strengths and challenges. Rather than dictating tasks, I facilitated discussions where everyone could contribute ideas. When we hit obstacles, we addressed them collectively, ensuring no one felt isolated. The project succeeded because we succeeded together, and I made sure to recognize everyone's contributions in our final presentation."
+        "I believe in the principle that 'I am because we are,' so when I was tasked with leading our quarterly sales project, I started by understanding each team member's strengths and challenges. Rather than dictating tasks, I facilitated discussions where everyone could contribute ideas. When we hit obstacles, we addressed them collectively, ensuring no one felt isolated. The project succeeded because we succeeded together, and I made sure to recognise everyone's contributions in our final presentation."
       </blockquote>
 
       <h3>Question: "How do you handle conflict in the workplace?"</h3>
@@ -128,7 +129,7 @@ const blogPosts = [
       <h2>Industry-Specific Ubuntu Applications</h2>
 
       <h3>Financial Services (Banks, Insurance)</h3>
-      <p>Emphasize how Ubuntu principles help build trust with clients and create inclusive financial solutions. Companies like <a href="https://www.oldmutual.co.za" target="_blank" rel="noopener noreferrer">Old Mutual</a> and <a href="https://www.fnb.co.za" target="_blank" rel="noopener noreferrer">FNB</a> value advisors who understand community needs.</p>
+      <p>Emphasise how Ubuntu principles help build trust with clients and create inclusive financial solutions. Companies like <a href="https://www.oldmutual.co.za" target="_blank" rel="noopener noreferrer">Old Mutual</a> and <a href="https://www.fnb.co.za" target="_blank" rel="noopener noreferrer">FNB</a> value advisors who understand community needs.</p>
 
       <h3>Technology Sector</h3>
       <p>Highlight how Ubuntu fosters innovation through diverse perspectives and collaborative problem-solving. Tech companies like <a href="https://www.naspers.com" target="_blank" rel="noopener noreferrer">Naspers</a> seek developers who can work effectively in multicultural teams.</p>
@@ -146,7 +147,7 @@ const blogPosts = [
           <th style="border: 1px solid #dee2e6; padding: 12px; text-align: left;">Tokenism</th>
         </tr>
         <tr>
-          <td style="border: 1px solid #dee2e6; padding: 12px;">Specific examples of collaborative behavior</td>
+          <td style="border: 1px solid #dee2e6; padding: 12px;">Specific examples of collaborative behaviour</td>
           <td style="border: 1px solid #dee2e6; padding: 12px;">Vague references to "working together"</td>
         </tr>
         <tr style="background-color: #f8f9fa;">
@@ -155,11 +156,11 @@ const blogPosts = [
         </tr>
         <tr>
           <td style="border: 1px solid #dee2e6; padding: 12px;">Showing how you've uplifted others</td>
-          <td style="border: 1px solid #dee2e6; padding: 12px;">Focusing only on personal achievements</td>
+          <td style="border: 1px solid #dee2e6; padding: 12px;">Focussing only on personal achievements</td>
         </tr>
       </table>
 
-      <h2>Preparing Ubuntu-Centered Interview Responses</h2>
+      <h2>Preparing Ubuntu-Centred Interview Responses</h2>
       <p>Practice articulating your experiences through an Ubuntu lens. Use the STAR method (Situation, Task, Action, Result) but ensure your actions demonstrate Ubuntu principles.</p>
 
       <h3>Practice Exercise:</h3>
@@ -171,12 +172,12 @@ const blogPosts = [
       </ol>
 
       <h2>The Competitive Advantage</h2>
-      <p>In a job market where technical skills can be taught, Ubuntu represents something deeper—a worldview that aligns with South Africa's transformation goals and modern workplace values. Candidates who can authentically demonstrate Ubuntu principles show they understand not just how to do the job, but how to do it in a way that builds stronger, more inclusive organizations.</p>
+      <p>In a job market where technical skills can be taught, Ubuntu represents something deeper—a worldview that aligns with South Africa's transformation goals and modern workplace values. Candidates who can authentically demonstrate Ubuntu principles show they understand not just how to do the job, but how to do it in a way that builds stronger, more inclusive organisations.</p>
 
       <p>Remember, Ubuntu isn't just about getting the job—it's about succeeding in the job and contributing to a workplace culture that reflects the best of South African values. When you embody Ubuntu in your interview, you're not just answering questions; you're demonstrating the kind of leader and colleague you'll be.</p>
     `,
-    author: 'Thabo Mokwena',
-    authorBio: 'Cultural Leadership Consultant and Former HR Director',
+    author: 'Oz Razak',
+    authorBio: 'Founder of Auxo Digital and Creator of JobSpark',
     date: '2025-01-12',
     readTime: '10 min read',
     category: 'Interview Skills',
@@ -205,7 +206,7 @@ const blogPosts = [
       <h2>Most In-Demand Digital Skills in South Africa</h2>
       <p>Based on analysis of job postings from <a href="https://www.careers24.com" target="_blank" rel="noopener noreferrer">Careers24</a>, <a href="https://www.pnet.co.za" target="_blank" rel="noopener noreferrer">PNet</a>, and <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>, these digital skills are most sought after by South African employers:</p>
 
-      <h3>1. Data Analysis and Visualization</h3>
+      <h3>1. Data Analysis and Visualisation</h3>
       <p><strong>Why it matters:</strong> Every business needs to understand their data to make informed decisions.</p>
       <p><strong>Tools to learn:</strong> Excel (advanced), Google Analytics, Power BI, Tableau</p>
       <p><strong>Salary range:</strong> R25,000 - R45,000 per month</p>
@@ -256,7 +257,7 @@ const blogPosts = [
       <h2>Success Stories: South Africans Who Transformed Their Careers</h2>
 
       <h3>Case Study 1: Nomsa from Soweto</h3>
-      <p>Nomsa was unemployed for 18 months after completing her BCom degree. She spent 6 months learning digital marketing through free online courses and practicing on her own social media accounts. She's now a Digital Marketing Specialist at a Cape Town agency, earning R32,000 per month and working remotely.</p>
+      <p>Nomsa was unemployed for 18 months after completing her BCom degree. She spent 6 months learning digital marketing through free online courses and practising on her own social media accounts. She's now a Digital Marketing Specialist at a Cape Town agency, earning R32,000 per month and working remotely.</p>
 
       <h3>Case Study 2: Sipho from Durban</h3>
       <p>Sipho worked in retail for 5 years but wanted better opportunities. He learned data analysis using free Excel and Power BI courses during evenings and weekends. After 8 months, he landed a Business Analyst role at a logistics company, doubling his previous salary.</p>
@@ -271,7 +272,7 @@ const blogPosts = [
         <li>Create professional online profiles (LinkedIn, email signature)</li>
       </ul>
 
-      <h3>Phase 2: Specialization (Months 3-6)</h3>
+      <h3>Phase 2: Specialisation (Months 3-6)</h3>
       <ul>
         <li>Choose one primary skill area based on your interests and market demand</li>
         <li>Complete relevant online courses and certifications</li>
@@ -292,10 +293,10 @@ const blogPosts = [
       <h3>Barrier 1: Limited Internet Access</h3>
       <p><strong>Solutions:</strong></p>
       <ul>
-        <li>Use public WiFi at libraries, malls, and community centers</li>
+        <li>Use public WiFi at libraries, malls, and community centres</li>
         <li>Download course materials when you have access for offline study</li>
         <li>Partner with friends to share data costs</li>
-        <li>Look for community programs offering free internet access</li>
+        <li>Look for community programmes offering free internet access</li>
       </ul>
 
       <h3>Barrier 2: No Computer Access</h3>
@@ -304,7 +305,7 @@ const blogPosts = [
         <li>Use smartphones for many learning activities</li>
         <li>Access computers at libraries and internet cafes</li>
         <li>Join study groups to share resources</li>
-        <li>Look for organizations providing device access (like JobSpark's future programs)</li>
+        <li>Look for organisations providing device access (like JobSpark's future programmes)</li>
       </ul>
 
       <h3>Barrier 3: Time Constraints</h3>
@@ -331,7 +332,7 @@ const blogPosts = [
       <p>Several initiatives support digital skills development in South Africa:</p>
 
       <ul>
-        <li><strong><a href="https://www.skillsbank.co.za" target="_blank" rel="noopener noreferrer">Skills Development Bank</a>:</strong> Government-funded training programs</li>
+        <li><strong><a href="https://www.skillsbank.co.za" target="_blank" rel="noopener noreferrer">Skills Development Bank</a>:</strong> Government-funded training programmes</li>
         <li><strong><a href="https://www.capaciti.org.za" target="_blank" rel="noopener noreferrer">Capaciti</a>:</strong> Tech skills development for youth</li>
         <li><strong><a href="https://www.digitalacademy.co.za" target="_blank" rel="noopener noreferrer">Digital Academy</a>:</strong> Online learning platform</li>
         <li><strong><a href="https://www.wethinkcode.co.za" target="_blank" rel="noopener noreferrer">WeThinkCode</a>:</strong> Free coding education</li>
@@ -352,8 +353,8 @@ const blogPosts = [
 
       <p>The question isn't whether you can afford to learn digital skills—it's whether you can afford not to. Your future self will thank you for starting today.</p>
     `,
-    author: 'Lerato Ndaba',
-    authorBio: 'Digital Skills Advocate and Former Unemployed Graduate',
+    author: 'Theodore Egling',
+    authorBio: 'Co-Founder & Technical Director at Auxo Digital',
     date: '2025-01-10',
     readTime: '12 min read',
     category: 'Skills Development',
@@ -447,11 +448,12 @@ export default function BlogPost({ params }: Props) {
           </div>
           
           <div className="flex items-center space-x-4">
-            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-              <Share2 className="w-4 h-4" />
-              <span>Share</span>
-            </button>
-            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
+            <ShareButton 
+              url={typeof window !== 'undefined' ? window.location.href : ''}
+              title={post.title}
+              description={post.excerpt}
+            />
+            <button className="flex items-center space-x-2 px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colours">
               <Bookmark className="w-4 h-4" />
               <span>Save</span>
             </button>
@@ -509,7 +511,7 @@ export default function BlogPost({ params }: Props) {
             {post.tags.map((tag) => (
               <span 
                 key={tag}
-                className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full hover:bg-slate-200 transition-colors"
+                className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full hover:bg-slate-200 transition-colours"
               >
                 {tag}
               </span>
@@ -537,7 +539,7 @@ export default function BlogPost({ params }: Props) {
                   <h3 className="text-lg font-semibold text-slate-900 mb-3">
                     <Link 
                       href={`/blog/${relatedPost.id}`}
-                      className="hover:text-green-600 transition-colors"
+                      className="hover:text-green-600 transition-colours"
                     >
                       {relatedPost.title}
                     </Link>

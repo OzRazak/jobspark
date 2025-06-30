@@ -35,7 +35,7 @@ export default function BuildingWithBoltPage() {
               href="https://bolt.new/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colours"
             >
               Explore Bolt.new
               <ExternalLink className="ml-2 w-5 h-5" />
@@ -44,7 +44,7 @@ export default function BuildingWithBoltPage() {
               href="https://auxo.digital/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colours"
             >
               Visit Auxo Digital
             </a>
@@ -76,7 +76,7 @@ export default function BuildingWithBoltPage() {
                     <h3 className="font-semibold text-slate-900 mb-2">A Once-in-a-Generation Shift</h3>
                     <p className="text-slate-600">
                       We're standing at the precipice of a revolutionary moment. The rules have changed. 
-                      The playing field has been leveled. For the first time in history, anyone with an 
+                      The playing field has been levelled. For the first time in history, anyone with an 
                       idea can build it without traditional software developer skills.
                     </p>
                   </div>
@@ -379,7 +379,7 @@ export default function BuildingWithBoltPage() {
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Use JobSpark</h3>
               <p className="text-slate-600 text-sm mb-4">
-                Start practicing interviews and building your career today
+                Start practising interviews and building your career today
               </p>
               <a 
                 href="https://app.jobspark.co.za/auth" 
@@ -433,7 +433,7 @@ export default function BuildingWithBoltPage() {
               href="https://bolt.new/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colours"
             >
               Try Bolt.new Today
               <ExternalLink className="ml-2 w-4 h-4" />

@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
-import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, User, ArrowRight, Search } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { BlogSearch } from '@/components/ui/BlogSearch';
 
 export const metadata: Metadata = {
   title: 'Career Insights Blog - JobSpark',
@@ -28,7 +29,7 @@ const blogPosts = [
   {
     id: 'future-platform-expansion',
     title: 'Our Future Ideas for Expanding the Platform',
-    excerpt: 'Introducing TalentSpark Portal and the complete JobSpark Ecosystem - our vision for revolutionizing how South African businesses hire junior talent with AI-powered recruitment tools.',
+    excerpt: 'Introducing TalentSpark Portal and the complete JobSpark Ecosystem - our vision for revolutionising how South African businesses hire junior talent with AI-powered recruitment tools.',
     author: 'Oz Razak',
     authorBio: 'Founder of Auxo Digital and Creator of JobSpark',
     date: '2025-01-16',
@@ -40,7 +41,7 @@ const blogPosts = [
   },
   {
     id: 'ai-revolution-south-african-job-market',
-    title: 'How AI is Revolutionizing the South African Job Market in 2025',
+    title: 'How AI is Revolutionising the South African Job Market in 2025',
     excerpt: 'Discover how artificial intelligence is transforming recruitment, creating new opportunities, and what job seekers need to know to stay competitive in the evolving landscape.',
     author: 'Theodore Egling',
     authorBio: 'Co-Founder & Technical Director at Auxo Digital',
@@ -66,7 +67,7 @@ const blogPosts = [
   },
   {
     id: 'jobspark-inspiration-competitive-landscape',
-    title: 'Where JobSpark Found Its Spark: Analyzing the Global Career Tools Landscape',
+    title: 'Where JobSpark Found Its Spark: Analysing the Global Career Tools Landscape',
     excerpt: 'Discover how we identified the perfect opportunity gap in the career development market and why South Africa needed a locally-built, integrated solution.',
     author: 'Theodore Egling',
     authorBio: 'Co-Founder & Technical Director at Auxo Digital',
@@ -136,6 +137,13 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Search Section */}
+      <section className="py-8 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BlogSearch posts={blogPosts} />
+        </div>
+      </section>
+
       {/* Featured Articles */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +200,7 @@ export default function BlogPage() {
                   }`}>
                     <Link 
                       href={`/blog/${post.id}`}
-                      className="hover:text-green-600 transition-colors"
+                      className="hover:text-green-600 transition-colours"
                     >
                       {post.title}
                     </Link>
@@ -242,7 +250,7 @@ export default function BlogPage() {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colours"
             >
               Subscribe
             </button>
