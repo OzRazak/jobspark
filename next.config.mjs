@@ -5,11 +5,6 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: false,
   },
-  
-  // Use legacy build mode
-  compiler: {
-    removeConsole: false,
-  },
 
   images: {
     remotePatterns: [
