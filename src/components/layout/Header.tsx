@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown, Zap, CreditCard } from "lucide-react";
+import { Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown, Zap, CreditCard } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
@@ -20,11 +20,6 @@ export const Header = () => {
   }, []);
 
   const navItems = [
-    { 
-      name: "Home", 
-      href: "/", 
-      icon: Home 
-    },
     {
       name: "Features",
       icon: Zap,
@@ -37,7 +32,7 @@ export const Header = () => {
     },
     {
       name: "Resources",
-      icon: BookOpen,
+      icon: BookBook,
       subItems: [
         { name: "Blog", href: "/blog" },
         { name: "Interview Tips", href: "/interview-tips" },
@@ -49,7 +44,7 @@ export const Header = () => {
       icon: CreditCard
     },
     {
-      name: "Company",
+      name: "About",
       icon: Building,
       subItems: [
         { name: "About Auxo Digital", href: "/about" },

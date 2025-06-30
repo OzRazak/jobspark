@@ -1,25 +1,22 @@
 'use client';
 
-import { Metadata } from 'next';
+import React from 'react';
 import { Check, AlertTriangle, Heart, Zap, Shield, CreditCard, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
 
-// Note: Metadata export is removed since this is now a client component
-// SEO will be handled by the layout or through other means
-
 export default function PricingPage() {
-  const plans = [
+  const creditOptions = [
     {
       name: "Free",
+      credits: 220,
       price: "R0",
-      period: "forever",
-      description: "Basic access to essential tools",
+      description: "Start with free credits",
       features: [
-        "7 Credits per month",
-        "5 interview practice sessions",
-        "2 CV generations",
+        "220 free credits to start",
+        "Each interview takes 30 credits",
+        "Each CV generation takes 15 credits",
         "Unlimited job searches",
         "Unlimited job saves",
         "Basic AI feedback"
@@ -31,43 +28,60 @@ export default function PricingPage() {
     },
     {
       name: "Basic",
-      price: "R49",
-      period: "per month",
-      description: "More practice for serious job seekers",
+      credits: 150,
+      price: "R15",
+      description: "Perfect for active job seekers",
       features: [
-        "15 Credits per month",
-        "10 interview practice sessions",
-        "5 CV generations",
+        "150 additional credits",
+        "5 interview practice sessions",
+        "10 CV generations",
         "Unlimited job searches",
         "Unlimited job saves",
-        "Advanced AI feedback",
-        "Priority support"
+        "Standard AI feedback"
       ],
-      cta: "Upgrade to Basic",
+      cta: "Buy 150 Credits",
       ctaLink: "https://app.jobspark.co.za/auth",
       highlight: true,
       color: "blue"
     },
     {
-      name: "Pro",
-      price: "R199",
-      period: "per month",
-      description: "Unlimited access for power users",
+      name: "Plus",
+      credits: 500,
+      price: "R50",
+      description: "More practice for serious candidates",
       features: [
-        "Unlimited Credits",
-        "Unlimited interview practice",
-        "Unlimited CV generations",
+        "500 additional credits",
+        "16 interview practice sessions",
+        "33 CV generations",
+        "Unlimited job searches",
+        "Unlimited job saves",
+        "Advanced AI feedback",
+        "Priority support"
+      ],
+      cta: "Buy 500 Credits",
+      ctaLink: "https://app.jobspark.co.za/auth",
+      highlight: false,
+      color: "green"
+    },
+    {
+      name: "Pro",
+      credits: 1000,
+      price: "R100",
+      description: "Maximum value for power users",
+      features: [
+        "1000 additional credits",
+        "33 interview practice sessions",
+        "66 CV generations",
         "Unlimited job searches",
         "Unlimited job saves",
         "Premium AI feedback",
         "Priority support",
-        "Advanced analytics",
-        "Custom interview scenarios"
+        "Advanced analytics"
       ],
-      cta: "Upgrade to Pro",
+      cta: "Buy 1000 Credits",
       ctaLink: "https://app.jobspark.co.za/auth",
       highlight: false,
-      color: "green"
+      color: "purple"
     }
   ];
 
@@ -79,12 +93,50 @@ export default function PricingPage() {
       <section className="bg-gradient-to-br from-green-600 to-blue-600 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            Simple, Transparent Pricing
+            Simple, Credit-Based Pricing
           </h1>
           <p className="text-xl lg:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
-            Choose the plan that fits your needs. Our pricing helps us cover API costs and 
+            Start with 220 free credits and add more when you need them. Our pricing helps us cover API costs and 
             ensure the platform remains available for everyone.
           </p>
+        </div>
+      </section>
+
+      {/* Credit Usage Explanation */}
+      <section className="py-12 bg-white border-b border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-50 p-6 rounded-xl"
+            >
+              <div className="text-3xl font-bold text-green-600 mb-2">220</div>
+              <p className="text-slate-700">Free credits to start</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-50 p-6 rounded-xl"
+            >
+              <div className="text-3xl font-bold text-blue-600 mb-2">30</div>
+              <p className="text-slate-700">Credits per interview</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-slate-50 p-6 rounded-xl"
+            >
+              <div className="text-3xl font-bold text-orange-600 mb-2">15</div>
+              <p className="text-slate-700">Credits per CV generation</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -93,34 +145,35 @@ export default function PricingPage() {
         <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {plans.map((plan, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {creditOptions.map((option, index) => (
               <motion.div
-                key={plan.name}
+                key={option.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className={`relative rounded-2xl overflow-hidden ${
-                  plan.highlight ? 'shadow-xl ring-2 ring-blue-500' : 'shadow-lg'
+                  option.highlight ? 'shadow-xl ring-2 ring-blue-500' : 'shadow-lg'
                 }`}
               >
-                {plan.highlight && (
+                {option.highlight && (
                   <div className="absolute top-0 inset-x-0 bg-blue-500 text-white text-xs font-semibold py-1 text-center">
-                    MOST POPULAR
+                    BEST VALUE
                   </div>
                 )}
                 
-                <div className={`bg-white p-8 ${plan.highlight ? 'pt-10' : ''}`}>
-                  <h3 className={`text-2xl font-bold text-${plan.color}-600 mb-2`}>{plan.name}</h3>
+                <div className={`bg-white p-8 ${option.highlight ? 'pt-10' : ''}`}>
+                  <h3 className={`text-2xl font-bold text-${option.color}-600 mb-2`}>{option.name}</h3>
                   <div className="flex items-baseline mb-4">
-                    <span className="text-4xl font-extrabold text-slate-900">{plan.price}</span>
-                    <span className="text-slate-500 ml-2">/{plan.period}</span>
+                    <span className="text-4xl font-extrabold text-slate-900">{option.price}</span>
+                    {option.name !== "Free" && <span className="text-slate-500 ml-2">one-time</span>}
                   </div>
-                  <p className="text-slate-600 mb-6">{plan.description}</p>
+                  <p className="text-slate-600 mb-2">{option.description}</p>
+                  <div className="text-lg font-bold text-green-600 mb-4">{option.credits} credits</div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {option.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
                         <Check className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
                         <span className="text-slate-700">{feature}</span>
@@ -129,14 +182,20 @@ export default function PricingPage() {
                   </ul>
                   
                   <a
-                    href={plan.ctaLink}
-                    className={`block w-full py-3 px-4 rounded-lg font-semibold text-center transition-colors ${
-                      plan.highlight
+                    href={option.ctaLink}
+                    className={`block w-full py-3 px-4 rounded-lg font-semibold text-center transition-colours ${
+                      option.highlight
                         ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                        : `bg-${plan.color}-100 text-${plan.color}-700 hover:bg-${plan.color}-200`
+                        : option.name === "Free" 
+                          ? 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                          : option.name === "Plus"
+                            ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                            : option.name === "Pro"
+                              ? 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                              : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
                     }`}
                   >
-                    {plan.cta}
+                    {option.cta}
                   </a>
                 </div>
               </motion.div>
@@ -158,7 +217,7 @@ export default function PricingPage() {
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Why We Have Pricing</h3>
                 <p className="text-slate-700 mb-4">
-                  JobSpark is committed to providing accessible career tools for all South Africans. Our pricing structure exists for two key reasons:
+                  JobSpark is committed to providing accessible career tools for all South Africans. Our credit-based pricing structure exists for two key reasons:
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
@@ -170,7 +229,7 @@ export default function PricingPage() {
                   <li className="flex items-start">
                     <Shield className="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0" />
                     <span className="text-slate-700">
-                      <strong>Preventing Abuse:</strong> Usage limits help prevent automated scraping and ensure the platform remains available for genuine job seekers.
+                      <strong>Preventing Abuse:</strong> Credit limits help prevent automated scraping and ensure the platform remains available for genuine job seekers.
                     </span>
                   </li>
                 </ul>
@@ -235,7 +294,7 @@ export default function PricingPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-slate-600">
-              Common questions about our pricing and subscription plans.
+              Common questions about our credit system and pricing.
             </p>
           </motion.div>
 
@@ -247,9 +306,9 @@ export default function PricingPage() {
               transition={{ delay: 0.1 }}
               className="bg-slate-50 rounded-xl p-6"
             >
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">What are credits?</h3>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">How do credits work?</h3>
               <p className="text-slate-700">
-                Credits are our way of measuring usage across different features. Each interview practice session or CV generation consumes a certain number of credits. This helps us manage API costs while giving you flexibility in how you use the platform.
+                Credits are our way of measuring usage across different features. Each interview practice session costs 30 credits, while each CV generation costs 15 credits. This helps us manage API costs while giving you flexibility in how you use the platform.
               </p>
             </motion.div>
 
@@ -260,9 +319,9 @@ export default function PricingPage() {
               transition={{ delay: 0.2 }}
               className="bg-slate-50 rounded-xl p-6"
             >
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Do credits roll over?</h3>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Do credits expire?</h3>
               <p className="text-slate-700">
-                Credits do not roll over from month to month. Each billing cycle, your credit balance resets to your plan's allocation. This helps us manage our API costs and ensures fair usage across all users.
+                No, your credits don't expire. Once purchased, they remain in your account until you use them. This gives you the flexibility to use the platform at your own pace without worrying about losing your investment.
               </p>
             </motion.div>
 
@@ -273,9 +332,9 @@ export default function PricingPage() {
               transition={{ delay: 0.3 }}
               className="bg-slate-50 rounded-xl p-6"
             >
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Can I cancel anytime?</h3>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Can I get a refund for unused credits?</h3>
               <p className="text-slate-700">
-                Yes, you can cancel your subscription at any time. Simply go to your profile settings after signing in and select "Manage Subscription." Your plan will remain active until the end of your current billing period.
+                We don't offer refunds for purchased credits. However, since credits don't expire, you can use them whenever you need them. If you have any issues with your purchase, please contact us at info@auxo.digital.
               </p>
             </motion.div>
 
@@ -286,9 +345,9 @@ export default function PricingPage() {
               transition={{ delay: 0.4 }}
               className="bg-slate-50 rounded-xl p-6"
             >
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">What if I can't afford a paid plan?</h3>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">What if I can't afford to buy credits?</h3>
               <p className="text-slate-700">
-                We're committed to making JobSpark accessible to everyone. The Free plan provides essential access to our core features. If you need additional credits but face financial hardship, please contact us at info@auxo.digital to discuss options for assistance.
+                We're committed to making JobSpark accessible to everyone. The 220 free credits provide a good starting point for most users. If you need additional credits but face financial hardship, please contact us at info@auxo.digital to discuss options for assistance.
               </p>
             </motion.div>
 
@@ -301,7 +360,7 @@ export default function PricingPage() {
             >
               <h3 className="text-lg font-semibold text-slate-900 mb-2">How can companies support JobSpark?</h3>
               <p className="text-slate-700">
-                Companies can support JobSpark by sponsoring credits for users, making donations, or partnering with us for bulk subscriptions. This helps us maintain the platform and provide access to those who need it most. Contact us at info@auxo.digital to discuss corporate sponsorship opportunities.
+                Companies can support JobSpark by sponsoring credits for users, making donations, or partnering with us for bulk credit purchases. This helps us maintain the platform and provide access to those who need it most. Contact us at info@auxo.digital to discuss corporate sponsorship opportunities.
               </p>
             </motion.div>
           </div>
@@ -320,7 +379,7 @@ export default function PricingPage() {
               Ready to Accelerate Your Career?
             </h2>
             <p className="text-xl text-green-100 mb-8">
-              Start with our Free plan and upgrade when you need more features.
+              Start with 220 free credits and add more when you need them.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -328,7 +387,7 @@ export default function PricingPage() {
                 className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colours flex items-center justify-center"
               >
                 <CreditCard className="w-5 h-5 mr-2" />
-                Choose Your Plan
+                Get Started with Free Credits
               </a>
               <a 
                 href="/donate"
