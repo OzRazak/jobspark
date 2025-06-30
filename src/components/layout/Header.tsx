@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown, Zap } from "lucide-react";
+import { Home, Users, Info, ArrowRight, Menu, X, Heart, BookOpen, Building, ChevronDown, Zap, CreditCard } from "lucide-react";
 import ShimmerButton from "../ui/ShimmerButton";
 import Image from "next/image";
 
@@ -42,6 +42,11 @@ export const Header = () => {
         { name: "Blog", href: "/blog" },
         { name: "Interview Tips", href: "/interview-tips" },
       ]
+    },
+    {
+      name: "Pricing",
+      href: "/pricing",
+      icon: CreditCard
     },
     {
       name: "Company",
