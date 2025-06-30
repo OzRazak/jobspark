@@ -30,22 +30,22 @@ export const Stats = () => {
       label: "Youth Unemployment in SA", 
       icon: TrendingDown, 
       color: "from-sa-gold-400 to-sa-gold-600",
-      description: "The crisis we're fighting"
+      description: "The crisis we're targeting"
     },
     { 
-      value: 12500, 
-      label: "Lives Changed", 
+      value: 3000000, 
+      label: "Lives to Change", 
       icon: Users, 
       color: "from-green-400 to-green-600",
-      description: "South Africans empowered"
+      description: "Targeting 3M South Africans"
     },
     { 
       value: 89, 
       suffix: "%", 
-      label: "Interview Success Rate", 
+      label: "Target Interview Success Rate", 
       icon: TrendingUp, 
       color: "from-blue-400 to-blue-600",
-      description: "After using JobSpark"
+      description: "Targeting with JobSpark"
     },
     { 
       value: 100, 
@@ -68,10 +68,10 @@ export const Stats = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter text-slate-900 mb-3 sm:mb-4">
-            Our Impact on South Africa
+            Our Target Impact on South Africa
           </h2>
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-            We're not just building a platform – we're tackling one of South Africa's 
+            We're not just building a platform – we're targeting one of South Africa's 
             biggest challenges with technology that works for everyone.
           </p>
         </motion.div>
@@ -137,7 +137,7 @@ export const Stats = () => {
             </h3>
             <p className="text-slate-600 mb-6">
               Every person who practices with JobSpark is one step closer to employment. 
-              Help us reach more South Africans who need it most.
+              Help us reach our target of 3 million South Africans who need it most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

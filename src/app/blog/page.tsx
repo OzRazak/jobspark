@@ -13,6 +13,19 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    id: 'south-africa-needs-open-source-software',
+    title: 'Why South Africa Desperately Needs More Free, Open Source Software Solutions',
+    excerpt: 'How open source software can leapfrog South Africa\'s development challenges and why companies like Auxo Digital are leading the charge with custom AI platforms that create real impact.',
+    author: 'Theodore Egling',
+    authorBio: 'Co-Founder & Technical Director at Auxo Digital',
+    date: '2025-01-17',
+    readTime: '14 min read',
+    category: 'Technology & Society',
+    tags: ['Open Source', 'South Africa', 'Digital Transformation', 'AI Platforms', 'Social Impact', 'Technology'],
+    image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800',
+    featured: true
+  },
+  {
     id: 'future-platform-expansion',
     title: 'Our Future Ideas for Expanding the Platform',
     excerpt: 'Introducing TalentSpark Portal and the complete JobSpark Ecosystem - our vision for revolutionizing how South African businesses hire junior talent with AI-powered recruitment tools.',
