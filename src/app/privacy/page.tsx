@@ -43,32 +43,9 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">2. Early Access Data Usage</h2>
-                <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-6 rounded-r-lg">
-                  <h3 className="text-lg font-semibold text-orange-900 mb-3">Important Early Access Notice</h3>
-                  <p className="text-orange-800 leading-relaxed mb-4">
-                    During our early access period, we may use your data in additional ways to improve our platform:
-                  </p>
-                  <ul className="text-orange-800 space-y-2 mb-4">
-                    <li>• Your interview recordings may be analysed to improve AI model accuracy</li>
-                    <li>• Usage patterns help us identify and fix bugs</li>
-                    <li>• Anonymised data may be used for research and development</li>
-                    <li>• Error logs and performance data help us optimise the platform</li>
-                    <li>• Your feedback directly influences feature development</li>
-                  </ul>
-                  <p className="text-orange-800">
-                    <strong>All data used for improvement is anonymised and aggregated.</strong> You can opt out of this additional data usage or request data deletion at any time by contacting us. For more details, see our{" "}
-                    <a href="/features/early-access" className="underline hover:text-orange-900">
-                      Early Access page
-                    </a>.
-                  </p>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">3. Information We Collect</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">2. Information We Collect</h2>
                 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">3.1 Personal Information</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">2.1 Personal Information</h3>
                 <ul className="list-disc pl-6 text-slate-700 mb-4 space-y-2">
                   <li>Name, email address, and contact information</li>
                   <li>Professional information (work experience, education, skills)</li>
@@ -79,7 +56,7 @@ export default function PrivacyPage() {
                   <li>Video recordings for interview preparation</li>
                 </ul>
 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">3.2 Technical Information</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">2.2 Technical Information</h3>
                 <ul className="list-disc pl-6 text-slate-700 mb-4 space-y-2">
                   <li>Device information and browser type</li>
                   <li>IP address and location data</li>
@@ -87,38 +64,36 @@ export default function PrivacyPage() {
                   <li>Performance and analytics data</li>
                   <li>Cookies and similar tracking technologies</li>
                   <li>Session recordings for user experience improvement</li>
-                  <li>Error logs and debugging information (during early access)</li>
                 </ul>
 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">3.3 Cookies and Tracking Technologies</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">2.3 Cookies and Tracking Technologies</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   We use cookies and similar technologies to enhance your experience. You can manage your cookie preferences through our cookie banner or browser settings.
                 </p>
                 <ul className="list-disc pl-6 text-slate-700 mb-4 space-y-2">
                   <li><strong>Necessary Cookies:</strong> Essential for site functionality</li>
                   <li><strong>Analytics Cookies:</strong> Help us understand site usage</li>
-                  <li><strong>Marketing Cookies:</strong> Used for personalised advertising</li>
+                  <li><strong>Marketing Cookies:</strong> Used for personalized advertising</li>
                 </ul>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. How We Use Your Information</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">3. How We Use Your Information</h2>
                 <ul className="list-disc pl-6 text-slate-700 space-y-2">
                   <li>Provide AI-powered interview coaching and CV generation services</li>
-                  <li>Personalise your experience and improve our platform</li>
-                  <li>Analyse usage patterns to enhance our services</li>
+                  <li>Personalize your experience and improve our platform</li>
+                  <li>Analyze usage patterns to enhance our services</li>
                   <li>Communicate with you about your account and our services</li>
                   <li>Ensure platform security and prevent fraud</li>
                   <li>Comply with legal obligations</li>
                   <li>Process voice and video data for AI training and improvement</li>
                   <li>Provide career matching and job recommendation services</li>
                   <li>Generate insights and analytics for service improvement</li>
-                  <li><strong>During Early Access:</strong> Improve AI models, fix bugs, and develop new features using anonymised data</li>
                 </ul>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Legal Basis for Processing (POPIA Compliance)</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. Legal Basis for Processing (POPIA Compliance)</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   Under POPIA, we process your personal information based on the following lawful grounds:
                 </p>
@@ -131,7 +106,7 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">6. Information Sharing and Disclosure</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Information Sharing and Disclosure</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
                 </p>
@@ -147,9 +122,9 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">7. Data Security</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">6. Data Security</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. These measures include:
+                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
                 </p>
                 <ul className="list-disc pl-6 text-slate-700 space-y-2">
                   <li>Encryption of data in transit and at rest</li>
@@ -163,7 +138,7 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">8. Your Rights Under POPIA</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">7. Your Rights Under POPIA</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   As a South African resident, you have the following rights regarding your personal information:
                 </p>
@@ -176,7 +151,6 @@ export default function PrivacyPage() {
                   <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for processing where applicable</li>
                   <li><strong>Right to Restrict Processing:</strong> Request limitation of processing in certain circumstances</li>
                   <li><strong>Right to Lodge a Complaint:</strong> File a complaint with the Information Regulator</li>
-                  <li><strong>Right to Opt Out:</strong> Opt out of early access data usage for platform improvement</li>
                 </ul>
                 <p className="text-slate-700 leading-relaxed mt-4">
                   To exercise these rights, please contact our Information Officer at info@auxo.digital.
@@ -184,24 +158,23 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">9. Data Retention</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">8. Data Retention</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  We retain your personal information only for as long as necessary to fulfil the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements. Specific retention periods include:
+                  We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements. Specific retention periods include:
                 </p>
                 <ul className="list-disc pl-6 text-slate-700 space-y-2">
                   <li><strong>Account Data:</strong> Retained while your account is active and for 2 years after closure</li>
                   <li><strong>Interview Recordings:</strong> Retained for 1 year unless you request earlier deletion</li>
-                  <li><strong>Analytics Data:</strong> Aggregated and anonymised data may be retained indefinitely</li>
+                  <li><strong>Analytics Data:</strong> Aggregated and anonymized data may be retained indefinitely</li>
                   <li><strong>Legal Compliance Data:</strong> Retained as required by applicable laws</li>
-                  <li><strong>Early Access Data:</strong> Anonymised improvement data may be retained indefinitely for research purposes</li>
                 </ul>
                 <p className="text-slate-700 leading-relaxed">
-                  When we no longer need your information, we will securely delete or anonymise it.
+                  When we no longer need your information, we will securely delete or anonymize it.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">10. International Data Transfers</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">9. International Data Transfers</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   Your information may be transferred to and processed in countries other than South Africa, including the United States and European Union. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information, including:
                 </p>
@@ -214,14 +187,14 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">11. Children's Privacy</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">10. Children's Privacy</h2>
                 <p className="text-slate-700 leading-relaxed">
                   Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If we become aware that we have collected such information, we will take steps to delete it promptly and notify the relevant authorities as required by law.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">12. Third-Party Services</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">11. Third-Party Services</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   Our platform integrates with various third-party services. Please review their privacy policies:
                 </p>
@@ -235,21 +208,21 @@ export default function PrivacyPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">13. Data Breach Notification</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">12. Data Breach Notification</h2>
                 <p className="text-slate-700 leading-relaxed">
                   In the event of a data breach that poses a risk to your rights and freedoms, we will notify the Information Regulator within 72 hours of becoming aware of the breach. If the breach poses a high risk, we will also notify affected individuals without undue delay, providing information about the nature of the breach and steps being taken to address it.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">14. Changes to This Privacy Policy</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">13. Changes to This Privacy Policy</h2>
                 <p className="text-slate-700 leading-relaxed">
                   We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on our website and updating the "Last Updated" date. For significant changes, we may also send you an email notification. Your continued use of our services after such changes constitutes acceptance of the updated policy.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">15. Contact Us</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">14. Contact Us</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:
                 </p>
@@ -259,8 +232,7 @@ export default function PrivacyPage() {
                   <p className="text-slate-700"><strong>Email:</strong> info@auxo.digital</p>
                   <p className="text-slate-700"><strong>Phone:</strong> +27 21 8480 9</p>
                   <p className="text-slate-700"><strong>Address:</strong> 6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
-                  <p className="text-slate-700 mt-4"><strong>Information Regulator:</strong> If you are not satisfied with our response, you may lodge a complaint with the Information Regulator of South Africa at <a href="https://inforegulator.org.za" className=\"text-green-600 hover:text-green-700">inforegulator.org.za</a></p>
-                  <p className="text-slate-700 mt-4"><strong>Early Access Information:</strong> <a href="/features/early-access" className=\"text-orange-600 hover:text-orange-700">View Early Access Details</a></p>
+                  <p className="text-slate-700 mt-4"><strong>Information Regulator:</strong> If you are not satisfied with our response, you may lodge a complaint with the Information Regulator of South Africa at <a href="https://inforegulator.org.za" className="text-green-600 hover:text-green-700">inforegulator.org.za</a></p>
                 </div>
               </section>
             </div>
