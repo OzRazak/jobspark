@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import { UserPlus, PencilRuler, Send, ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { UserPlus, PencilRuler, Send, ArrowRight, Play, X } from "lucide-react";
+import { useRef, useState } from "react";
 
 const steps = [
   {
@@ -140,6 +140,7 @@ export const HowItWorks = () => {
   });
   
   const timelineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const [showVideo, setShowVideo] = useState(false);
 
   return (
     <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-slate-50">
@@ -153,9 +154,19 @@ export const HowItWorks = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter text-slate-900 mb-3 sm:mb-4">
             Your Path to Success in 3 Steps
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8">
             Follow our proven process to go from job seeker to valued employee.
           </p>
+          
+          <motion.button
+            onClick={() => setShowVideo(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md"
+          >
+            <Play className="w-5 h-5 mr-2" />
+            Watch How It Works
+          </motion.button>
         </motion.div>
 
         {/* Mobile Layout */}
@@ -180,6 +191,38 @@ export const HowItWorks = () => {
             </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {showVideo && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 sm:p-8"
+        >
+          <div className="relative w-full max-w-4xl bg-white rounded-xl overflow-hidden shadow-2xl">
+            <div className="absolute top-4 right-4 z-10">
+              <button 
+                onClick={() => setShowVideo(false)}
+                className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/w93FOJ3pI3U?autoplay=1"
+                title="JobSpark: How It Works"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };

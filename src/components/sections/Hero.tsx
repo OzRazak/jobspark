@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Zap,
   AlertTriangle,
+  Play,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
@@ -59,17 +60,26 @@ const SpotlightButton = ({ children, href }: { children: React.ReactNode; href?:
 const FlipButton = ({
   children,
   href,
+  onClick,
 }: {
   children: React.ReactNode;
-  href: string;
+  href?: string;
+  onClick?: () => void;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <motion.a
-      href={href}
+  const handleClick = (e: React.MouseEvent) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
+  const ButtonContent = (
+    <motion.button
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      onClick={handleClick}
       className="relative flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 font-semibold text-slate-800 bg-white/90 backdrop-blur-sm border-2 border-slate-200 hover:border-green-300 transition-all duration-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg"
       style={{ perspective: "500px" }}
     >
@@ -94,13 +104,19 @@ const FlipButton = ({
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="flex items-center gap-2 text-green-600 text-base sm:text-lg"
           >
-            <ExternalLink className="w-5 h-5" />
-            <span>Learn More</span>
+            <Play className="w-5 h-5" />
+            <span>Watch Video</span>
           </motion.span>
         )}
       </AnimatePresence>
-    </motion.a>
+    </motion.button>
   );
+
+  return href && !onClick ? (
+    <a href={href}>
+      {ButtonContent}
+    </a>
+  ) : ButtonContent;
 };
 
 // --- South African Interview Animation ---
@@ -215,6 +231,7 @@ const animationScenes = [
 
 export const Hero = () => {
   const [sceneIndex, setSceneIndex] = useState(0);
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -355,7 +372,7 @@ export const Hero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </span>
             </SpotlightButton>
-            <FlipButton href="#how-it-works">How it Works</FlipButton>
+            <FlipButton onClick={() => setShowVideo(true)}>How it Works</FlipButton>
           </motion.div>
 
           {/* Early Access Subtle Notice */}
@@ -453,6 +470,38 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Video Modal */}
+      {showVideo && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 sm:p-8"
+        >
+          <div className="relative w-full max-w-4xl bg-white rounded-xl overflow-hidden shadow-2xl">
+            <div className="absolute top-4 right-4 z-10">
+              <button 
+                onClick={() => setShowVideo(false)}
+                className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/w93FOJ3pI3U?autoplay=1"
+                title="JobSpark: How It Works"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };
