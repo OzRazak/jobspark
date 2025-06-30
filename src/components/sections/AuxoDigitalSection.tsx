@@ -65,14 +65,10 @@ export const AuxoDigitalSection = () => {
             <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-2xl border border-blue-200/50">
               <h3 className="text-xl font-bold text-slate-900 mb-4">A Message from Oz Razak, Founder</h3>
               <p className="text-slate-700 leading-relaxed mb-4">
-                "At Auxo Digital, we believe technology should enhance human potential, not replace it. 
-                JobSpark represents everything we stand for – using cutting-edge AI to solve real problems 
-                and create meaningful impact in people's lives."
+                "When we first thought of JobSpark, two issues for us came to mind. One was helping more people find purpose through meaningful work and in that helping in a very small way with the job crisis issue we have in South Africa."
               </p>
               <p className="text-slate-700 leading-relaxed">
-                "We saw South Africa's unemployment crisis and knew we had to act. JobSpark isn't just 
-                another platform – it's our contribution to building a future where every talented 
-                individual has the tools they need to succeed."
+                "Secondly, we are a startup that often has to go through thousands of CVs and hundreds of interviews in a year. We come across good, skilled people, that often due to nervousness, perhaps lack of practice, do not put their best foot forward in an interview, which is usually the make or break as to whether we progress to a case study or even hiring."
               </p>
             </div>
 
