@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Smartphone, Target, Users, Zap, Trophy, Star, GamepadIcon, BarChart } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Smartphone, Target, Users, Zap, Trophy, Star, GamepadIcon, BarChart, CheckCircle, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
@@ -15,8 +15,8 @@ export default function JobSparkZAMobileFirstPost() {
   const post = {
     title: 'JobSpark ZA: The Mobile-First AI Career Platform Transforming South African Youth Employment',
     excerpt: 'How our AI-powered, mobile-first platform is specifically designed to tackle South Africa\'s 60% youth unemployment crisis with gamified career readiness tools.',
-    author: 'Lerato Ndaba',
-    authorBio: 'Digital Skills Advocate and Former Unemployed Graduate',
+    author: 'Oz Razak',
+    authorBio: 'Founder of Auxo Digital and Creator of JobSpark',
     date: '2025-01-14',
     readTime: '12 min read',
     category: 'Platform Overview',
@@ -123,12 +123,54 @@ export default function JobSparkZAMobileFirstPost() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="prose prose-lg prose-slate max-w-none">
           
+          {/* Executive Summary */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-xl my-8 border-l-4 border-blue-500">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Executive Summary</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              JobSpark ZA is a mobile-first, AI-powered career readiness platform designed to solve South Africa's crippling youth unemployment crisis by directly addressing the application barrier that ambitious but underserved young professionals face. While the market is crowded with disconnected global AI giants like Teal and Kickresume, slow-moving local job boards like PNet and Careers24, and niche, single-purpose tools like Google's Interview Warmup, no existing platform offers an effective, integrated solution tailored for the South African context.
+            </p>
+            
+            <h3 className="text-lg font-semibold text-slate-900 mb-3">Our Competitive Advantage</h3>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              Our platform's primary advantage is its all-in-one integrated workflow, which seamlessly guides users from building an ATS-optimized CV, to generating AI-tailored cover letters, and finally to practicing for interviews with an innovative voice-first AI coach powered by ElevenLabs. This replaces the clunky, multi-service process required by competitors with a single, intuitive journey.
+            </p>
+            
+            <h3 className="text-lg font-semibold text-slate-900 mb-3">Our Defensible Moat</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Hyper-Localization</h4>
+                <p className="text-slate-600 text-sm">Unlike USD-priced global tools, JobSpark ZA is affordable, priced in Rands, and fine-tuned to the nuances of the local job market.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Voice-First Innovation</h4>
+                <p className="text-slate-600 text-sm">Our accessible voice-only interview coach is less intimidating than video-based tools, allowing users to practice anywhere, anytime.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Motivational Gamification</h4>
+                <p className="text-slate-600 text-sm">To combat the demoralizing nature of job hunting, we incorporate engaging features like a "Readiness Score," achievement badges, and daily streaks.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Unmatched Team Insight</h4>
+                <p className="text-slate-600 text-sm">Our team's 360-degree view of the problem, blending empathetic understanding of candidates with firsthand business experience of hiring.</p>
+              </div>
+            </div>
+            
+            <div className="mt-6 p-4 bg-green-100 rounded-lg">
+              <p className="text-green-800 font-medium">
+                This potent combination of problem urgency, innovative solution, and perfect alignment with the hackathon's technical and business challenges makes JobSpark ZA the undisputed top-priority project. It is not merely another CV builder, but a desperately needed, end-to-end career companion designed to build confidence and unlock the potential of South Africa's youth.
+              </p>
+            </div>
+          </div>
+
           <p className="text-xl text-slate-700 leading-relaxed mb-8">
             JobSpark ZA is more than just another career platform—it's a lifeline for South Africa's ambitious but underserved youth. In a country where over 60% of young people aged 15-24 face unemployment, we've built an AI-powered, mobile-first solution that meets users where they are and guides them to where they want to be.
           </p>
 
           <div className="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
-            <h3 className="text-lg font-semibold text-red-900 mb-3">The Crisis We're Addressing</h3>
+            <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">
+              <AlertTriangle className="w-5 h-5 mr-2" />
+              The Crisis We're Addressing
+            </h3>
             <p className="text-red-800">
               South Africa's youth unemployment rate of over 60% for the 15-24 age group represents one of the world's most severe employment crises. Behind these statistics are millions of talented individuals who simply lack the professional guidance to navigate the modern job market.
             </p>
@@ -424,9 +466,9 @@ export default function JobSparkZAMobileFirstPost() {
               <h3 className="text-lg font-semibold text-slate-900 mb-1">{post.author}</h3>
               <p className="text-slate-600 mb-3">{post.authorBio}</p>
               <p className="text-slate-700 text-sm">
-                Lerato experienced firsthand the challenges of youth unemployment in South Africa before discovering 
-                the power of digital skills. Now a passionate advocate for accessible career development, she works 
-                to ensure that no young South African faces the job market without the tools they need to succeed.
+                Oz is the founder of Auxo Digital and the creator of JobSpark. With a passion for using technology 
+                to solve real-world problems, he's dedicated to tackling South Africa's unemployment crisis through 
+                innovative AI-powered solutions that empower individuals and transform communities.
               </p>
             </div>
           </div>

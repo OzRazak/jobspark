@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Building, Users, Zap, Target, BarChart, MessageSquare, CheckCircle, TrendingUp, Lightbulb } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Building, Users, Zap, Target, BarChart, MessageSquare, CheckCircle, TrendingUp, Lightbulb, Layers, Network, Workflow } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
@@ -7,20 +7,20 @@ import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'Our Future Ideas for Expanding the Platform - JobSpark Blog',
-  description: 'Discover TalentSpark Portal - our vision for revolutionizing B2B hiring in South Africa with AI-powered recruitment tools.',
-  keywords: 'TalentSpark, B2B hiring, recruitment, South Africa, AI recruitment, job portal, hiring platform',
+  description: 'Discover TalentSpark Portal and the complete JobSpark Ecosystem - our vision for revolutionizing B2B hiring in South Africa with AI-powered recruitment tools.',
+  keywords: 'TalentSpark, B2B hiring, recruitment, South Africa, AI recruitment, job portal, hiring platform, JobSpark ecosystem',
 };
 
 export default function FuturePlatformExpansionPost() {
   const post = {
     title: 'Our Future Ideas for Expanding the Platform',
-    excerpt: 'Introducing TalentSpark Portal - our vision for revolutionizing how South African businesses hire junior talent with AI-powered recruitment tools.',
+    excerpt: 'Introducing TalentSpark Portal and the complete JobSpark Ecosystem - our vision for revolutionizing how South African businesses hire junior talent with AI-powered recruitment tools.',
     author: 'Oz Razak',
     authorBio: 'Founder of Auxo Digital and Creator of JobSpark',
     date: '2025-01-16',
     readTime: '15 min read',
     category: 'Platform Development',
-    tags: ['TalentSpark', 'B2B', 'Recruitment', 'AI', 'Platform Expansion', 'South Africa'],
+    tags: ['TalentSpark', 'B2B', 'Recruitment', 'AI', 'Platform Expansion', 'South Africa', 'JobSpark Ecosystem'],
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
   };
 
@@ -124,79 +124,187 @@ export default function FuturePlatformExpansionPost() {
         <div className="prose prose-lg prose-slate max-w-none">
           
           <p className="text-xl text-slate-700 leading-relaxed mb-8">
-            As JobSpark continues to empower individual job seekers across South Africa, we're excited to share our vision for the next phase of our platform: <strong>TalentSpark Portal</strong>. This B2B component will revolutionize how South African businesses discover and hire junior talent, creating a complete ecosystem that benefits both job seekers and employers.
+            As JobSpark continues to empower individual job seekers across South Africa, we're excited to share our vision for the next phase of our platform: <strong>The JobSpark Ecosystem</strong>. This comprehensive, two-sided talent marketplace will fundamentally fix the broken hiring process for junior talent in South Africa, creating a unified platform that benefits both job seekers and employers.
           </p>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Introduction & Vision</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The JobSpark Ecosystem: A Complete Vision</h2>
           
           <p className="text-slate-700 leading-relaxed mb-6">
-            The TalentSpark portal (talentspark.co.za) represents the B2B evolution of the JobSpark ecosystem. Our vision is ambitious yet focused: to become the most efficient and insightful platform for South African businesses to hire junior talent.
+            The JobSpark Ecosystem is designed to create a single, unified platform that simultaneously empowers job seekers to present their best selves and provides businesses with an efficient, intelligent tool to discover quality candidates. The ecosystem directly connects preparation with opportunity, creating a "readiness loop" where candidates are given the tools to succeed, and businesses gain direct access to the resulting pool of high-quality, pre-vetted talent.
           </p>
 
-          <p className="text-slate-700 leading-relaxed mb-8">
-            This platform directly addresses the core frustrations plaguing modern recruitment: the overwhelming volume of low-quality, generic CVs and the inability to assess crucial soft skills before the interview stage. TalentSpark transforms the hiring funnel from a time-consuming administrative burden into an intelligent, data-driven screening process.
-          </p>
-
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
-            <h3 className="text-lg font-semibold text-blue-900 mb-3">Key Insight</h3>
-            <p className="text-blue-800">
-              Traditional job boards create a paradox: the easier it is to apply, the lower the quality of applications. TalentSpark flips this model by making applications more thoughtful while making screening more efficient.
-            </p>
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl my-10">
+            <h3 className="text-xl font-bold text-slate-900 mb-6">The Core Ecosystem Loop</h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 font-bold text-sm">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900">Candidate Prepares</h4>
+                    <p className="text-slate-600 text-sm">Job seeker signs up on JobSpark and is guided through building a structured professional profile, generating a perfect CV, and practicing interviews with an AI coach.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-sm">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900">Company Seeks</h4>
+                    <p className="text-slate-600 text-sm">Business posts a job on the TalentSpark portal, defining exact criteria and custom screening questions they need answered.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <span className="text-orange-600 font-bold text-sm">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900">Candidate Applies</h4>
+                    <p className="text-slate-600 text-sm">Candidate applies directly within the JobSpark app, submitting their professional profile and a "Video Pitch" answering the company's specific screening questions.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-purple-600 font-bold text-sm">4</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900">Company Screens</h4>
+                    <p className="text-slate-600 text-sm">Company instantly receives high-quality, structured applications on their TalentSpark dashboard, allowing them to assess hard skills, soft skills, and personality in minutes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Core Value Proposition for Businesses</h2>
-
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Component 1: JobSpark (The Candidate Application)</h2>
+          
           <p className="text-slate-700 leading-relaxed mb-6">
-            The platform offers four key advantages over traditional job boards and recruiting methods:
+            JobSpark (jobspark.co.za) is the candidate-facing heart of the ecosystem. Its primary purpose is to build user confidence and prepare them for the job market through four core features:
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 my-10">
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="p-2 bg-green-100 rounded-lg">
-                  <Zap className="w-6 h-6 text-green-600" />
+                  <User className="w-6 h-6 text-green-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900">Dramatically Reduce Time-to-Hire</h3>
+                <h3 className="text-lg font-semibold text-slate-900">Structured Profile</h3>
               </div>
               <p className="text-slate-600">
-                By providing structured data and video pitches upfront, recruiters can screen candidates for both technical fit and personality in a fraction of the time, leading to shorter, more effective interview cycles.
+                Guides users to input their data into clean, specific fields that can be easily parsed and analyzed by both AI systems and human recruiters.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="p-2 bg-blue-100 rounded-lg">
-                  <MessageSquare className="w-6 h-6 text-blue-600" />
+                  <Zap className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900">Screen for Soft Skills at Scale</h3>
+                <h3 className="text-lg font-semibold text-slate-900">AI Document Generation</h3>
               </div>
               <p className="text-slate-600">
-                Move beyond keyword-matched CVs. Asynchronous video screening allows hiring managers to assess communication skills, professionalism, and personality before committing to live interviews.
+                Creates professional, ATS-friendly CVs and tailored cover letters that are optimized for the South African job market.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="p-2 bg-orange-100 rounded-lg">
-                  <Target className="w-6 h-6 text-orange-600" />
+                  <MessageSquare className="w-6 h-6 text-orange-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900">Unprecedented Application Control</h3>
+                <h3 className="text-lg font-semibold text-slate-900">AI Interview Coach</h3>
               </div>
               <p className="text-slate-600">
-                Businesses are no longer passive recipients of applications. Design your own application funnel with mandatory fields and custom screening questions to ensure only relevant, high-quality submissions.
+                A safe space for users to practice interview questions using a voice-first interface and record their best answers as a "Video Pitch."
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="p-2 bg-purple-100 rounded-lg">
-                  <Users className="w-6 h-6 text-purple-600" />
+                  <Building className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900">Access to Motivated Talent</h3>
+                <h3 className="text-lg font-semibold text-slate-900">Job Board & Application Portal</h3>
               </div>
               <p className="text-slate-600">
-                All candidates are sourced through JobSpark, meaning they are inherently proactive, prepared, and have already invested time in presenting their best selves.
+                Allows users to find opportunities and apply with their complete, high-quality profile directly through the platform.
               </p>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Component 2: TalentSpark Portal (The Recruiter Portal)</h2>
+          
+          <p className="text-slate-700 leading-relaxed mb-6">
+            The TalentSpark portal (talentspark.co.za) is the B2B component that completes the ecosystem loop. While JobSpark creates the talent supply, TalentSpark provides the demand and the screening tools that businesses need.
+          </p>
+
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+            <h3 className="text-lg font-semibold text-blue-900 mb-3">High-Level Integration</h3>
+            <p className="text-blue-800">
+              All applications submitted through JobSpark are routed directly to the corresponding company's dashboard on the TalentSpark portal. The structured data, generated CV, and Video Pitch from the candidate become the assets that the recruiter screens. This seamless integration ensures businesses receive standardized, high-quality, and easy-to-evaluate applications.
+            </p>
+          </div>
+
+          <h3 className="text-xl font-semibold text-slate-800 mb-4">Core Value Proposition for Businesses</h3>
+
+          <p className="text-slate-700 leading-relaxed mb-6">
+            The TalentSpark platform offers four key advantages over traditional job boards and recruiting methods:
+          </p>
+
+          <div className="space-y-6 my-8">
+            <div className="flex items-start space-x-4">
+              <div className="p-2 bg-green-100 rounded-lg mt-1">
+                <Zap className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Dramatically Reduce Time-to-Hire</h4>
+                <p className="text-slate-700">
+                  By providing structured data and video pitches upfront, recruiters can screen candidates for both technical fit and personality in a fraction of the time, leading to shorter, more effective interview cycles.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="p-2 bg-blue-100 rounded-lg mt-1">
+                <MessageSquare className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Screen for Soft Skills at Scale</h4>
+                <p className="text-slate-700">
+                  Move beyond keyword-matched CVs. Asynchronous video screening allows hiring managers to assess communication skills, professionalism, and personality before committing to live interviews.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="p-2 bg-orange-100 rounded-lg mt-1">
+                <Target className="w-5 h-5 text-orange-600" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Unprecedented Application Control</h4>
+                <p className="text-slate-700">
+                  Businesses are no longer passive recipients of applications. Design your own application funnel with mandatory fields and custom screening questions to ensure only relevant, high-quality submissions.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="p-2 bg-purple-100 rounded-lg mt-1">
+                <Users className="w-5 h-5 text-purple-600" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Access to Motivated Talent</h4>
+                <p className="text-slate-700">
+                  All candidates are sourced through JobSpark, meaning they are inherently proactive, prepared, and have already invested time in presenting their best selves.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -317,50 +425,6 @@ export default function FuturePlatformExpansionPost() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Competitive Advantage</h2>
-
-          <p className="text-slate-700 leading-relaxed mb-6">
-            TalentSpark's unique position in the market stems from several key differentiators:
-          </p>
-
-          <div className="space-y-6 my-8">
-            <div className="flex items-start space-x-4">
-              <div className="p-2 bg-green-100 rounded-lg mt-1">
-                <BarChart className="w-5 h-5 text-green-600" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Quality Over Quantity</h4>
-                <p className="text-slate-700">
-                  While traditional job boards compete on volume, we compete on quality. Every candidate has been through JobSpark's preparation process, ensuring a higher baseline of professionalism and preparedness.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="p-2 bg-blue-100 rounded-lg mt-1">
-                <MessageSquare className="w-5 h-5 text-blue-600" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Soft Skills Assessment</h4>
-                <p className="text-slate-700">
-                  No other platform in South Africa offers comprehensive video-based soft skills screening at scale. This addresses one of the biggest gaps in traditional recruitment.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="p-2 bg-orange-100 rounded-lg mt-1">
-                <Target className="w-5 h-5 text-orange-600" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">South African Context</h4>
-                <p className="text-slate-700">
-                  Built specifically for the South African market, understanding local hiring challenges, cultural nuances, and business needs.
-                </p>
-              </div>
-            </div>
-          </div>
-
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Implementation Roadmap</h2>
 
           <p className="text-slate-700 leading-relaxed mb-6">
@@ -390,10 +454,10 @@ export default function FuturePlatformExpansionPost() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Bigger Picture</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Bigger Picture: Solving South Africa's Employment Crisis</h2>
 
           <p className="text-slate-700 leading-relaxed mb-6">
-            TalentSpark Portal isn't just another recruitment platform—it's a critical component in addressing South Africa's unemployment crisis from both sides of the equation. While JobSpark prepares individuals for success, TalentSpark ensures businesses can efficiently identify and hire that prepared talent.
+            The JobSpark Ecosystem isn't just another recruitment platform—it's a critical component in addressing South Africa's unemployment crisis from both sides of the equation. While JobSpark prepares individuals for success, TalentSpark ensures businesses can efficiently identify and hire that prepared talent.
           </p>
 
           <p className="text-slate-700 leading-relaxed mb-8">
