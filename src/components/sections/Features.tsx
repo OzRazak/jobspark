@@ -79,7 +79,7 @@ const CVVisual = () => (
       className="mt-4 flex items-center space-x-2 bg-green-50 px-3 py-2 rounded-lg"
     >
       <CheckCircle className="w-4 h-4 text-green-600" />
-      <span className="text-xs sm:text-sm text-green-700 font-medium">SA-optimized CV ready!</span>
+      <span className="text-xs sm:text-sm text-green-700 font-medium">SA-optimised CV ready!</span>
     </motion.div>
   </div>
 );
@@ -100,8 +100,8 @@ const CommunityVisual = () => (
     >
       <div className="text-2xl font-bold text-orange-600">100%</div>
       <p className="text-xs sm:text-sm text-slate-600">Free & Open Source</p>
-      <div className="text-lg font-bold text-green-600">12,500+</div>
-      <p className="text-xs sm:text-sm text-slate-600">South Africans helped</p>
+      <div className="text-lg font-bold text-green-600">3M</div>
+      <p className="text-xs sm:text-sm text-slate-600">Targeting to help</p>
     </motion.div>
     <motion.div
       initial={{ opacity: 0 }}
@@ -134,7 +134,7 @@ const ImpactVisual = () => (
       <div className="text-2xl font-bold text-red-600">32.9%</div>
       <p className="text-xs sm:text-sm text-slate-600">Youth unemployment</p>
       <div className="text-2xl font-bold text-green-600">89%</div>
-      <p className="text-xs sm:text-sm text-slate-600">Success rate with JobSpark</p>
+      <p className="text-xs sm:text-sm text-slate-600">Targeting success rate</p>
     </motion.div>
     <motion.div
       initial={{ opacity: 0 }}
@@ -160,7 +160,7 @@ const features = [
   },
   { 
     icon: FileText, 
-    title: "Locally-Optimized CV Builder", 
+    title: "Locally-Optimised CV Builder", 
     description: "Create CVs that resonate with South African employers and ATS systems.", 
     visual: <CVVisual/> 
   },
@@ -168,7 +168,8 @@ const features = [
     icon: Users, 
     title: "Free & Open Source", 
     description: "Built by the community, for the community. Always free for those who need it most.", 
-    visual: <CommunityVisual/> 
+    visual: <CommunityVisual/>,
+    linkTo: "/blog/south-africa-needs-open-source-software"
   },
   { 
     icon: TrendingUp, 
@@ -188,11 +189,27 @@ export const Features = () => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, [isHovered, activeIndex]);
 
   return (
-    <section id="features" className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative">
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] sm:bg-[size:2.5rem_2.5rem] opacity-30 sm:opacity-50" />
+    <section id="features" className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
+        {/* Enhanced Background */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] sm:bg-[size:2.5rem_2.5rem] opacity-30 sm:opacity-50" />
+          <motion.div 
+            className="absolute inset-0 opacity-20"
+            animate={{
+              background: [
+                "radial-gradient(circle at 20% 50%, #dcfce7 0%, transparent 50%)",
+                "radial-gradient(circle at 80% 50%, #dbeafe 0%, transparent 50%)",
+                "radial-gradient(circle at 50% 80%, #fed7aa 0%, transparent 50%)",
+                "radial-gradient(circle at 20% 50%, #dcfce7 0%, transparent 50%)"
+              ]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }} 
@@ -200,13 +217,25 @@ export const Features = () => {
           viewport={{ once: true, amount: 0.5 }} 
           transition={{ duration: 0.5 }}
           className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter text-slate-900 mb-3 sm:mb-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter text-slate-900 mb-3 sm:mb-4 bg-gradient-to-r from-green-600 via-blue-600 to-green-600 bg-clip-text text-transparent"
+          >
             Built for South African Success
-          </h2>
-          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto"
+          >
             Our AI understands the unique challenges and opportunities in the South African job market, 
-            helping you succeed with culturally-aware coaching and locally-optimized tools.
-          </p>
+            helping you succeed with culturally-aware coaching and locally-optimised tools.
+          </motion.p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -227,7 +256,16 @@ export const Features = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-2">{feature.description}</p>
+                    {feature.linkTo && (
+                      <motion.a 
+                        href={feature.linkTo}
+                        whileHover={{ scale: 1.05 }}
+                        className="inline-flex items-center text-green-600 hover:text-green-700 font-medium text-sm"
+                      >
+                        Read More →
+                      </motion.a>
+                    )}
                   </div>
                 </div>
                 <div className="aspect-[4/3] rounded-xl overflow-hidden">
@@ -242,9 +280,12 @@ export const Features = () => {
             onMouseEnter={() => setIsHovered(true)} 
             onMouseLeave={() => setIsHovered(false)}>
             {features.map((feature, index) => (
-              <div key={feature.title} 
+              <motion.div 
+                key={feature.title} 
                 onMouseEnter={() => setActiveIndex(index)}
-                className="relative p-6 rounded-2xl cursor-pointer transition-all duration-300">
+                className="relative p-6 rounded-2xl cursor-pointer transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+              >
                 {activeIndex === index && (
                   <motion.div 
                     layoutId="active-feature-background"
@@ -259,15 +300,28 @@ export const Features = () => {
                     animate={{
                         backgroundColor: activeIndex === index ? "#dcfce7" : "#f1f5f9",
                         color: activeIndex === index ? "#16a34a" : "#64748b"
-                    }}>
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                  >
                     <feature.icon className="w-6 h-6" />
                   </motion.div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-slate-800 mb-2">{feature.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                    <p className="text-slate-600 leading-relaxed mb-2">{feature.description}</p>
+                    {feature.linkTo && activeIndex === index && (
+                      <motion.a 
+                        href={feature.linkTo}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        whileHover={{ scale: 1.05 }}
+                        className="inline-flex items-center text-green-600 hover:text-green-700 font-medium text-sm"
+                      >
+                        Read More →
+                      </motion.a>
+                    )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           

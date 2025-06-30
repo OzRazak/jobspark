@@ -6,7 +6,7 @@ import Image from "next/image";
 const partners = [
   {
     name: "Bolt.new",
-    logo: "/bolt-logo.svg",
+    logo: "/black_circle_360x360.png",
     url: "https://bolt.new"
   },
   {
@@ -16,7 +16,7 @@ const partners = [
   },
   {
     name: "Supabase",
-    logo: "https://supabase.com/brand-assets/supabase-logo-icon.svg",
+    logo: "/supabase.jpeg",
     url: "https://supabase.com"
   },
   {
@@ -31,7 +31,7 @@ const partners = [
   },
   {
     name: "Tailwind CSS",
-    logo: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg",
+    logo: "/tailwind.png",
     url: "https://tailwindcss.com"
   }
 ];

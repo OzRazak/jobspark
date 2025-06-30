@@ -177,13 +177,13 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a 
-                    href="https://auxo.digital/" 
+                    href="https://www.linkedin.com/in/oz-razak/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colours text-sm"
                   >
                     <ExternalLink className="mr-2 w-4 h-4" />
-                    Auxo Digital
+                    LinkedIn
                   </a>
                   <a 
                     href="mailto:info@auxo.digital" 
@@ -234,13 +234,13 @@ export default function AboutPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <a 
-                    href="https://auxo.digital/" 
+                    href="https://www.linkedin.com/in/theodore-egling-95a64b203/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colours text-sm"
                   >
                     <ExternalLink className="mr-2 w-4 h-4" />
-                    Auxo Digital
+                    LinkedIn
                   </a>
                   <a 
                     href="mailto:info@auxo.digital" 

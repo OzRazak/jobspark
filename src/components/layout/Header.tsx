@@ -66,6 +66,14 @@ export const Header = () => {
   ) => {
     if (href.startsWith('/#')) {
       e.preventDefault();
+      
+      // If we're not on the home page, navigate there first
+      if (window.location.pathname !== '/') {
+        window.location.href = '/' + href;
+        return;
+      }
+      
+      // If we're on the home page, scroll to the section
       const element = document.querySelector(href.substring(1));
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -142,7 +150,7 @@ export const Header = () => {
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <button className="flex items-center space-x-1 font-medium text-slate-600 hover:text-slate-900 transition-colors px-3 py-2 rounded-lg text-sm">
+                  <button className="flex items-center space-x-1 font-medium text-slate-600 hover:text-slate-900 transition-colours px-3 py-2 rounded-lg text-sm">
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                     <ChevronDown className="w-3 h-3" />
@@ -162,7 +170,7 @@ export const Header = () => {
                             key={subItem.name}
                             href={subItem.href}
                             onClick={(e) => handleNavClick(e, subItem.href)}
-                            className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+                            className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colours"
                           >
                             {subItem.name}
                           </a>
@@ -175,7 +183,7 @@ export const Header = () => {
                 <a
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href!)}
-                  className={`flex items-center space-x-2 font-medium transition-colors px-3 py-2 rounded-lg text-sm ${
+                  className={`flex items-center space-x-2 font-medium transition-colours px-3 py-2 rounded-lg text-sm ${
                     item.highlight 
                       ? "text-sa-gold-600 hover:text-sa-gold-700 bg-sa-gold-50 hover:bg-sa-gold-100" 
                       : "text-slate-600 hover:text-slate-900"
@@ -217,7 +225,7 @@ export const Header = () => {
             <motion.button
               whileHover={{ scale: 1.05, color: "#000" }}
               whileTap={{ scale: 0.95 }}
-              className="font-semibold px-3 lg:px-4 py-2 text-slate-600 transition-colors text-sm lg:text-base"
+              className="font-semibold px-3 lg:px-4 py-2 text-slate-600 transition-colours text-sm lg:text-base"
             >
               Login
             </motion.button>
@@ -233,7 +241,7 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
+            className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colours"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -256,7 +264,7 @@ export const Header = () => {
                     <div>
                       <button
                         onClick={() => handleDropdownToggle(item.name)}
-                        className="flex items-center justify-between w-full px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
+                        className="flex items-center justify-between w-full px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colours"
                       >
                         <div className="flex items-center space-x-3">
                           <item.icon className="w-5 h-5" />
@@ -280,7 +288,7 @@ export const Header = () => {
                                 key={subItem.name}
                                 href={subItem.href}
                                 onClick={(e) => handleNavClick(e, subItem.href)}
-                                className="block px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors text-sm"
+                                className="block px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colours text-sm"
                               >
                                 {subItem.name}
                               </a>
@@ -293,7 +301,7 @@ export const Header = () => {
                     <a
                       href={item.href}
                       onClick={(e) => handleNavClick(e, item.href!)}
-                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colours ${
                         item.highlight 
                           ? "text-sa-gold-600 hover:text-sa-gold-700 bg-sa-gold-50 hover:bg-sa-gold-100" 
                           : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -308,12 +316,12 @@ export const Header = () => {
               
               <div className="pt-4 border-t border-slate-200 space-y-3">
                 <a href="https://app.jobspark.co.za/auth" className="block">
-                  <button className="w-full text-left px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors font-medium">
+                  <button className="w-full text-left px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colours font-medium">
                     Login
                   </button>
                 </a>
                 <a href="https://app.jobspark.co.za/auth" className="block">
-                  <button className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                  <button className="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colours">
                     Get Started
                   </button>
                 </a>
