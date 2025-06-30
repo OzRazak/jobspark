@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Building, Users, Zap, Target, BarChart, MessageSquare } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag, Building, Users, Zap, Target, BarChart, MessageSquare, CheckCircle, TrendingUp, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
@@ -23,6 +23,33 @@ export default function FuturePlatformExpansionPost() {
     tags: ['TalentSpark', 'B2B', 'Recruitment', 'AI', 'Platform Expansion', 'South Africa'],
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
   };
+
+  const relatedPosts = [
+    {
+      id: 'jobspark-za-mobile-first-career-platform',
+      title: 'JobSpark ZA: The Mobile-First AI Career Platform Transforming South African Youth Employment',
+      excerpt: 'How our AI-powered, mobile-first platform tackles South Africa\'s unemployment crisis.',
+      image: 'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'Platform Overview',
+      readTime: '12 min read'
+    },
+    {
+      id: 'jobspark-inspiration-competitive-landscape',
+      title: 'Where JobSpark Found Its Spark: Analyzing the Global Career Tools Landscape',
+      excerpt: 'Discover how we identified the perfect opportunity gap in the career development market.',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'Market Analysis',
+      readTime: '10 min read'
+    },
+    {
+      id: 'ai-revolution-south-african-job-market',
+      title: 'How AI is Revolutionizing the South African Job Market in 2025',
+      excerpt: 'Discover how artificial intelligence is transforming recruitment and creating new opportunities.',
+      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'AI & Technology',
+      readTime: '8 min read'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -97,7 +124,7 @@ export default function FuturePlatformExpansionPost() {
         <div className="prose prose-lg prose-slate max-w-none">
           
           <p className="text-xl text-slate-700 leading-relaxed mb-8">
-            As JobSpark continues to empower individual job seekers across South Africa, we're excited to share our vision for the next phase of our platform: <strong>TalentSpark Portal</strong>. This B2B component will revolutionize how South African businesses discover and hire junior talent.
+            As JobSpark continues to empower individual job seekers across South Africa, we're excited to share our vision for the next phase of our platform: <strong>TalentSpark Portal</strong>. This B2B component will revolutionize how South African businesses discover and hire junior talent, creating a complete ecosystem that benefits both job seekers and employers.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Introduction & Vision</h2>
@@ -243,6 +270,53 @@ export default function FuturePlatformExpansionPost() {
             </p>
           </div>
 
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">TalentSpark MVP: Hackathon Demo Scope</h2>
+
+          <p className="text-slate-700 leading-relaxed mb-6">
+            To validate our concept and demonstrate the platform's potential, we developed a comprehensive MVP during our hackathon participation. This demo showcases the core functionality that will revolutionize recruitment in South Africa.
+          </p>
+
+          <div className="bg-slate-50 p-6 rounded-xl my-8">
+            <h3 className="text-lg font-semibold text-slate-900 mb-4">MVP Scope (21 Developer-Hours)</h3>
+            <p className="text-slate-700 mb-4">
+              Scoped for 7 hours of work per developer (Theo, Katleho, Dewald), our MVP focuses on creating a high-fidelity demonstration of the recruiter experience.
+            </p>
+            
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-slate-900">Single Job Posting View</h4>
+                  <p className="text-slate-600 text-sm">Dashboard showing one hardcoded job posting (e.g., "Full-Stack Developer")</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-slate-900">Applicant List with AI Scores</h4>
+                  <p className="text-slate-600 text-sm">3-4 pre-loaded applicants with hardcoded AI Match Scores and status tags</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-slate-900">Detailed Applicant Profiles</h4>
+                  <p className="text-slate-600 text-sm">Structured data display, embedded video player, and full transcriptions</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-slate-900">"Magic Button" Simulation</h4>
+                  <p className="text-slate-600 text-sm">Shortlist & Send Invite button with success message popup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Competitive Advantage</h2>
 
           <p className="text-slate-700 leading-relaxed mb-6">
@@ -385,6 +459,49 @@ export default function FuturePlatformExpansionPost() {
           </div>
         </div>
       </article>
+
+      {/* Related Articles */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-8">Related Articles</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {relatedPosts.map((relatedPost) => (
+              <article key={relatedPost.id} className="bg-slate-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                <Image
+                  src={relatedPost.image}
+                  alt={relatedPost.title}
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="text-sm text-slate-500 mb-2">{relatedPost.category}</div>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-3">
+                    <Link 
+                      href={`/blog/${relatedPost.id}`}
+                      className="hover:text-green-600 transition-colors"
+                    >
+                      {relatedPost.title}
+                    </Link>
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4 line-clamp-3">
+                    {relatedPost.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-slate-500">
+                    <span>{relatedPost.readTime}</span>
+                    <Link 
+                      href={`/blog/${relatedPost.id}`}
+                      className="text-green-600 hover:text-green-700 font-medium"
+                    >
+                      Read More
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
