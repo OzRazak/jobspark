@@ -42,13 +42,37 @@ export default function TermsPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">2. Description of Services</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">2. Early Access Program</h2>
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-6 rounded-r-lg">
+                  <h3 className="text-lg font-semibold text-orange-900 mb-3">Important Early Access Notice</h3>
+                  <p className="text-orange-800 leading-relaxed mb-4">
+                    JobSpark is currently in early access. By using our Services during this period, you acknowledge and agree that:
+                  </p>
+                  <ul className="text-orange-800 space-y-2">
+                    <li>• The platform may contain bugs, errors, and incomplete features</li>
+                    <li>• AI responses may be inaccurate, inappropriate, or unreliable</li>
+                    <li>• Your data may be lost, corrupted, or used to improve our services</li>
+                    <li>• Service availability is not guaranteed and may be interrupted</li>
+                    <li>• Features and functionality may change without notice</li>
+                    <li>• Some content may be fictitious for demonstration purposes</li>
+                  </ul>
+                  <p className="text-orange-800 mt-4">
+                    <strong>You use the Services entirely at your own risk and discretion.</strong> For detailed information about our early access program, please visit our{" "}
+                    <a href="/features/early-access" className="underline hover:text-orange-900">
+                      Early Access page
+                    </a>.
+                  </p>
+                </div>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">3. Description of Services</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   JobSpark provides AI-powered career development tools specifically designed for the South African job market, including:
                 </p>
                 <ul className="list-disc pl-6 text-slate-700 space-y-2">
                   <li>AI-powered interview practice and coaching</li>
-                  <li>CV generation and optimization tools</li>
+                  <li>CV generation and optimisation tools</li>
                   <li>Career readiness assessments</li>
                   <li>Job matching and application assistance</li>
                   <li>Professional development resources</li>
@@ -59,34 +83,34 @@ export default function TermsPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">3. User Accounts and Registration</h2>
-                <h3 className="text-xl font-medium text-slate-800 mb-3">3.1 Account Creation</h3>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. User Accounts and Registration</h2>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">4.1 Account Creation</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   To access certain features of our Services, you must register for an account. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate, current, and complete.
                 </p>
                 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">3.2 Account Security</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">4.2 Account Security</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  You are responsible for safeguarding the password and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
+                  You are responsible for safeguarding the password and for all activities that occur under your account. You agree to notify us immediately of any unauthorised use of your account.
                 </p>
 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">3.3 Age Requirements</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">4.3 Age Requirements</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   You must be at least 18 years old to use our Services. By using our Services, you represent and warrant that you meet this age requirement.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. Acceptable Use Policy</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Acceptable Use Policy</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   You agree to use our Services only for lawful purposes and in accordance with these Terms. You agree not to:
                 </p>
                 <ul className="list-disc pl-6 text-slate-700 space-y-2">
-                  <li>Use the Services for any illegal or unauthorized purpose</li>
+                  <li>Use the Services for any illegal or unauthorised purpose</li>
                   <li>Violate any applicable laws or regulations</li>
                   <li>Infringe upon the rights of others</li>
                   <li>Upload or transmit harmful, offensive, or inappropriate content</li>
-                  <li>Attempt to gain unauthorized access to our systems</li>
+                  <li>Attempt to gain unauthorised access to our systems</li>
                   <li>Interfere with or disrupt the Services</li>
                   <li>Use automated systems to access the Services without permission</li>
                   <li>Impersonate any person or entity</li>
@@ -96,46 +120,46 @@ export default function TermsPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Intellectual Property Rights</h2>
-                <h3 className="text-xl font-medium text-slate-800 mb-3">5.1 Our Content</h3>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">6. Intellectual Property Rights</h2>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">6.1 Our Content</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   The Services and their original content, features, and functionality are and will remain the exclusive property of Auxo Digital Pty Ltd and its licensors. The Services are protected by copyright, trademark, and other laws.
                 </p>
                 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">5.2 Your Content</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">6.2 Your Content</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  You retain ownership of any content you submit, post, or display on or through the Services ("Your Content"). By submitting Your Content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute Your Content solely for the purpose of providing and improving our Services.
+                  You retain ownership of any content you submit, post, or display on or through the Services ("Your Content"). By submitting Your Content, you grant us a worldwide, non-exclusive, royalty-free licence to use, reproduce, modify, and distribute Your Content solely for the purpose of providing and improving our Services.
                 </p>
 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">5.3 AI-Generated Content</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">6.3 AI-Generated Content</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Content generated by our AI tools based on your input is provided to you for your use. However, we retain the right to use anonymized and aggregated data to improve our AI models and services.
+                  Content generated by our AI tools based on your input is provided to you for your use. However, we retain the right to use anonymised and aggregated data to improve our AI models and services.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">6. Open Source and Free Access</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">7. Open Source and Free Access</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   JobSpark is committed to providing free access to career development tools for those who need them most. Our core services are provided at no cost, and our platform is built on open-source principles.
                 </p>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   While our Services are free to use, we may offer premium features or accept voluntary contributions to support our mission of tackling unemployment in South Africa.
                 </p>
-                <h3 className="text-xl font-medium text-slate-800 mb-3">6.1 Community Contributions</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">7.1 Community Contributions</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  We welcome community contributions to improve our platform. By contributing, you agree that your contributions may be incorporated into our Services under our open-source license.
+                  We welcome community contributions to improve our platform. By contributing, you agree that your contributions may be incorporated into our Services under our open-source licence.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">7. Privacy and Data Protection</h2>
+                <h2 className="text-2xl font-semibent text-slate-900 mb-4">8. Privacy and Data Protection</h2>
                 <p className="text-slate-700 leading-relaxed">
                   Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information when you use our Services. By using our Services, you agree to the collection and use of information in accordance with our Privacy Policy.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">8. Third-Party Services</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">9. Third-Party Services</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   Our Services may integrate with third-party services and platforms. Your use of these third-party services is subject to their respective terms and conditions. We are not responsible for the content, privacy policies, or practices of third-party services.
                 </p>
@@ -145,39 +169,44 @@ export default function TermsPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">9. Disclaimers and Limitations</h2>
-                <h3 className="text-xl font-medium text-slate-800 mb-3">9.1 Service Availability</h3>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">10. Disclaimers and Limitations</h2>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">10.1 Service Availability</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   We strive to provide reliable Services, but we cannot guarantee that the Services will be available at all times or free from errors. The Services are provided "as is" and "as available" without warranties of any kind.
                 </p>
                 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">9.2 Career Outcomes</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">10.2 Career Outcomes</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   While our Services are designed to help improve your career prospects, we cannot guarantee specific outcomes such as job offers, interviews, or career advancement. Your success depends on many factors beyond our control.
                 </p>
 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">9.3 AI Accuracy</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">10.3 AI Accuracy</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Our AI-powered features are designed to assist and guide you, but they may not always be accurate or appropriate for your specific situation. You should use your own judgment and seek professional advice when making important career decisions.
+                  Our AI-powered features are designed to assist and guide you, but they may not always be accurate or appropriate for your specific situation. You should use your own judgement and seek professional advice when making important career decisions.
+                </p>
+
+                <h3 className="text-xl font-medium text-slate-800 mb-3">10.4 Early Access Limitations</h3>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  During our early access period, the Services may contain significant bugs, errors, and incomplete features. AI responses may be inaccurate or inappropriate. We make no warranties about the reliability or suitability of the Services during this period.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">10. Limitation of Liability</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">11. Limitation of Liability</h2>
                 <p className="text-slate-700 leading-relaxed">
                   To the maximum extent permitted by South African law, Auxo Digital Pty Ltd shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of the Services.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibent text-slate-900 mb-4">11. Indemnification</h2>
+                <h2 className="text-2xl font-semibent text-slate-900 mb-4">12. Indemnification</h2>
                 <p className="text-slate-700 leading-relaxed">
                   You agree to defend, indemnify, and hold harmless Auxo Digital Pty Ltd and its officers, directors, employees, and agents from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including attorney's fees) arising from your use of the Services or violation of these Terms.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">12. Termination</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">13. Termination</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   We may terminate or suspend your account and bar access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including without limitation if you breach the Terms.
                 </p>
@@ -190,39 +219,39 @@ export default function TermsPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">13. Governing Law and Dispute Resolution</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">14. Governing Law and Dispute Resolution</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   These Terms shall be governed by and construed in accordance with the laws of South Africa, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.
                 </p>
-                <h3 className="text-xl font-medium text-slate-800 mb-3">13.1 Dispute Resolution Process</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">14.1 Dispute Resolution Process</h3>
                 <p className="text-slate-700 leading-relaxed">
                   Before initiating any legal proceedings, parties agree to attempt to resolve disputes through good faith negotiations. If unsuccessful, disputes may be resolved through mediation or arbitration as agreed by both parties.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">14. Force Majeure</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">15. Force Majeure</h2>
                 <p className="text-slate-700 leading-relaxed">
                   We shall not be liable for any failure or delay in performance under these Terms which is due to fire, flood, earthquake, elements of nature, acts of God, acts of war, terrorism, riots, civil disorders, rebellions, or other similar causes beyond our reasonable control.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">15. Severability</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">16. Severability</h2>
                 <p className="text-slate-700 leading-relaxed">
                   If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect, and the invalid or unenforceable provision will be replaced with a valid and enforceable provision that most closely matches the intent of the original provision.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">16. Changes to Terms</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">17. Changes to Terms</h2>
                 <p className="text-slate-700 leading-relaxed">
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect. Your continued use of the Services after such changes constitutes acceptance of the new Terms.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">17. Contact Information</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">18. Contact Information</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   If you have any questions about these Terms, please contact us:
                 </p>
@@ -231,7 +260,8 @@ export default function TermsPage() {
                   <p className="text-slate-700"><strong>Email:</strong> info@auxo.digital</p>
                   <p className="text-slate-700"><strong>Phone:</strong> +27 21 8480 9</p>
                   <p className="text-slate-700"><strong>Address:</strong> 6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
-                  <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className=\"text-green-600 hover:text-green-700">jobspark.co.za</a></p>
+                  <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className="text-green-600 hover:text-green-700">jobspark.co.za</a></p>
+                  <p className="text-slate-700 mt-4"><strong>Early Access Information:</strong> <a href="/features/early-access" className="text-orange-600 hover:text-orange-700">View Early Access Details</a></p>
                 </div>
               </section>
             </div>

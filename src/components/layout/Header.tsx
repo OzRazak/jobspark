@@ -31,6 +31,7 @@ export const Header = () => {
       subItems: [
         { name: "Platform Features", href: "/features" },
         { name: "How It Works", href: "/#how-it-works" },
+        { name: "Early Access", href: "/features/early-access" },
         { name: "FAQ", href: "/features#faq" },
       ]
     },

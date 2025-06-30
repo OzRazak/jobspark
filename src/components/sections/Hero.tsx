@@ -13,6 +13,7 @@ import {
   Users,
   TrendingUp,
   Zap,
+  AlertTriangle,
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
@@ -155,8 +156,8 @@ const UnemploymentStatsVisual = () => (
     >
       <div className="text-3xl font-bold text-sa-gold-600">32.9%</div>
       <p className="text-xs sm:text-sm text-slate-600">Youth unemployment in SA</p>
-      <div className="text-2xl font-bold text-green-600">12,500+</div>
-      <p className="text-xs sm:text-sm text-slate-600">Lives changed with JobSpark</p>
+      <div className="text-2xl font-bold text-green-600">3M</div>
+      <p className="text-xs sm:text-sm text-slate-600">Targeting to help</p>
     </motion.div>
   </div>
 );
@@ -227,14 +228,51 @@ export const Hero = () => {
 
   return (
     <section className="relative pt-20 sm:pt-32 pb-16 sm:pb-24 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
-      {/* --- Simplified Background --- */}
+      {/* Enhanced South African Flag-Inspired Background */}
       <div className="absolute inset-0 z-0">
         {/* The Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] sm:bg-[size:36px_36px] opacity-20 sm:opacity-30" />
-        {/* South African inspired colors */}
-        <div className="absolute inset-0 opacity-30 sm:opacity-40">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_#fef3c7_0%,_transparent_40%)]" />
-          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#dcfce7_0%,_transparent_45%)]" />
+        
+        {/* Animated South African Flag Colors */}
+        <motion.div 
+          className="absolute inset-0 opacity-40"
+          animate={{
+            background: [
+              "radial-gradient(circle at 20% 20%, #22c55e 0%, transparent 40%), radial-gradient(circle at 80% 80%, #fbbf24 0%, transparent 40%), radial-gradient(circle at 50% 50%, #3b82f6 0%, transparent 30%)",
+              "radial-gradient(circle at 80% 20%, #fbbf24 0%, transparent 40%), radial-gradient(circle at 20% 80%, #3b82f6 0%, transparent 40%), radial-gradient(circle at 50% 50%, #22c55e 0%, transparent 30%)",
+              "radial-gradient(circle at 50% 20%, #3b82f6 0%, transparent 40%), radial-gradient(circle at 20% 80%, #22c55e 0%, transparent 40%), radial-gradient(circle at 80% 50%, #fbbf24 0%, transparent 30%)",
+              "radial-gradient(circle at 20% 20%, #22c55e 0%, transparent 40%), radial-gradient(circle at 80% 80%, #fbbf24 0%, transparent 40%), radial-gradient(circle at 50% 50%, #3b82f6 0%, transparent 30%)"
+            ]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
+        {/* Floating particles in SA flag colors */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={i}
+              className={`absolute w-2 h-2 rounded-full ${
+                i % 3 === 0 ? 'bg-green-400/30' : 
+                i % 3 === 1 ? 'bg-yellow-400/30' : 'bg-blue-400/30'
+              }`}
+              animate={{
+                x: [0, 100, 0],
+                y: [0, -100, 0],
+                opacity: [0, 1, 0],
+                scale: [0.5, 1, 0.5]
+              }}
+              transition={{
+                duration: 6 + i,
+                repeat: Infinity,
+                delay: i * 0.8
+              }}
+              style={{
+                left: `${10 + i * 12}%`,
+                top: `${20 + i * 8}%`
+              }}
+            />
+          ))}
         </div>
       </div>
 
@@ -245,6 +283,21 @@ export const Hero = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center lg:text-left order-2 lg:order-1"
         >
+          {/* Early Access Badge */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="inline-flex items-center bg-gradient-to-r from-orange-100 to-red-100 text-orange-800 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-4 sm:mb-6 border border-orange-200 shadow-sm"
+          >
+            <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-600" />
+            <span className="hidden sm:inline">Early Access - Bugs & Issues Expected</span>
+            <span className="sm:hidden">Early Access</span>
+            <a href="/features/early-access" className="ml-2 text-orange-600 hover:text-orange-700 underline">
+              Learn More
+            </a>
+          </motion.div>
+
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -262,10 +315,37 @@ export const Hero = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-slate-900 mb-4 sm:mb-6 leading-tight"
           >
-            <span className="text-blue-600">Ignite</span> Your <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 bg-clip-text text-transparent">
+            <motion.span 
+              className="bg-gradient-to-r from-blue-600 via-green-600 to-yellow-500 bg-clip-text text-transparent"
+              animate={{ 
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+              }}
+              transition={{ 
+                duration: 8, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              style={{ backgroundSize: "200% 200%" }}
+            >
+              AIgnite
+            </motion.span>{" "}Your <br className="hidden sm:block" />
+            <motion.span 
+              className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 bg-clip-text text-transparent"
+              animate={{ 
+                textShadow: [
+                  "0 0 20px rgba(34, 197, 94, 0.3)",
+                  "0 0 40px rgba(34, 197, 94, 0.5)",
+                  "0 0 20px rgba(34, 197, 94, 0.3)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+            >
               Interview Success
-            </span>
+            </motion.span>
           </motion.h1>
 
           <motion.p 
@@ -286,7 +366,7 @@ export const Hero = () => {
           >
             <SpotlightButton href="https://app.jobspark.co.za/auth">
               <span className="flex items-center">
-                Start Practicing Free
+                Start Practising Free
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </span>
             </SpotlightButton>
@@ -377,6 +457,30 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Early Access Disclaimer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.6 }}
+        className="max-w-4xl mx-auto mt-12 relative z-10"
+      >
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 sm:p-6">
+          <div className="flex items-start space-x-3">
+            <AlertTriangle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+            <div>
+              <h3 className="font-semibold text-orange-900 mb-2">Early Access Notice</h3>
+              <p className="text-orange-800 text-sm leading-relaxed">
+                JobSpark is currently in early access. You may encounter bugs, issues, or incomplete features. 
+                Some content may be fictitious for demonstration purposes. Use at your own discretion.{" "}
+                <a href="/features/early-access" className="underline hover:text-orange-900">
+                  Learn more about our early access program
+                </a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
