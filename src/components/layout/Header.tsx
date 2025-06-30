@@ -124,20 +124,14 @@ export const Header = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 sm:h-20"
       >
         {/* Left Side: Logo */}
-        <a href="/" className="flex items-center space-x-3">
+        <a href="/" className="flex items-center">
           <Image 
-            src="/jobspark-logo.svg" 
+            src="/Job Spark Logo .png" 
             alt="JobSpark Logo" 
-            width={40} 
+            width={150} 
             height={40}
-            className="w-8 h-8 sm:w-10 sm:h-10"
+            className="h-10 w-auto"
           />
-          <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl font-bold tracking-tight">
-              <span className="text-blue-600">Job</span><span className="text-green-600">Spark</span>
-            </span>
-            <span className="text-xs text-orange-500 font-medium hidden sm:block">Ignite your interview</span>
-          </div>
         </a>
 
         {/* Center: Navigation - Hidden on mobile, shown on lg+ */}
@@ -257,7 +251,7 @@ export const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60 overflow-hidden"
           >
-            <div className="px-4 py-6 space-y-4 max-h-96 overflow-y-auto">
+            <div className="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.subItems ? (
