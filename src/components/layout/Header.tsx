@@ -147,7 +147,7 @@ export const Header = () => {
             className="h-10 w-auto"
           />
           <motion.div 
-            className="ml-2 hidden sm:block"
+            className="ml-2 hidden sm:block bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent font-bold text-xl"
             animate={{ 
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
             }}
@@ -157,7 +157,6 @@ export const Header = () => {
               ease: "easeInOut" 
             }}
             style={{ backgroundSize: "200% 200%" }}
-            className="bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent font-bold text-xl"
           >
             JobSpark
           </motion.div>
