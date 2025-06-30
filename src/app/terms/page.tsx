@@ -27,11 +27,18 @@ export default function TermsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. Acceptance of Terms</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Welcome to JobSpark! These Terms of Service ("Terms") govern your use of the JobSpark platform and services ("Services") operated by JobSpark ("we," "our," or "us"). By accessing or using our Services, you agree to be bound by these Terms.
+                  Welcome to JobSpark! These Terms of Service ("Terms") govern your use of the JobSpark platform and services ("Services") operated by Auxo Digital Pty Ltd ("we," "our," or "us"). By accessing or using our Services, you agree to be bound by these Terms.
                 </p>
-                <p className="text-slate-700 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed mb-4">
                   If you disagree with any part of these Terms, then you may not access the Services. These Terms apply to all visitors, users, and others who access or use the Services.
                 </p>
+                <div className="bg-slate-50 p-4 rounded-lg">
+                  <p className="text-slate-700"><strong>Company Information:</strong></p>
+                  <p className="text-slate-700">Auxo Digital Pty Ltd</p>
+                  <p className="text-slate-700">6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
+                  <p className="text-slate-700">Email: info@auxo.digital</p>
+                  <p className="text-slate-700">Phone: +27 21 8480 9</p>
+                </div>
               </section>
 
               <section className="mb-8">
@@ -45,6 +52,9 @@ export default function TermsPage() {
                   <li>Career readiness assessments</li>
                   <li>Job matching and application assistance</li>
                   <li>Professional development resources</li>
+                  <li>Voice-based interview simulation</li>
+                  <li>Real-time feedback and scoring</li>
+                  <li>Career guidance and mentorship tools</li>
                 </ul>
               </section>
 
@@ -58,6 +68,11 @@ export default function TermsPage() {
                 <h3 className="text-xl font-medium text-slate-800 mb-3">3.2 Account Security</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   You are responsible for safeguarding the password and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
+                </p>
+
+                <h3 className="text-xl font-medium text-slate-800 mb-3">3.3 Age Requirements</h3>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  You must be at least 18 years old to use our Services. By using our Services, you represent and warrant that you meet this age requirement.
                 </p>
               </section>
 
@@ -74,6 +89,9 @@ export default function TermsPage() {
                   <li>Attempt to gain unauthorized access to our systems</li>
                   <li>Interfere with or disrupt the Services</li>
                   <li>Use automated systems to access the Services without permission</li>
+                  <li>Impersonate any person or entity</li>
+                  <li>Collect or harvest personal information of other users</li>
+                  <li>Use the Services to spam or send unsolicited communications</li>
                 </ul>
               </section>
 
@@ -81,12 +99,17 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Intellectual Property Rights</h2>
                 <h3 className="text-xl font-medium text-slate-800 mb-3">5.1 Our Content</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  The Services and their original content, features, and functionality are and will remain the exclusive property of JobSpark and its licensors. The Services are protected by copyright, trademark, and other laws.
+                  The Services and their original content, features, and functionality are and will remain the exclusive property of Auxo Digital Pty Ltd and its licensors. The Services are protected by copyright, trademark, and other laws.
                 </p>
                 
                 <h3 className="text-xl font-medium text-slate-800 mb-3">5.2 Your Content</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   You retain ownership of any content you submit, post, or display on or through the Services ("Your Content"). By submitting Your Content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute Your Content solely for the purpose of providing and improving our Services.
+                </p>
+
+                <h3 className="text-xl font-medium text-slate-800 mb-3">5.3 AI-Generated Content</h3>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Content generated by our AI tools based on your input is provided to you for your use. However, we retain the right to use anonymized and aggregated data to improve our AI models and services.
                 </p>
               </section>
 
@@ -95,8 +118,12 @@ export default function TermsPage() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   JobSpark is committed to providing free access to career development tools for those who need them most. Our core services are provided at no cost, and our platform is built on open-source principles.
                 </p>
-                <p className="text-slate-700 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed mb-4">
                   While our Services are free to use, we may offer premium features or accept voluntary contributions to support our mission of tackling unemployment in South Africa.
+                </p>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">6.1 Community Contributions</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  We welcome community contributions to improve our platform. By contributing, you agree that your contributions may be incorporated into our Services under our open-source license.
                 </p>
               </section>
 
@@ -108,65 +135,103 @@ export default function TermsPage() {
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">8. Disclaimers and Limitations</h2>
-                <h3 className="text-xl font-medium text-slate-800 mb-3">8.1 Service Availability</h3>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">8. Third-Party Services</h2>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Our Services may integrate with third-party services and platforms. Your use of these third-party services is subject to their respective terms and conditions. We are not responsible for the content, privacy policies, or practices of third-party services.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  Third-party services we integrate with include but are not limited to OpenAI, ElevenLabs, Supabase, and Netlify.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">9. Disclaimers and Limitations</h2>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">9.1 Service Availability</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   We strive to provide reliable Services, but we cannot guarantee that the Services will be available at all times or free from errors. The Services are provided "as is" and "as available" without warranties of any kind.
                 </p>
                 
-                <h3 className="text-xl font-medium text-slate-800 mb-3">8.2 Career Outcomes</h3>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">9.2 Career Outcomes</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   While our Services are designed to help improve your career prospects, we cannot guarantee specific outcomes such as job offers, interviews, or career advancement. Your success depends on many factors beyond our control.
                 </p>
-              </section>
 
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">9. Limitation of Liability</h2>
-                <p className="text-slate-700 leading-relaxed">
-                  To the maximum extent permitted by South African law, JobSpark shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of the Services.
+                <h3 className="text-xl font-medium text-slate-800 mb-3">9.3 AI Accuracy</h3>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Our AI-powered features are designed to assist and guide you, but they may not always be accurate or appropriate for your specific situation. You should use your own judgment and seek professional advice when making important career decisions.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">10. Indemnification</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">10. Limitation of Liability</h2>
                 <p className="text-slate-700 leading-relaxed">
-                  You agree to defend, indemnify, and hold harmless JobSpark and its officers, directors, employees, and agents from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including attorney's fees) arising from your use of the Services or violation of these Terms.
+                  To the maximum extent permitted by South African law, Auxo Digital Pty Ltd shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of the Services.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">11. Termination</h2>
+                <h2 className="text-2xl font-semibent text-slate-900 mb-4">11. Indemnification</h2>
+                <p className="text-slate-700 leading-relaxed">
+                  You agree to defend, indemnify, and hold harmless Auxo Digital Pty Ltd and its officers, directors, employees, and agents from and against any claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including attorney's fees) arising from your use of the Services or violation of these Terms.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">12. Termination</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   We may terminate or suspend your account and bar access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including without limitation if you breach the Terms.
                 </p>
-                <p className="text-slate-700 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed mb-4">
                   You may terminate your account at any time by contacting us. Upon termination, your right to use the Services will cease immediately.
                 </p>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">12. Governing Law</h2>
                 <p className="text-slate-700 leading-relaxed">
-                  These Terms shall be governed by and construed in accordance with the laws of South Africa, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.
+                  Upon termination, we will retain your data in accordance with our Privacy Policy and applicable laws.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">13. Changes to Terms</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">13. Governing Law and Dispute Resolution</h2>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  These Terms shall be governed by and construed in accordance with the laws of South Africa, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.
+                </p>
+                <h3 className="text-xl font-medium text-slate-800 mb-3">13.1 Dispute Resolution Process</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Before initiating any legal proceedings, parties agree to attempt to resolve disputes through good faith negotiations. If unsuccessful, disputes may be resolved through mediation or arbitration as agreed by both parties.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">14. Force Majeure</h2>
+                <p className="text-slate-700 leading-relaxed">
+                  We shall not be liable for any failure or delay in performance under these Terms which is due to fire, flood, earthquake, elements of nature, acts of God, acts of war, terrorism, riots, civil disorders, rebellions, or other similar causes beyond our reasonable control.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">15. Severability</h2>
+                <p className="text-slate-700 leading-relaxed">
+                  If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect, and the invalid or unenforceable provision will be replaced with a valid and enforceable provision that most closely matches the intent of the original provision.
+                </p>
+              </section>
+
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">16. Changes to Terms</h2>
                 <p className="text-slate-700 leading-relaxed">
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect. Your continued use of the Services after such changes constitutes acceptance of the new Terms.
                 </p>
               </section>
 
               <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-slate-900 mb-4">14. Contact Information</h2>
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">17. Contact Information</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   If you have any questions about these Terms, please contact us:
                 </p>
                 <div className="bg-slate-50 p-4 rounded-lg">
-                  <p className="text-slate-700"><strong>Email:</strong> legal@jobspark.co.za</p>
-                  <p className="text-slate-700"><strong>Address:</strong> JobSpark Legal Department, Cape Town, South Africa</p>
-                  <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className=\"text-green-600 hover:text-green-700">jobspark.co.za</a></p>
+                  <p className="text-slate-700"><strong>Auxo Digital Pty Ltd</strong></p>
+                  <p className="text-slate-700"><strong>Email:</strong> info@auxo.digital</p>
+                  <p className="text-slate-700"><strong>Phone:</strong> +27 21 8480 9</p>
+                  <p className="text-slate-700"><strong>Address:</strong> 6 Hoggs Bay Close, Kyalami, 1684, South Africa</p>
+                  <p className="text-slate-700"><strong>Website:</strong> <a href="https://jobspark.co.za" className="text-green-600 hover:text-green-700">jobspark.co.za</a></p>
                 </div>
               </section>
             </div>

@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { CookieBanner } from "@/components/ui/CookieBanner";
 
 export const metadata = {
   title: "JobSpark - Your AI Career Co-Pilot",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

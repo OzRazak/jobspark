@@ -50,6 +50,7 @@ export const Header = () => {
         { name: "About Auxo Digital", href: "/about" },
         { name: "Our Mission", href: "/about#mission" },
         { name: "Meet the Team", href: "/about#team" },
+        { name: "Building with Bolt & Auxo", href: "/building-with-bolt" },
       ]
     },
     { 
@@ -191,6 +192,28 @@ export const Header = () => {
 
         {/* Right Side: Actions & Mobile Menu */}
         <div className="flex items-center space-x-2 sm:space-x-4">
+          {/* Bolt Logo */}
+          <a 
+            href="https://bolt.new/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden sm:block"
+          >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              className="w-8 h-8 lg:w-10 lg:h-10"
+            >
+              <Image
+                src="/bolt-logo-circle.svg"
+                alt="Powered by Bolt.new"
+                width={40}
+                height={40}
+                className="w-full h-full"
+              />
+            </motion.div>
+          </a>
+
           <a href="https://app.jobspark.co.za/auth" className="hidden sm:block">
             <motion.button
               whileHover={{ scale: 1.05, color: "#000" }}
