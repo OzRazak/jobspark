@@ -485,7 +485,7 @@ export const Hero = () => {
                 onClick={() => setShowVideo(false)}
                 className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
               >
-                <X className="w-6 h-6" />
+                <Play className="w-6 h-6" />
               </button>
             </div>
             
