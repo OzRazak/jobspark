@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, ArrowRight, CheckCircle } from "lucide-react";
+import { Heart, ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
 import React from "react";
 
 // --- Enhanced "Shine" Button ---
@@ -178,6 +178,27 @@ export const CTA = () => {
                 Targeting to help 3 million South Africans accelerate their careers
               </motion.p>
             </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Early Access Notice - Subtle and at the end of the page */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mt-12 max-w-3xl mx-auto"
+        >
+          <div className="bg-orange-50/80 backdrop-blur-sm border border-orange-100 rounded-lg p-4 flex items-start space-x-3">
+            <AlertTriangle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="text-sm text-orange-700">
+                <span className="font-medium">Early Access Notice:</span> We're still fine-tuning JobSpark! You might encounter some bugs or incomplete features as we work to make everything perfect. Your feedback helps us improve!{" "}
+                <a href="/features/early-access" className="text-orange-600 hover:text-orange-800 underline">
+                  Learn more
+                </a>
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

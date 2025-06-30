@@ -283,21 +283,6 @@ export const Hero = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center lg:text-left order-2 lg:order-1"
         >
-          {/* Early Access Badge */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="inline-flex items-center bg-gradient-to-r from-orange-100 to-red-100 text-orange-800 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-4 sm:mb-6 border border-orange-200 shadow-sm"
-          >
-            <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-600" />
-            <span className="hidden sm:inline">Early Access - Bugs & Issues Expected</span>
-            <span className="sm:hidden">Early Access</span>
-            <a href="/features/early-access" className="ml-2 text-orange-600 hover:text-orange-700 underline">
-              Learn More
-            </a>
-          </motion.div>
-
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -371,6 +356,17 @@ export const Hero = () => {
               </span>
             </SpotlightButton>
             <FlipButton href="#how-it-works">How it Works</FlipButton>
+          </motion.div>
+
+          {/* Early Access Subtle Notice */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="mt-4 text-xs sm:text-sm text-orange-600 flex items-center justify-center lg:justify-start"
+          >
+            <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+            <span>Early Access - <a href="/features/early-access" className="underline hover:text-orange-700">Learn more</a></span>
           </motion.div>
 
           {/* Trust indicators */}
@@ -457,30 +453,6 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Early Access Disclaimer */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.6 }}
-        className="max-w-4xl mx-auto mt-12 relative z-10"
-      >
-        <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 sm:p-6">
-          <div className="flex items-start space-x-3">
-            <AlertTriangle className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-            <div>
-              <h3 className="font-semibold text-orange-900 mb-2">Early Access Notice</h3>
-              <p className="text-orange-800 text-sm leading-relaxed">
-                JobSpark is currently in early access. You may encounter bugs, issues, or incomplete features. 
-                Some content may be fictitious for demonstration purposes. Use at your own discretion.{" "}
-                <a href="/features/early-access" className="underline hover:text-orange-900">
-                  Learn more about our early access program
-                </a>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 };
